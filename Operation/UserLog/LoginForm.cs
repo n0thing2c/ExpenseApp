@@ -12,8 +12,8 @@ namespace Login.Operation.UserLog
     public class LoginForm
     {
         private static string path = "D:\\UI\\Login\\Operation\\UserLog\\userPass.txt";
-        private string user;
-        private string pass;
+        private readonly string user;
+        private readonly string pass;
 
         public LoginForm() { }
         public LoginForm(string username, string password)

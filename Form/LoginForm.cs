@@ -8,26 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Form;
 using Login.Operation.UserLog;
 
 namespace Login
 {
-    public partial class Login : Form
+    public partial class LoginForm : System.Windows.Forms.Form
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            new SignUp().Show();
+            new SignUpForm().Show();
 
             this.Hide();
         }
         private void Login_Button(object sender, EventArgs e)
         {
-            LoginForm log = new LoginForm(txtUsername.Text, txtPassword.Text);
+            Account acc = new Account(txtUsername.Text, txtPassword.Text);
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Username or password is not filled, please try again");
@@ -36,12 +37,14 @@ namespace Login
                 txtUsername.Focus();
             }
 
-            else if (log.isValid())
+            else if (acc.isValid())
             {
-                string path = "D:\\UI\\Login\\Operation\\UserInfo\\info.txt";
+                string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string path = Path.Combine(repoPath, "Operation", "UserInfo", "info.txt");
                 string convert = txtUsername.Text + ":" + txtPassword.Text;
-                File.AppendAllText(path, convert + Environment.NewLine);
-                //new Menu().Show();
+                File.AppendAllText(path, txtUsername.Text + Environment.NewLine);
+                File.AppendAllText(path, txtPassword.Text + Environment.NewLine);
+                new MenuForm().Show();
                 this.Hide();
             }
             else
@@ -58,19 +61,7 @@ namespace Login
             Application.Exit();
         }
 
-        private void eyeIcon_Click(object sender, EventArgs e)
-        {
-            if(eyeIcon.Image == openEye)
-            {
-                eyeIcon.Image = closeEye;
-                txtPassword.PasswordChar = '•';
-            }
-            else
-            {
-                eyeIcon.Image = openEye;
-                txtPassword.PasswordChar = '\0';
-            }
-        }
+        
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -94,6 +85,31 @@ namespace Login
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void closeEye_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '•')
+            {
+                txtPassword.PasswordChar = '\0';
+                closeEye.Hide();
+                openEye.Show();
+            }
+        }
+
+        private void openEye_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '•';
+                openEye.Hide();
+                closeEye.Show();
+            }
         }
     }
 }

@@ -1,14 +1,15 @@
 ﻿using System.Drawing;
-
+using System.IO;
+using System;
 namespace Login
 {
-    partial class Login
+    partial class LoginForm : System.Windows.Forms.Form
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+       
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -28,8 +29,6 @@ namespace Login
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private Image openEye = System.Drawing.Image.FromFile("D:\\UI\\Login\\Resources\\open-eye.png") ;
-        private Image closeEye = System.Drawing.Image.FromFile("D:\\UI\\Login\\Resources\\close-eye.png");
         private void InitializeComponent()
         {
             this.Label1 = new System.Windows.Forms.Label();
@@ -41,14 +40,16 @@ namespace Login
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.eyeIcon = new System.Windows.Forms.PictureBox();
             this.userIcon = new System.Windows.Forms.PictureBox();
             this.passIcon = new System.Windows.Forms.PictureBox();
             this.pig = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.eyeIcon)).BeginInit();
+            this.openEye = new System.Windows.Forms.PictureBox();
+            this.closeEye = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.openEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeEye)).BeginInit();
             this.SuspendLayout();
             // 
             // Label1
@@ -134,8 +135,10 @@ namespace Login
             this.txtPassword.Location = new System.Drawing.Point(57, 246);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(204, 24);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // LoginButton
@@ -151,17 +154,6 @@ namespace Login
             this.LoginButton.Text = "LOGIN";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.Login_Button);
-            // 
-            // eyeIcon
-            // 
-            this.eyeIcon.Image = global::Login.Properties.Resources.open_eye;
-            this.eyeIcon.Location = new System.Drawing.Point(254, 245);
-            this.eyeIcon.Name = "eyeIcon";
-            this.eyeIcon.Size = new System.Drawing.Size(26, 25);
-            this.eyeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.eyeIcon.TabIndex = 12;
-            this.eyeIcon.TabStop = false;
-            this.eyeIcon.Click += new System.EventHandler(this.eyeIcon_Click);
             // 
             // userIcon
             // 
@@ -193,13 +185,36 @@ namespace Login
             this.pig.TabIndex = 9;
             this.pig.TabStop = false;
             // 
-            // Login
+            // openEye
+            // 
+            this.openEye.Image = global::Login.Properties.Resources.open_eye;
+            this.openEye.Location = new System.Drawing.Point(237, 245);
+            this.openEye.Name = "openEye";
+            this.openEye.Size = new System.Drawing.Size(25, 25);
+            this.openEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.openEye.TabIndex = 11;
+            this.openEye.TabStop = false;
+            this.openEye.Click += new System.EventHandler(this.openEye_Click);
+            // 
+            // closeEye
+            // 
+            this.closeEye.Image = global::Login.Properties.Resources.close_eye1;
+            this.closeEye.Location = new System.Drawing.Point(236, 245);
+            this.closeEye.Name = "closeEye";
+            this.closeEye.Size = new System.Drawing.Size(25, 25);
+            this.closeEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeEye.TabIndex = 11;
+            this.closeEye.TabStop = false;
+            this.closeEye.Click += new System.EventHandler(this.closeEye_Click);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(292, 447);
-            this.Controls.Add(this.eyeIcon);
+            this.Controls.Add(this.closeEye);
+            this.Controls.Add(this.openEye);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.userIcon);
             this.Controls.Add(this.passIcon);
@@ -213,13 +228,15 @@ namespace Login
             this.Controls.Add(this.pig);
             this.Controls.Add(this.Label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.eyeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.openEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeEye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +255,7 @@ namespace Login
         private System.Windows.Forms.PictureBox passIcon;
         private System.Windows.Forms.PictureBox userIcon;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.PictureBox eyeIcon;
+        private System.Windows.Forms.PictureBox openEye;
+        private System.Windows.Forms.PictureBox closeEye;
     }
 }

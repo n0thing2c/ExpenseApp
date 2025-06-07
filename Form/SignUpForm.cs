@@ -11,9 +11,9 @@ using System.Windows.Forms;
 using Login.Operation.UserLog;
 namespace Login
 {
-    public partial class SignUp : Form
+    public partial class SignUpForm : System.Windows.Forms.Form
     {
-        public SignUp()
+        public SignUpForm()
         {
             InitializeComponent();
         }
@@ -34,11 +34,11 @@ namespace Login
             }
             else
             {
-                LoginForm log = new LoginForm(txtUsername.Text, txtPassword.Text);
-                log.signUp();
+                Account acc = new Account(txtUsername.Text, txtPassword.Text);
+                acc.signUp();
                 MessageBox.Show("Sign up successfully, Log in to continue");
                 this.Hide();
-                new Login().Show();
+                new LoginForm().Show();
             }
         }
 
@@ -47,20 +47,6 @@ namespace Login
             Application.Exit();
         }
 
-        private void eyeIcon_Click(object sender, EventArgs e)
-        {
-
-            if (eyeIcon.Image == openEye)
-            {
-                eyeIcon.Image = closeEye;
-                txtPassword.PasswordChar = '•';
-            }
-            else
-            {
-                eyeIcon.Image = openEye;
-                txtPassword.PasswordChar = '\0';
-            }
-        }
 
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {
@@ -80,6 +66,32 @@ namespace Login
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
+        }
+
+
+        private void closeEye_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.PasswordChar == '•')
+            {
+                txtPassword.PasswordChar = '\0';
+                closeEye.Hide();
+                openEye.Show();
+            }
+        }
+
+        private void openEye_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '•';
+                openEye.Hide();
+                closeEye.Show();
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

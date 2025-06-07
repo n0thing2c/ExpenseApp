@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 namespace Login
 {
-    partial class SignUp
+    partial class SignUpForm : System.Windows.Forms.Form
     {
         /// <summary>
         /// Required designer variable.
@@ -27,9 +27,7 @@ namespace Login
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-
-        private Image openEye = System.Drawing.Image.FromFile("D:\\UI\\Login\\Resources\\open-eye.png");
-        private Image closeEye = System.Drawing.Image.FromFile("D:\\UI\\Login\\Resources\\close-eye.png");
+    
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,11 +40,13 @@ namespace Login
             this.panel2 = new System.Windows.Forms.Panel();
             this.signUpButton = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Label();
-            this.eyeIcon = new System.Windows.Forms.PictureBox();
+            this.openEye = new System.Windows.Forms.PictureBox();
+            this.closeEye = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eyeIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.openEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeEye)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -116,8 +116,10 @@ namespace Login
             this.txtPassword.ForeColor = System.Drawing.Color.Salmon;
             this.txtPassword.Location = new System.Drawing.Point(58, 245);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(204, 17);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // panel2
@@ -156,24 +158,36 @@ namespace Login
             this.Exit.Text = "Exit";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // eyeIcon
+            // openEye
             // 
-            this.eyeIcon.Image = global::Login.Properties.Resources.open_eye;
-            this.eyeIcon.Location = new System.Drawing.Point(239, 243);
-            this.eyeIcon.Name = "eyeIcon";
-            this.eyeIcon.Size = new System.Drawing.Size(25, 25);
-            this.eyeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.eyeIcon.TabIndex = 7;
-            this.eyeIcon.TabStop = false;
-            this.eyeIcon.Click += new System.EventHandler(this.eyeIcon_Click);
+            this.openEye.Image = global::Login.Properties.Resources.open_eye;
+            this.openEye.Location = new System.Drawing.Point(237, 243);
+            this.openEye.Name = "openEye";
+            this.openEye.Size = new System.Drawing.Size(25, 25);
+            this.openEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.openEye.TabIndex = 7;
+            this.openEye.TabStop = false;
+            this.openEye.Click += new System.EventHandler(this.openEye_Click);
             // 
-            // SignUp
+            // closeEye
+            // 
+            this.closeEye.Image = global::Login.Properties.Resources.close_eye1;
+            this.closeEye.Location = new System.Drawing.Point(237, 243);
+            this.closeEye.Name = "closeEye";
+            this.closeEye.Size = new System.Drawing.Size(25, 25);
+            this.closeEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeEye.TabIndex = 7;
+            this.closeEye.TabStop = false;
+            this.closeEye.Click += new System.EventHandler(this.closeEye_Click);
+            // 
+            // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(276, 408);
-            this.Controls.Add(this.eyeIcon);
+            this.Controls.Add(this.closeEye);
+            this.Controls.Add(this.openEye);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.signUpButton);
             this.Controls.Add(this.panel2);
@@ -185,13 +199,15 @@ namespace Login
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SignUp";
+            this.Name = "SignUpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eyeIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.openEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeEye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +225,7 @@ namespace Login
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Label Exit;
-        private System.Windows.Forms.PictureBox eyeIcon;
+        private System.Windows.Forms.PictureBox openEye;
+        private System.Windows.Forms.PictureBox closeEye;
     }
 }

@@ -32,7 +32,7 @@ namespace Login.Page
         {
             string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
             string folder = Path.Combine(repoPath, "Operation","UserFiles",user,"FMFiles");
-            string name = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Expenses.csv";
+            string name = new CultureInfo("en-US").DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Expenses.csv";
             string path = Path.Combine(folder, name);
             FMFile file = new FMFile();
             file.Create(path);

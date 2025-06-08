@@ -49,16 +49,16 @@
             this.Sumres = new System.Windows.Forms.Label();
             this.Sumlabel = new System.Windows.Forms.Label();
             this.MyExpenses = new System.Windows.Forms.DataGridView();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FileName = new System.Windows.Forms.Label();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Content = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MoneyOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MoneyIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Means = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FileName = new System.Windows.Forms.Label();
             this.resultpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyExpenses)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +129,7 @@
             // 
             this.InRes.AutoSize = true;
             this.InRes.ForeColor = System.Drawing.Color.MistyRose;
-            this.InRes.Location = new System.Drawing.Point(156, 123);
+            this.InRes.Location = new System.Drawing.Point(169, 123);
             this.InRes.Name = "InRes";
             this.InRes.Size = new System.Drawing.Size(41, 16);
             this.InRes.TabIndex = 7;
@@ -142,15 +142,15 @@
             this.SumIn.ForeColor = System.Drawing.Color.White;
             this.SumIn.Location = new System.Drawing.Point(23, 113);
             this.SumIn.Name = "SumIn";
-            this.SumIn.Size = new System.Drawing.Size(95, 28);
+            this.SumIn.Size = new System.Drawing.Size(128, 28);
             this.SumIn.TabIndex = 6;
-            this.SumIn.Text = "Sum use:";
+            this.SumIn.Text = "Total spend:";
             // 
             // OutRes
             // 
             this.OutRes.AutoSize = true;
             this.OutRes.ForeColor = System.Drawing.Color.MistyRose;
-            this.OutRes.Location = new System.Drawing.Point(156, 83);
+            this.OutRes.Location = new System.Drawing.Point(169, 83);
             this.OutRes.Name = "OutRes";
             this.OutRes.Size = new System.Drawing.Size(41, 16);
             this.OutRes.TabIndex = 4;
@@ -163,15 +163,15 @@
             this.SumOut.ForeColor = System.Drawing.Color.White;
             this.SumOut.Location = new System.Drawing.Point(23, 73);
             this.SumOut.Name = "SumOut";
-            this.SumOut.Size = new System.Drawing.Size(131, 28);
+            this.SumOut.Size = new System.Drawing.Size(140, 28);
             this.SumOut.TabIndex = 5;
-            this.SumOut.Text = "Sum income:";
+            this.SumOut.Text = "Total income:";
             // 
             // Sumres
             // 
             this.Sumres.AutoSize = true;
             this.Sumres.ForeColor = System.Drawing.Color.MistyRose;
-            this.Sumres.Location = new System.Drawing.Point(156, 42);
+            this.Sumres.Location = new System.Drawing.Point(169, 42);
             this.Sumres.Name = "Sumres";
             this.Sumres.Size = new System.Drawing.Size(41, 16);
             this.Sumres.TabIndex = 3;
@@ -184,9 +184,9 @@
             this.Sumlabel.ForeColor = System.Drawing.Color.White;
             this.Sumlabel.Location = new System.Drawing.Point(23, 32);
             this.Sumlabel.Name = "Sumlabel";
-            this.Sumlabel.Size = new System.Drawing.Size(64, 28);
+            this.Sumlabel.Size = new System.Drawing.Size(131, 28);
             this.Sumlabel.TabIndex = 3;
-            this.Sumlabel.Text = "Sum: ";
+            this.Sumlabel.Text = "Net Balance:";
             // 
             // MyExpenses
             // 
@@ -233,12 +233,104 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MyExpenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.MyExpenses.RowHeadersWidth = 45;
-            this.MyExpenses.Size = new System.Drawing.Size(1421, 488);
+            this.MyExpenses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.MyExpenses.Size = new System.Drawing.Size(1421, 826);
             this.MyExpenses.TabIndex = 4;
             this.MyExpenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.MyExpenses_CellFormatting);
             this.MyExpenses.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.MyExpenses_CellParsing);
             this.MyExpenses.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.CellValidating);
             this.MyExpenses.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.MyExpenses_CellValueChanged);
+            // 
+            // Date
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Date.FillWeight = 64.17112F;
+            this.Date.HeaderText = "Day";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Content
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Content.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Content.FillWeight = 78.60345F;
+            this.Content.HeaderText = "Content";
+            this.Content.Items.AddRange(new object[] {
+            "Rent",
+            "Food & Beverages",
+            "Utilities bill",
+            "Transportation",
+            "Shopping",
+            "Insurance",
+            "Loan",
+            "Job",
+            "Medicals",
+            "Entertainment",
+            "Others"});
+            this.Content.MinimumWidth = 6;
+            this.Content.Name = "Content";
+            this.Content.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // MoneyOut
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Crimson;
+            this.MoneyOut.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MoneyOut.FillWeight = 102.711F;
+            this.MoneyOut.HeaderText = "Spend";
+            this.MoneyOut.MinimumWidth = 6;
+            this.MoneyOut.Name = "MoneyOut";
+            this.MoneyOut.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // MoneyIn
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen;
+            this.MoneyIn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MoneyIn.FillWeight = 95.73236F;
+            this.MoneyIn.HeaderText = "Earn";
+            this.MoneyIn.MinimumWidth = 6;
+            this.MoneyIn.Name = "MoneyIn";
+            this.MoneyIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Details
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Details.FillWeight = 177.2692F;
+            this.Details.HeaderText = "Description";
+            this.Details.MinimumWidth = 6;
+            this.Details.Name = "Details";
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Means
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Means.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Means.FillWeight = 81.5128F;
+            this.Means.HeaderText = "Transaction method";
+            this.Means.Items.AddRange(new object[] {
+            "Momo",
+            "VCB",
+            "Cash",
+            "Debit/Credit Card",
+            "E-Wallet",
+            "Agribank",
+            "BIDV",
+            "MB Bank",
+            "TCB",
+            "VIB",
+            "OCB",
+            "ACB"});
+            this.Means.MinimumWidth = 6;
+            this.Means.Name = "Means";
+            this.Means.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // ExitButton
             // 
@@ -247,7 +339,7 @@
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(114, 57);
             this.ExitButton.TabIndex = 6;
-            this.ExitButton.Text = "Thoát";
+            this.ExitButton.Text = "Return";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -258,7 +350,7 @@
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(114, 57);
             this.SaveButton.TabIndex = 5;
-            this.SaveButton.Text = "Luu";
+            this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
@@ -280,88 +372,6 @@
             this.FileName.Size = new System.Drawing.Size(148, 36);
             this.FileName.TabIndex = 8;
             this.FileName.Text = "FileName";
-            // 
-            // Date
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Date.FillWeight = 80.24082F;
-            this.Date.HeaderText = "Day";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Content
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Content.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Content.FillWeight = 53.56126F;
-            this.Content.HeaderText = "Content";
-            this.Content.Items.AddRange(new object[] {
-            "Rent",
-            "Food & Beverages",
-            "Electricity/Water/Gas/Internet",
-            "Transportation",
-            "Shopping",
-            "Insurance",
-            "Loan",
-            "Job",
-            "Medicals",
-            "Entertainment",
-            "Others"});
-            this.Content.MinimumWidth = 6;
-            this.Content.Name = "Content";
-            this.Content.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // MoneyOut
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Crimson;
-            this.MoneyOut.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MoneyOut.FillWeight = 111.5436F;
-            this.MoneyOut.HeaderText = "Spend";
-            this.MoneyOut.MinimumWidth = 6;
-            this.MoneyOut.Name = "MoneyOut";
-            this.MoneyOut.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // MoneyIn
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen;
-            this.MoneyIn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MoneyIn.FillWeight = 103.9648F;
-            this.MoneyIn.HeaderText = "Earn";
-            this.MoneyIn.MinimumWidth = 6;
-            this.MoneyIn.Name = "MoneyIn";
-            this.MoneyIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Details
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Details.FillWeight = 192.5133F;
-            this.Details.HeaderText = "Description";
-            this.Details.MinimumWidth = 6;
-            this.Details.Name = "Details";
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Means
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Means.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Means.FillWeight = 58.17606F;
-            this.Means.HeaderText = "Transaction method";
-            this.Means.Items.AddRange(new object[] {
-            "Momo",
-            "VCB",
-            "Tien mat"});
-            this.Means.MinimumWidth = 6;
-            this.Means.Name = "Means";
-            this.Means.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // LoadFileForm
             // 

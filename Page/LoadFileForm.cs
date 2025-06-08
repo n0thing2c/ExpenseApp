@@ -106,12 +106,13 @@ namespace Login.Page
         }
         private void MyExpenses_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            
             Sumres_Calculate();
             OutRes_Calculate();
             InRes_Calculate();
             MaxMoneyUsedDay();
             MaxMoneyMakedDay();
-
+            
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -126,38 +127,42 @@ namespace Login.Page
             switch (e.ColumnIndex)
             {
                 case 0:
-                    
+                   
+                    if (int.TryParse(e.FormattedValue.ToString(), out int month) == false || month <= 0 || month > 31)
+                    {
+                        MessageBox.Show("Incorrect value, please type in again");
+                        e.Cancel = true;
+                    }
                     break;
                 case 2:
-                    if (MyExpenses.Rows[e.RowIndex].Cells[3].Value!=null)
+                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[3].Value.ToString(), out long value))
                     {
                         MessageBox.Show("Spend and Earn can not be on the same row");
                         e.Cancel = true;
                     }
-                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out long value) == false)
+                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
                         e.Cancel = true;
                     }
-                    
                     break;
                 case 3:
-                    if (MyExpenses.Rows[e.RowIndex].Cells[2].Value != null)
+                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[2].Value.ToString(), out value))
                     {
                         MessageBox.Show("Spend and Earn can not be on the same row");
-                        e.Cancel = true;
+                        e.Cancel=true;
                     }
-                    if (long.TryParse(e.FormattedValue.ToString().Replace(".",""), out value) == false)
+                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
-
                         e.Cancel = true;
                     }
-                    
+
                     break;
                 default:
                     break;
             }
+            
         }
 
         private void MyExpenses_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
@@ -183,5 +188,7 @@ namespace Login.Page
                 }
             }
         }
+
+        
     }
 }

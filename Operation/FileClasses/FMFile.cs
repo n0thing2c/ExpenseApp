@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.IO;
 namespace Login.Page
 {
+    //FM: Financial Management
     internal class FMFile:AppFile
     {
         private string fullpath;

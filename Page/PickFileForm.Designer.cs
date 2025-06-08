@@ -50,10 +50,10 @@ namespace Login.Page
             this.listBoxFiles.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxFiles.FormattingEnabled = true;
             this.listBoxFiles.ItemHeight = 31;
-            this.listBoxFiles.Location = new System.Drawing.Point(31, 58);
+            this.listBoxFiles.Location = new System.Drawing.Point(22, 58);
             this.listBoxFiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxFiles.Name = "listBoxFiles";
-            this.listBoxFiles.Size = new System.Drawing.Size(722, 252);
+            this.listBoxFiles.Size = new System.Drawing.Size(501, 252);
             this.listBoxFiles.TabIndex = 1;
             this.listBoxFiles.DoubleClick += new System.EventHandler(this.listBoxFiles_DoubleClick);
             // 
@@ -67,39 +67,39 @@ namespace Login.Page
             this.panel1.Location = new System.Drawing.Point(12, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(771, 327);
+            this.panel1.Size = new System.Drawing.Size(553, 325);
             this.panel1.TabIndex = 2;
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(410, 287);
+            this.ExitButton.Location = new System.Drawing.Point(220, 278);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(94, 23);
             this.ExitButton.TabIndex = 5;
-            this.ExitButton.Text = "Thoat";
+            this.ExitButton.Text = "Return";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // OpenButton
             // 
-            this.OpenButton.Location = new System.Drawing.Point(645, 287);
+            this.OpenButton.Location = new System.Drawing.Point(420, 278);
             this.OpenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(94, 23);
             this.OpenButton.TabIndex = 4;
-            this.OpenButton.Text = "Mo File";
+            this.OpenButton.Text = "Open";
             this.OpenButton.UseVisualStyleBackColor = true;
             this.OpenButton.Click += new System.EventHandler(this.listBoxFiles_DoubleClick);
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(529, 287);
+            this.DeleteButton.Location = new System.Drawing.Point(320, 278);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(94, 23);
             this.DeleteButton.TabIndex = 3;
-            this.DeleteButton.Text = "Xoa File";
+            this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
@@ -107,18 +107,18 @@ namespace Login.Page
             // 
             this.FilesAreBelowLabel.AutoSize = true;
             this.FilesAreBelowLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilesAreBelowLabel.Location = new System.Drawing.Point(193, 0);
+            this.FilesAreBelowLabel.Location = new System.Drawing.Point(156, 11);
             this.FilesAreBelowLabel.Name = "FilesAreBelowLabel";
-            this.FilesAreBelowLabel.Size = new System.Drawing.Size(413, 45);
+            this.FilesAreBelowLabel.Size = new System.Drawing.Size(238, 45);
             this.FilesAreBelowLabel.TabIndex = 2;
-            this.FilesAreBelowLabel.Text = "Cac file dang co tren may";
+            this.FilesAreBelowLabel.Text = "Available Files";
             // 
             // PickFileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(818, 360);
+            this.ClientSize = new System.Drawing.Size(581, 347);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

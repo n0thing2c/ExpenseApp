@@ -46,7 +46,7 @@ namespace Login.Page
         private void DeleteButton_Click(object sender, EventArgs e)
         {
 
-            if (listBoxFiles.Items.Count == 0 || MessageBox.Show("Bạn có muốn xoa file nay?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            if (listBoxFiles.Items.Count == 0 || MessageBox.Show("Do you want the delete this file?", "Delete Confirmation", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 return;
             }

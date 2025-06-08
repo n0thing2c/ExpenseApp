@@ -50,16 +50,16 @@ namespace Login.Page
             // 
             this.panel2.Controls.Add(this.MonthPicker);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(41, 13);
+            this.panel2.Location = new System.Drawing.Point(21, 13);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 59);
+            this.panel2.Size = new System.Drawing.Size(344, 59);
             this.panel2.TabIndex = 0;
             // 
             // MonthPicker
             // 
             this.MonthPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthPicker.Location = new System.Drawing.Point(142, 17);
+            this.MonthPicker.Location = new System.Drawing.Point(176, 17);
             this.MonthPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MonthPicker.Maximum = new decimal(new int[] {
             12,
@@ -86,24 +86,24 @@ namespace Login.Page
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 22);
+            this.label1.Size = new System.Drawing.Size(157, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thang chi tieu";
+            this.label1.Text = "Month of expense:";
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.YearPicker);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(41, 87);
+            this.panel3.Location = new System.Drawing.Point(21, 87);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(292, 66);
+            this.panel3.Size = new System.Drawing.Size(341, 66);
             this.panel3.TabIndex = 2;
             // 
             // YearPicker
             // 
             this.YearPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearPicker.Location = new System.Drawing.Point(142, 18);
+            this.YearPicker.Location = new System.Drawing.Point(176, 18);
             this.YearPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.YearPicker.Maximum = new decimal(new int[] {
             1215752192,
@@ -130,9 +130,9 @@ namespace Login.Page
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 22);
+            this.label4.Size = new System.Drawing.Size(146, 22);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Nam chi tieu";
+            this.label4.Text = "Year of expense:";
             // 
             // MakeFileButton
             // 

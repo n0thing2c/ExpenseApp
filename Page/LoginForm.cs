@@ -44,7 +44,7 @@ namespace Login.Page
                 string convert = txtUsername.Text + ":" + txtPassword.Text;
                 File.AppendAllText(path, txtUsername.Text + Environment.NewLine);
                 File.AppendAllText(path, txtPassword.Text + Environment.NewLine);
-                new MenuForm().Show();
+                new MenuForm(acc.getUserName()).Show();
                 this.Hide();
             }
             else

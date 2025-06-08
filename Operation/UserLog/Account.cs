@@ -32,6 +32,24 @@ namespace Login.Operation.UserLog
             }
            
         }
+        public string getUserName()
+        {
+            return user;
+        }
+        public void createUserFolder()
+        {
+            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string path = Path.Combine(repoPath, "Operation", "UserFiles", user);
+            try
+            {
+                Directory.CreateDirectory(Path.Combine(path, "FMFiles"));
+                Directory.CreateDirectory(Path.Combine(path, "MDFiles"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Can not create user mgmtfiles folder" + ex.Message);
+            }
+        }
         public bool isValid()
         {
             string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;

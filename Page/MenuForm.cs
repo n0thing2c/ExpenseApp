@@ -11,8 +11,10 @@ namespace Login.Page
 {
     public partial class MenuForm : Form
     {
-        public MenuForm()
+        string user;
+        public MenuForm(string username)
         {
+            user= username;
             InitializeComponent();
         }
 
@@ -21,5 +23,20 @@ namespace Login.Page
 
         }
 
+        private void NewFileButton_Click(object sender, EventArgs e)
+        {
+            new NewFileForm(user).Show();
+        }
+
+        private void LoadFileButton_Click(object sender, EventArgs e)
+        {
+            new PickFileForm(user).Show();
+            
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

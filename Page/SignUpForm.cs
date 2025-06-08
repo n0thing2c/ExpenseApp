@@ -36,6 +36,7 @@ namespace Login.Page
             {
                 Account acc = new Account(txtUsername.Text, txtPassword.Text);
                 acc.signUp();
+                acc.createUserFolder();
                 MessageBox.Show("Sign up successfully, Log in to continue");
                 this.Hide();
                 new LoginForm().Show();

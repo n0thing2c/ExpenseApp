@@ -1,6 +1,10 @@
-﻿namespace Login.Form
+﻿using System.Drawing;
+using System.IO;
+using System;
+using System.Windows.Forms;
+namespace Login.Page
 {
-    partial class MenuForm : System.Windows.Forms.Form
+    partial class MenuForm : Form
     {
         /// <summary>
         /// Required designer variable.

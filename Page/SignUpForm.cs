@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Login.Operation.UserLog;
 namespace Login
 {
-    public partial class SignUpForm : System.Windows.Forms.Form
+    public partial class SignUpForm : Form
     {
         public SignUpForm()
         {

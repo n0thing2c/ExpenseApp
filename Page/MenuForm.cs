@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace Login.Form
+namespace Login.Page
 {
-    public partial class MenuForm : System.Windows.Forms.Form
+    public partial class MenuForm : Form
     {
         public MenuForm()
         {

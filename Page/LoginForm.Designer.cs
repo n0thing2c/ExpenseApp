@@ -1,9 +1,10 @@
 ﻿using System.Drawing;
 using System.IO;
 using System;
+using System.Windows.Forms;
 namespace Login
 {
-    partial class LoginForm : System.Windows.Forms.Form
+    partial class LoginForm : Form
     {
         /// <summary>
         /// Required designer variable.

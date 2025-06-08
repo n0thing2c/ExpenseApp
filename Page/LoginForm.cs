@@ -8,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Login.Form;
+using Login.Page;
 using Login.Operation.UserLog;
 
 namespace Login
 {
-    public partial class LoginForm : System.Windows.Forms.Form
+    public partial class LoginForm : Form
     {
         public LoginForm()
         {

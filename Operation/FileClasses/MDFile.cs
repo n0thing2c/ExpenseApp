@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Login.Page
 {
-    //MD: Money Dividor
+    //MD: Money Divider
     internal class MDFile
     {
         private string fullpath;

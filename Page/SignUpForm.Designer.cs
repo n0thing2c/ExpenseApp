@@ -2,7 +2,7 @@
 using System.IO;
 using System;
 using System.Windows.Forms;
-namespace Login
+namespace Login.Page
 {
     partial class SignUpForm : Form
     {

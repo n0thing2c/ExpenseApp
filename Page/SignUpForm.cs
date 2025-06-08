@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Login.Operation.UserLog;
-namespace Login
+namespace Login.Page
 {
     public partial class SignUpForm : Form
     {

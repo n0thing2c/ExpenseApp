@@ -2,7 +2,7 @@
 using System.IO;
 using System;
 using System.Windows.Forms;
-namespace Login
+namespace Login.Page
 {
     partial class LoginForm : Form
     {
@@ -10,7 +10,7 @@ namespace Login
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-       
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>

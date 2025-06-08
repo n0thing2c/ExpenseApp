@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Login.Page;
+using Login;   
 using Login.Operation.UserLog;
 
-namespace Login
+namespace Login.Page
 {
     public partial class LoginForm : Form
     {

@@ -1,7 +1,10 @@
 ﻿using System.Drawing;
-namespace Login
+using System.IO;
+using System;
+using System.Windows.Forms;
+namespace Login.Page
 {
-    partial class SignUpForm : System.Windows.Forms.Form
+    partial class SignUpForm : Form
     {
         /// <summary>
         /// Required designer variable.

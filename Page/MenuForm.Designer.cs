@@ -1,6 +1,10 @@
-﻿namespace Login.Form
+﻿using System.Drawing;
+using System.IO;
+using System;
+using System.Windows.Forms;
+namespace Login.Page
 {
-    partial class MenuForm : System.Windows.Forms.Form
+    partial class MenuForm : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +96,6 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.account)).EndInit();

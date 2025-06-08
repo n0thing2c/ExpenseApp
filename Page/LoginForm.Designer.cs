@@ -1,15 +1,16 @@
 ﻿using System.Drawing;
 using System.IO;
 using System;
-namespace Login
+using System.Windows.Forms;
+namespace Login.Page
 {
-    partial class LoginForm : System.Windows.Forms.Form
+    partial class LoginForm : Form
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-       
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>

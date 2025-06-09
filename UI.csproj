@@ -146,6 +146,10 @@
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
     <Content Include="Resources\close-eye.png" />
+    <None Include="Resources\return.png" />
+    <None Include="Resources\saveFile1.png" />
+    <None Include="Resources\saveFile.png" />
+    <None Include="Resources\saveIcon.jpg" />
     <None Include="Resources\close-eye1.png" />
     <None Include="Resources\close-eye2.png" />
     <None Include="Resources\LoadFileIcon.jpeg" />

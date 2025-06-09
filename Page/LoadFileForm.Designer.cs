@@ -55,10 +55,10 @@
             this.MoneyIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Means = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.FileName = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.resultpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyExpenses)).BeginInit();
             this.SuspendLayout();
@@ -76,11 +76,12 @@
             this.resultpanel.Controls.Add(this.SumOut);
             this.resultpanel.Controls.Add(this.Sumres);
             this.resultpanel.Controls.Add(this.Sumlabel);
+            this.resultpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultpanel.ForeColor = System.Drawing.Color.White;
-            this.resultpanel.Location = new System.Drawing.Point(31, 179);
+            this.resultpanel.Location = new System.Drawing.Point(3, 152);
             this.resultpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resultpanel.Name = "resultpanel";
-            this.resultpanel.Size = new System.Drawing.Size(221, 308);
+            this.resultpanel.Size = new System.Drawing.Size(249, 312);
             this.resultpanel.TabIndex = 3;
             // 
             // MostMakeDayRes
@@ -89,7 +90,7 @@
             this.MostMakeDayRes.ForeColor = System.Drawing.Color.MistyRose;
             this.MostMakeDayRes.Location = new System.Drawing.Point(27, 262);
             this.MostMakeDayRes.Name = "MostMakeDayRes";
-            this.MostMakeDayRes.Size = new System.Drawing.Size(41, 16);
+            this.MostMakeDayRes.Size = new System.Drawing.Size(57, 20);
             this.MostMakeDayRes.TabIndex = 11;
             this.MostMakeDayRes.Text = "NULL";
             // 
@@ -110,7 +111,7 @@
             this.MostSpendDayRes.ForeColor = System.Drawing.Color.MistyRose;
             this.MostSpendDayRes.Location = new System.Drawing.Point(27, 192);
             this.MostSpendDayRes.Name = "MostSpendDayRes";
-            this.MostSpendDayRes.Size = new System.Drawing.Size(41, 16);
+            this.MostSpendDayRes.Size = new System.Drawing.Size(57, 20);
             this.MostSpendDayRes.TabIndex = 9;
             this.MostSpendDayRes.Text = "NULL";
             // 
@@ -131,7 +132,7 @@
             this.InRes.ForeColor = System.Drawing.Color.MistyRose;
             this.InRes.Location = new System.Drawing.Point(169, 123);
             this.InRes.Name = "InRes";
-            this.InRes.Size = new System.Drawing.Size(41, 16);
+            this.InRes.Size = new System.Drawing.Size(57, 20);
             this.InRes.TabIndex = 7;
             this.InRes.Text = "NULL";
             // 
@@ -152,7 +153,7 @@
             this.OutRes.ForeColor = System.Drawing.Color.MistyRose;
             this.OutRes.Location = new System.Drawing.Point(169, 83);
             this.OutRes.Name = "OutRes";
-            this.OutRes.Size = new System.Drawing.Size(41, 16);
+            this.OutRes.Size = new System.Drawing.Size(57, 20);
             this.OutRes.TabIndex = 4;
             this.OutRes.Text = "NULL";
             // 
@@ -173,7 +174,7 @@
             this.Sumres.ForeColor = System.Drawing.Color.MistyRose;
             this.Sumres.Location = new System.Drawing.Point(169, 42);
             this.Sumres.Name = "Sumres";
-            this.Sumres.Size = new System.Drawing.Size(41, 16);
+            this.Sumres.Size = new System.Drawing.Size(57, 20);
             this.Sumres.TabIndex = 3;
             this.Sumres.Text = "NULL";
             // 
@@ -333,28 +334,6 @@
             this.Means.Name = "Means";
             this.Means.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(1424, 28);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(114, 57);
-            this.ExitButton.TabIndex = 6;
-            this.ExitButton.Text = "Return";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Location = new System.Drawing.Point(1565, 28);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(114, 57);
-            this.SaveButton.TabIndex = 5;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -368,11 +347,45 @@
             // 
             this.FileName.AutoSize = true;
             this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FileName.Location = new System.Drawing.Point(25, 32);
+            this.FileName.Location = new System.Drawing.Point(912, 45);
             this.FileName.Name = "FileName";
             this.FileName.Size = new System.Drawing.Size(148, 36);
             this.FileName.TabIndex = 8;
             this.FileName.Text = "FileName";
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.White;
+            this.ExitButton.BackgroundImage = global::Login.Properties.Resources._return;
+            this.ExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.Color.White;
+            this.ExitButton.Location = new System.Drawing.Point(22, 17);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(133, 77);
+            this.ExitButton.TabIndex = 6;
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.Transparent;
+            this.SaveButton.BackgroundImage = global::Login.Properties.Resources.saveFile1;
+            this.SaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(245, 17);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SaveButton.Size = new System.Drawing.Size(114, 71);
+            this.SaveButton.TabIndex = 5;
+            this.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // LoadFileForm
             // 

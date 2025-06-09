@@ -58,7 +58,8 @@ namespace Login.Page
             // 
             // MonthPicker
             // 
-            this.MonthPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthPicker.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthPicker.ForeColor = System.Drawing.Color.Black;
             this.MonthPicker.Location = new System.Drawing.Point(176, 17);
             this.MonthPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MonthPicker.Maximum = new decimal(new int[] {
@@ -72,7 +73,7 @@ namespace Login.Page
             0,
             0});
             this.MonthPicker.Name = "MonthPicker";
-            this.MonthPicker.Size = new System.Drawing.Size(150, 28);
+            this.MonthPicker.Size = new System.Drawing.Size(150, 30);
             this.MonthPicker.TabIndex = 3;
             this.MonthPicker.Value = new decimal(new int[] {
             6,
@@ -83,10 +84,11 @@ namespace Login.Page
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Salmon;
+            this.label1.Location = new System.Drawing.Point(3, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 22);
+            this.label1.Size = new System.Drawing.Size(146, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Month of expense:";
             // 
@@ -102,7 +104,7 @@ namespace Login.Page
             // 
             // YearPicker
             // 
-            this.YearPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearPicker.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YearPicker.Location = new System.Drawing.Point(176, 18);
             this.YearPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.YearPicker.Maximum = new decimal(new int[] {
@@ -116,7 +118,7 @@ namespace Login.Page
             0,
             0});
             this.YearPicker.Name = "YearPicker";
-            this.YearPicker.Size = new System.Drawing.Size(150, 28);
+            this.YearPicker.Size = new System.Drawing.Size(150, 30);
             this.YearPicker.TabIndex = 2;
             this.YearPicker.Value = new decimal(new int[] {
             2025,
@@ -127,10 +129,11 @@ namespace Login.Page
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Salmon;
             this.label4.Location = new System.Drawing.Point(3, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 22);
+            this.label4.Size = new System.Drawing.Size(131, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Year of expense:";
             // 
@@ -138,11 +141,12 @@ namespace Login.Page
             // 
             this.MakeFileButton.BackColor = System.Drawing.Color.Salmon;
             this.MakeFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MakeFileButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MakeFileButton.ForeColor = System.Drawing.Color.White;
-            this.MakeFileButton.Location = new System.Drawing.Point(243, 179);
+            this.MakeFileButton.Location = new System.Drawing.Point(211, 170);
             this.MakeFileButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MakeFileButton.Name = "MakeFileButton";
-            this.MakeFileButton.Size = new System.Drawing.Size(90, 30);
+            this.MakeFileButton.Size = new System.Drawing.Size(118, 39);
             this.MakeFileButton.TabIndex = 3;
             this.MakeFileButton.Text = "Make File";
             this.MakeFileButton.UseVisualStyleBackColor = false;
@@ -150,25 +154,27 @@ namespace Login.Page
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ExitButton);
             this.panel1.Controls.Add(this.MakeFileButton);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(4, 11);
+            this.panel1.Location = new System.Drawing.Point(1, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 221);
+            this.panel1.Size = new System.Drawing.Size(378, 237);
             this.panel1.TabIndex = 0;
             // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.Salmon;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(132, 179);
+            this.ExitButton.Location = new System.Drawing.Point(63, 170);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(90, 30);
+            this.ExitButton.Size = new System.Drawing.Size(118, 39);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Return";
             this.ExitButton.UseVisualStyleBackColor = false;

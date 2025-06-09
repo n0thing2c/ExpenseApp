@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login.Operation.UserLog;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Login.Page
 {
     internal class UserFolder
     {
+        Account acc;
         private string username;
         private string targetFolder;
         private List<string> filePaths;

@@ -236,6 +236,7 @@
             this.MyExpenses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.MyExpenses.Size = new System.Drawing.Size(1421, 826);
             this.MyExpenses.TabIndex = 4;
+            this.MyExpenses.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.MyExpenses_CellBeginEdit);
             this.MyExpenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.MyExpenses_CellFormatting);
             this.MyExpenses.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.MyExpenses_CellParsing);
             this.MyExpenses.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.CellValidating);

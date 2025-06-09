@@ -135,23 +135,15 @@ namespace Login.Page
                     }
                     break;
                 case 2:
-                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[3].Value.ToString(), out long value))
-                    {
-                        MessageBox.Show("Spend and Earn can not be on the same row");
-                        e.Cancel = true;
-                    }
-                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
+                    
+                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out long value) == false)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
                         e.Cancel = true;
                     }
                     break;
                 case 3:
-                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[2].Value.ToString(), out value))
-                    {
-                        MessageBox.Show("Spend and Earn can not be on the same row");
-                        e.Cancel=true;
-                    }
+                    
                     if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
@@ -189,6 +181,22 @@ namespace Login.Page
             }
         }
 
-        
+        private void MyExpenses_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            int cellidx;
+            if (e.ColumnIndex == 2)
+                cellidx = 3;
+            else if (e.ColumnIndex == 3)
+                cellidx = 2;
+            else
+                return;
+            if (MyExpenses.Rows[e.RowIndex].Cells[cellidx].Value == null)
+                return;
+            if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[cellidx].Value.ToString(),out long value))
+            {
+                MessageBox.Show("Error");
+                e.Cancel = true;
+            }
+        }
     }
 }

@@ -134,15 +134,22 @@ namespace Login.Page
 
             switch (columnName)
             {
-                case "Date": 
-                    if (!DateTime.TryParseExact(e.FormattedValue.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+                case "Date":
+                    if (!int.TryParse(e.FormattedValue.ToString(), out int day) || day <= 0 || day > 31)
                     {
-                        MessageBox.Show("Please enter in format: 'dd/MM/YY' (Ex: 10/08/2006).", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        e.Cancel = true;
+                        MessageBox.Show("Invalid day, please enter again", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true; // Giữ người dùng ở lại ô cho đến khi sửa đúng
                     }
                     break;
 
                 case "MoneyOut":
+                    var earnCell = MyExpenses.Rows[e.RowIndex].Cells["MoneyIn"].Value;
+                    if (earnCell != null && !string.IsNullOrEmpty(earnCell.ToString()))
+                    {
+                        MessageBox.Show("Cannot enter 'Spend' and 'Earn' on the same line");
+                        e.Cancel = true;
+                        return;
+                    }
                     if (!long.TryParse(e.FormattedValue.ToString().Replace(".", "").Replace(",", ""), out _))
                     {
                         MessageBox.Show("Invalid number, please enter again");
@@ -151,6 +158,13 @@ namespace Login.Page
                     break;
 
                 case "MoneyIn":
+                    var spendCell = MyExpenses.Rows[e.RowIndex].Cells["MoneyOut"].Value;
+                    if (spendCell != null && !string.IsNullOrEmpty(spendCell.ToString()))
+                    {
+                        MessageBox.Show("Cannot enter 'Spend' and 'Earn' on the same line");
+                        e.Cancel = true;
+                        return;
+                    }
                     if (!long.TryParse(e.FormattedValue.ToString().Replace(".", "").Replace(",", ""), out _))
                     {
                         MessageBox.Show("Invalid number, please enter again");

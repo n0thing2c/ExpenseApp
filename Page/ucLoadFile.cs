@@ -17,7 +17,7 @@ namespace Login.Page
         public ucLoadFile()
         {
             InitializeComponent();
-            this.MyExpenses.CellValidating += new DataGridViewCellValidatingEventHandler(MyExpenses_CellValidating);
+            this.MyExpenses.CellValidating += new DataGridViewCellValidatingEventHandler(this.CellValidating);
         }
         private FMFile file = new FMFile();
         public void LoadFile(string path)
@@ -39,22 +39,6 @@ namespace Login.Page
             MessageBox.Show("Saved successfully");
         }
 
-        private void MyExpenses_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            if (MyExpenses.Columns[e.ColumnIndex].Name == "Date")
-            {
-                if (string.IsNullOrEmpty(e.FormattedValue.ToString()) || MyExpenses.Rows[e.RowIndex].IsNewRow)
-                {
-                    return;
-                }
-                DateTime parsedDate;
-                if (!DateTime.TryParseExact(e.FormattedValue.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate))
-                {
-                    MessageBox.Show("Please enter in 'dd/MM/yyyy' format", "Invalid date format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    e.Cancel = true;
-                }
-            }
-        }
         private void Sumres_Calculate()
         {
             long sum = 0;
@@ -143,47 +127,37 @@ namespace Login.Page
 
         private void CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.FormattedValue.ToString() == "")
+            if (string.IsNullOrEmpty(e.FormattedValue.ToString()) || MyExpenses.Rows[e.RowIndex].IsNewRow)
                 return;
-            switch (e.ColumnIndex)
+
+            string columnName = MyExpenses.Columns[e.ColumnIndex].Name;
+
+            switch (columnName)
             {
-                case 0:
+                case "Date": 
+                    if (!DateTime.TryParseExact(e.FormattedValue.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+                    {
+                        MessageBox.Show("Please enter in format: 'dd/MM/YY' (Ex: 10/08/2006).", "Invalid format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
+                    break;
 
-                    if (int.TryParse(e.FormattedValue.ToString(), out int month) == false || month <= 0 || month > 31)
+                case "MoneyOut":
+                    if (!long.TryParse(e.FormattedValue.ToString().Replace(".", "").Replace(",", ""), out _))
                     {
-                        MessageBox.Show("Incorrect value, please type in again");
+                        MessageBox.Show("Invalid number, please enter again");
                         e.Cancel = true;
                     }
                     break;
-                case 2:
-                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[3].Value.ToString(), out long value))
-                    {
-                        MessageBox.Show("Spend and Earn can not be on the same row");
-                        e.Cancel = true;
-                    }
-                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
-                    {
-                        MessageBox.Show("Incorrect value, please type in again");
-                        e.Cancel = true;
-                    }
-                    break;
-                case 3:
-                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[2].Value.ToString(), out value))
-                    {
-                        MessageBox.Show("Spend and Earn can not be on the same row");
-                        e.Cancel = true;
-                    }
-                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
-                    {
-                        MessageBox.Show("Incorrect value, please type in again");
-                        e.Cancel = true;
-                    }
 
-                    break;
-                default:
+                case "MoneyIn":
+                    if (!long.TryParse(e.FormattedValue.ToString().Replace(".", "").Replace(",", ""), out _))
+                    {
+                        MessageBox.Show("Invalid number, please enter again");
+                        e.Cancel = true;
+                    }
                     break;
             }
-
         }
 
         private void MyExpenses_CellParsing(object sender, DataGridViewCellParsingEventArgs e)

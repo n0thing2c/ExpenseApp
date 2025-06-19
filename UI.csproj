@@ -87,6 +87,24 @@
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Operation\UserLog\Account.cs" />
+    <Compile Include="Page\ucLoadFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucLoadFile.Designer.cs">
+      <DependentUpon>ucLoadFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucNewFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucNewFile.Designer.cs">
+      <DependentUpon>ucNewFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucPickFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucPickFile.Designer.cs">
+      <DependentUpon>ucPickFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Page\LoadFileForm.resx">
@@ -110,20 +128,29 @@
       <DependentUpon>SignUpForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucLoadFile.resx">
+      <DependentUpon>ucLoadFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucNewFile.resx">
+      <DependentUpon>ucNewFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucPickFile.resx">
+      <DependentUpon>ucPickFile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -146,6 +173,12 @@
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
     <Content Include="Resources\close-eye.png" />
+    <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%291.png" />
+    <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%29.png" />
+    <None Include="Resources\return.png" />
+    <None Include="Resources\saveFile1.png" />
+    <None Include="Resources\saveFile.png" />
+    <None Include="Resources\saveIcon.jpg" />
     <None Include="Resources\close-eye1.png" />
     <None Include="Resources\close-eye2.png" />
     <None Include="Resources\LoadFileIcon.jpeg" />

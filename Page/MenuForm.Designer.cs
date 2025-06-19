@@ -32,169 +32,316 @@ namespace Login.Page
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.LoadFileButton = new System.Windows.Forms.Button();
-            this.NewFileButton = new System.Windows.Forms.Button();
-            this.accountButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.OpenFilePb = new System.Windows.Forms.PictureBox();
-            this.add = new System.Windows.Forms.PictureBox();
-            this.account = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OpenFilePb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.account)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Notification_Button = new System.Windows.Forms.Button();
+            this.Personal_Button = new System.Windows.Forms.Button();
+            this.Menu_Button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.AboutUs_Button = new System.Windows.Forms.Button();
+            this.Exit_Button = new System.Windows.Forms.Button();
+            this.NewFile_Button = new System.Windows.Forms.Button();
+            this.LoadFile_Button = new System.Windows.Forms.Button();
+            this.NotificationList_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.User_Panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.Profile_Button = new System.Windows.Forms.Button();
+            this.Calendar_Button = new System.Windows.Forms.Button();
+            this.Reports_Button = new System.Windows.Forms.Button();
+            this.LogOut_Button = new System.Windows.Forms.Button();
+            this.panelContent = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.User_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // panel1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.OpenFilePb);
-            this.groupBox1.Controls.Add(this.ExitButton);
-            this.groupBox1.Controls.Add(this.LoadFileButton);
-            this.groupBox1.Controls.Add(this.NewFileButton);
-            this.groupBox1.Controls.Add(this.accountButton);
-            this.groupBox1.Controls.Add(this.add);
-            this.groupBox1.Controls.Add(this.account);
-            this.groupBox1.Location = new System.Drawing.Point(316, 94);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(475, 366);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.Pink;
+            this.panel1.Controls.Add(this.Notification_Button);
+            this.panel1.Controls.Add(this.Personal_Button);
+            this.panel1.Controls.Add(this.Menu_Button);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1031, 69);
+            this.panel1.TabIndex = 0;
             // 
-            // ExitButton
+            // Notification_Button
             // 
-            this.ExitButton.BackColor = System.Drawing.Color.Salmon;
-            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(83, 286);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(280, 43);
-            this.ExitButton.TabIndex = 4;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.Notification_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.Notification_Button.FlatAppearance.BorderSize = 0;
+            this.Notification_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Notification_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.Notification_Button.Image = ((System.Drawing.Image)(resources.GetObject("Notification_Button.Image")));
+            this.Notification_Button.Location = new System.Drawing.Point(909, 11);
+            this.Notification_Button.Name = "Notification_Button";
+            this.Notification_Button.Size = new System.Drawing.Size(53, 55);
+            this.Notification_Button.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.Notification_Button, "Notifications");
+            this.Notification_Button.UseVisualStyleBackColor = true;
+            this.Notification_Button.Click += new System.EventHandler(this.Notification_Button_Click);
             // 
-            // LoadFileButton
+            // Personal_Button
             // 
-            this.LoadFileButton.BackColor = System.Drawing.Color.Salmon;
-            this.LoadFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadFileButton.ForeColor = System.Drawing.Color.White;
-            this.LoadFileButton.Location = new System.Drawing.Point(83, 203);
-            this.LoadFileButton.Margin = new System.Windows.Forms.Padding(4);
-            this.LoadFileButton.Name = "LoadFileButton";
-            this.LoadFileButton.Size = new System.Drawing.Size(280, 43);
-            this.LoadFileButton.TabIndex = 3;
-            this.LoadFileButton.Text = "Load File";
-            this.LoadFileButton.UseVisualStyleBackColor = false;
-            this.LoadFileButton.Click += new System.EventHandler(this.LoadFileButton_Click);
+            this.Personal_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.Personal_Button.FlatAppearance.BorderSize = 0;
+            this.Personal_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Personal_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.Personal_Button.Image = ((System.Drawing.Image)(resources.GetObject("Personal_Button.Image")));
+            this.Personal_Button.Location = new System.Drawing.Point(968, 11);
+            this.Personal_Button.Name = "Personal_Button";
+            this.Personal_Button.Size = new System.Drawing.Size(53, 55);
+            this.Personal_Button.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.Personal_Button, "User");
+            this.Personal_Button.UseVisualStyleBackColor = true;
+            this.Personal_Button.Click += new System.EventHandler(this.Personal_Button_Click);
             // 
-            // NewFileButton
+            // Menu_Button
             // 
-            this.NewFileButton.BackColor = System.Drawing.Color.Salmon;
-            this.NewFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewFileButton.ForeColor = System.Drawing.Color.White;
-            this.NewFileButton.Location = new System.Drawing.Point(83, 112);
-            this.NewFileButton.Margin = new System.Windows.Forms.Padding(4);
-            this.NewFileButton.Name = "NewFileButton";
-            this.NewFileButton.Size = new System.Drawing.Size(280, 43);
-            this.NewFileButton.TabIndex = 2;
-            this.NewFileButton.Text = "New File";
-            this.NewFileButton.UseVisualStyleBackColor = false;
-            this.NewFileButton.Click += new System.EventHandler(this.NewFileButton_Click);
+            this.Menu_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Menu_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.Menu_Button.FlatAppearance.BorderSize = 0;
+            this.Menu_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Menu_Button.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.Menu_Button.Image = ((System.Drawing.Image)(resources.GetObject("Menu_Button.Image")));
+            this.Menu_Button.Location = new System.Drawing.Point(202, 11);
+            this.Menu_Button.Name = "Menu_Button";
+            this.Menu_Button.Size = new System.Drawing.Size(57, 45);
+            this.Menu_Button.TabIndex = 1;
+            this.Menu_Button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Menu_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.Menu_Button, "Menu");
+            this.Menu_Button.UseVisualStyleBackColor = true;
+            this.Menu_Button.Click += new System.EventHandler(this.Menu_Button_Click);
             // 
-            // accountButton
+            // label1
             // 
-            this.accountButton.BackColor = System.Drawing.Color.Salmon;
-            this.accountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.accountButton.ForeColor = System.Drawing.Color.White;
-            this.accountButton.Location = new System.Drawing.Point(83, 23);
-            this.accountButton.Margin = new System.Windows.Forms.Padding(4);
-            this.accountButton.Name = "accountButton";
-            this.accountButton.Size = new System.Drawing.Size(280, 43);
-            this.accountButton.TabIndex = 1;
-            this.accountButton.Text = "View Account";
-            this.accountButton.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Pink;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Expense App";
             // 
-            // pictureBox1
+            // panel2
             // 
-            this.pictureBox1.BackgroundImage = global::Login.Properties.Resources.ExitIcon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 286);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 43);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panel2.Controls.Add(this.AboutUs_Button);
+            this.panel2.Controls.Add(this.Exit_Button);
+            this.panel2.Controls.Add(this.NewFile_Button);
+            this.panel2.Controls.Add(this.LoadFile_Button);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panel2.Location = new System.Drawing.Point(0, 69);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 575);
+            this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
             // 
-            // OpenFilePb
+            // AboutUs_Button
             // 
-            this.OpenFilePb.BackgroundImage = global::Login.Properties.Resources.LoadFileIcon;
-            this.OpenFilePb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.OpenFilePb.Location = new System.Drawing.Point(29, 203);
-            this.OpenFilePb.Name = "OpenFilePb";
-            this.OpenFilePb.Size = new System.Drawing.Size(47, 43);
-            this.OpenFilePb.TabIndex = 5;
-            this.OpenFilePb.TabStop = false;
+            this.AboutUs_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.AboutUs_Button.FlatAppearance.BorderSize = 0;
+            this.AboutUs_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AboutUs_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutUs_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.AboutUs_Button.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs_Button.Image")));
+            this.AboutUs_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AboutUs_Button.Location = new System.Drawing.Point(10, 264);
+            this.AboutUs_Button.Name = "AboutUs_Button";
+            this.AboutUs_Button.Size = new System.Drawing.Size(237, 55);
+            this.AboutUs_Button.TabIndex = 8;
+            this.AboutUs_Button.Text = "About us";
+            this.AboutUs_Button.UseVisualStyleBackColor = true;
+            this.AboutUs_Button.Visible = false;
             // 
-            // add
+            // Exit_Button
             // 
-            this.add.Image = global::Login.Properties.Resources.plus2;
-            this.add.Location = new System.Drawing.Point(28, 112);
-            this.add.Margin = new System.Windows.Forms.Padding(4);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(47, 43);
-            this.add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.add.TabIndex = 0;
-            this.add.TabStop = false;
+            this.Exit_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.Exit_Button.FlatAppearance.BorderSize = 0;
+            this.Exit_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.Exit_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exit_Button.Image")));
+            this.Exit_Button.Location = new System.Drawing.Point(10, 495);
+            this.Exit_Button.Name = "Exit_Button";
+            this.Exit_Button.Size = new System.Drawing.Size(205, 55);
+            this.Exit_Button.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.Exit_Button, "Exit");
+            this.Exit_Button.UseVisualStyleBackColor = true;
+            this.Exit_Button.Visible = false;
+            this.Exit_Button.Click += new System.EventHandler(this.Exit_Button_Click);
             // 
-            // account
+            // NewFile_Button
             // 
-            this.account.Image = global::Login.Properties.Resources.pro5_icon;
-            this.account.Location = new System.Drawing.Point(28, 23);
-            this.account.Margin = new System.Windows.Forms.Padding(4);
-            this.account.Name = "account";
-            this.account.Size = new System.Drawing.Size(47, 43);
-            this.account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.account.TabIndex = 0;
-            this.account.TabStop = false;
+            this.NewFile_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.NewFile_Button.FlatAppearance.BorderSize = 0;
+            this.NewFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewFile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewFile_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.NewFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("NewFile_Button.Image")));
+            this.NewFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NewFile_Button.Location = new System.Drawing.Point(10, 141);
+            this.NewFile_Button.Name = "NewFile_Button";
+            this.NewFile_Button.Size = new System.Drawing.Size(237, 55);
+            this.NewFile_Button.TabIndex = 6;
+            this.NewFile_Button.Text = "New File";
+            this.NewFile_Button.UseVisualStyleBackColor = true;
+            this.NewFile_Button.Visible = false;
+            this.NewFile_Button.Click += new System.EventHandler(this.NewFile_Button_Click);
+            // 
+            // LoadFile_Button
+            // 
+            this.LoadFile_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.LoadFile_Button.FlatAppearance.BorderSize = 0;
+            this.LoadFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadFile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadFile_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.LoadFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("LoadFile_Button.Image")));
+            this.LoadFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LoadFile_Button.Location = new System.Drawing.Point(16, 203);
+            this.LoadFile_Button.Name = "LoadFile_Button";
+            this.LoadFile_Button.Size = new System.Drawing.Size(230, 55);
+            this.LoadFile_Button.TabIndex = 5;
+            this.LoadFile_Button.Text = "Load File";
+            this.LoadFile_Button.UseVisualStyleBackColor = true;
+            this.LoadFile_Button.Visible = false;
+            this.LoadFile_Button.Click += new System.EventHandler(this.LoadFile_Button_Click);
+            // 
+            // NotificationList_panel
+            // 
+            this.NotificationList_panel.BackColor = System.Drawing.Color.White;
+            this.NotificationList_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NotificationList_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.NotificationList_panel.Location = new System.Drawing.Point(810, 83);
+            this.NotificationList_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.NotificationList_panel.Name = "NotificationList_panel";
+            this.NotificationList_panel.Size = new System.Drawing.Size(197, 283);
+            this.NotificationList_panel.TabIndex = 2;
+            this.NotificationList_panel.Visible = false;
+            // 
+            // User_Panel
+            // 
+            this.User_Panel.BackColor = System.Drawing.Color.White;
+            this.User_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.User_Panel.Controls.Add(this.Profile_Button);
+            this.User_Panel.Controls.Add(this.Calendar_Button);
+            this.User_Panel.Controls.Add(this.Reports_Button);
+            this.User_Panel.Controls.Add(this.LogOut_Button);
+            this.User_Panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.User_Panel.Location = new System.Drawing.Point(924, 83);
+            this.User_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.User_Panel.Name = "User_Panel";
+            this.User_Panel.Size = new System.Drawing.Size(98, 143);
+            this.User_Panel.TabIndex = 3;
+            this.User_Panel.Visible = false;
+            // 
+            // Profile_Button
+            // 
+            this.Profile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_Button.Location = new System.Drawing.Point(2, 2);
+            this.Profile_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Profile_Button.Name = "Profile_Button";
+            this.Profile_Button.Size = new System.Drawing.Size(90, 30);
+            this.Profile_Button.TabIndex = 0;
+            this.Profile_Button.Text = "Profile";
+            this.Profile_Button.UseVisualStyleBackColor = true;
+            // 
+            // Calendar_Button
+            // 
+            this.Calendar_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendar_Button.Location = new System.Drawing.Point(2, 36);
+            this.Calendar_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Calendar_Button.Name = "Calendar_Button";
+            this.Calendar_Button.Size = new System.Drawing.Size(90, 30);
+            this.Calendar_Button.TabIndex = 1;
+            this.Calendar_Button.Text = "Calendar";
+            this.Calendar_Button.UseVisualStyleBackColor = true;
+            // 
+            // Reports_Button
+            // 
+            this.Reports_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports_Button.Location = new System.Drawing.Point(2, 70);
+            this.Reports_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Reports_Button.Name = "Reports_Button";
+            this.Reports_Button.Size = new System.Drawing.Size(90, 30);
+            this.Reports_Button.TabIndex = 2;
+            this.Reports_Button.Text = "Reports";
+            this.Reports_Button.UseVisualStyleBackColor = true;
+            // 
+            // LogOut_Button
+            // 
+            this.LogOut_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut_Button.Location = new System.Drawing.Point(2, 104);
+            this.LogOut_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.LogOut_Button.Name = "LogOut_Button";
+            this.LogOut_Button.Size = new System.Drawing.Size(90, 30);
+            this.LogOut_Button.TabIndex = 3;
+            this.LogOut_Button.Text = "Log out";
+            this.LogOut_Button.UseVisualStyleBackColor = true;
+            this.LogOut_Button.Click += new System.EventHandler(this.LogOut_Button_Click);
+            // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(0, 69);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1031, 575);
+            this.panelContent.TabIndex = 4;
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.groupBox1);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1031, 644);
+            this.Controls.Add(this.User_Panel);
+            this.Controls.Add(this.NotificationList_panel);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelContent);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OpenFilePb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.account)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuForm_FormClosing);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.User_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox account;
-        private System.Windows.Forms.PictureBox add;
-        private System.Windows.Forms.Button accountButton;
-        private Button LoadFileButton;
-        private Button NewFileButton;
-        private Button ExitButton;
-        private PictureBox OpenFilePb;
-        private PictureBox pictureBox1;
+        private Panel panel1;
+        private Panel panel2;
+        private Label label1;
+        private Button Menu_Button;
+        private Button Personal_Button;
+        private Button Notification_Button;
+        private Button NewFile_Button;
+        private Button LoadFile_Button;
+        private Button Exit_Button;
+        private FlowLayoutPanel NotificationList_panel;
+        private Button AboutUs_Button;
+        private ToolTip toolTip1;
+        private FlowLayoutPanel User_Panel;
+        private Button Profile_Button;
+        private Button Calendar_Button;
+        private Button Reports_Button;
+        private Button LogOut_Button;
+        private Panel panelContent;
     }
 }

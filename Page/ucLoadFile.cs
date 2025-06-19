@@ -6,20 +6,22 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Login.Page
 {
-    public partial class LoadFileForm : Form
+    public partial class ucLoadFile: UserControl
     {
-        private FMFile file = new FMFile();
-        public LoadFileForm(string path)
+        public event EventHandler ExitButtonClicked;
+        public ucLoadFile()
         {
-            
             InitializeComponent();
-            
+            this.MyExpenses.CellValidating += new DataGridViewCellValidatingEventHandler(MyExpenses_CellValidating);
+        }
+        private FMFile file = new FMFile();
+        public void LoadFile(string path)
+        {
             FileName.Text = path.Remove(path.Length - 4).Substring(path.LastIndexOf('\\') + 1).Replace('_', ' ');
             file.SetPath(path);
             file.LoadTotable(MyExpenses);
@@ -30,9 +32,28 @@ namespace Login.Page
             MaxMoneyUsedDay();
             MaxMoneyMakedDay();
         }
+
         private void SaveButton_Click(object sender, EventArgs e)
         {
             file.SaveFrom(MyExpenses);
+            MessageBox.Show("Saved successfully");
+        }
+
+        private void MyExpenses_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (MyExpenses.Columns[e.ColumnIndex].Name == "Date")
+            {
+                if (string.IsNullOrEmpty(e.FormattedValue.ToString()) || MyExpenses.Rows[e.RowIndex].IsNewRow)
+                {
+                    return;
+                }
+                DateTime parsedDate;
+                if (!DateTime.TryParseExact(e.FormattedValue.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate))
+                {
+                    MessageBox.Show("Please enter in 'dd/MM/yyyy' format", "Invalid date format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
         }
         private void Sumres_Calculate()
         {
@@ -106,18 +127,18 @@ namespace Login.Page
         }
         private void MyExpenses_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             Sumres_Calculate();
             OutRes_Calculate();
             InRes_Calculate();
             MaxMoneyUsedDay();
             MaxMoneyMakedDay();
-            
+
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
@@ -127,7 +148,7 @@ namespace Login.Page
             switch (e.ColumnIndex)
             {
                 case 0:
-                   
+
                     if (int.TryParse(e.FormattedValue.ToString(), out int month) == false || month <= 0 || month > 31)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
@@ -135,15 +156,23 @@ namespace Login.Page
                     }
                     break;
                 case 2:
-                    
-                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out long value) == false)
+                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[3].Value.ToString(), out long value))
+                    {
+                        MessageBox.Show("Spend and Earn can not be on the same row");
+                        e.Cancel = true;
+                    }
+                    if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
                         e.Cancel = true;
                     }
                     break;
                 case 3:
-                    
+                    if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[2].Value.ToString(), out value))
+                    {
+                        MessageBox.Show("Spend and Earn can not be on the same row");
+                        e.Cancel = true;
+                    }
                     if (long.TryParse(e.FormattedValue.ToString().Replace(".", ""), out value) == false)
                     {
                         MessageBox.Show("Incorrect value, please type in again");
@@ -154,7 +183,7 @@ namespace Login.Page
                 default:
                     break;
             }
-            
+
         }
 
         private void MyExpenses_CellParsing(object sender, DataGridViewCellParsingEventArgs e)
@@ -178,24 +207,6 @@ namespace Login.Page
                     e.Value = Value.ToString("N0", new CultureInfo("de-DE"));
                     e.FormattingApplied = true;
                 }
-            }
-        }
-
-        private void MyExpenses_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        {
-            int cellidx;
-            if (e.ColumnIndex == 2)
-                cellidx = 3;
-            else if (e.ColumnIndex == 3)
-                cellidx = 2;
-            else
-                return;
-            if (MyExpenses.Rows[e.RowIndex].Cells[cellidx].Value == null)
-                return;
-            if (long.TryParse(MyExpenses.Rows[e.RowIndex].Cells[cellidx].Value.ToString(),out long value))
-            {
-                MessageBox.Show("Error");
-                e.Cancel = true;
             }
         }
     }

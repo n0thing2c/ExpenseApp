@@ -12,33 +12,32 @@ using System.Windows.Forms;
 
 namespace Login.Page
 {
-    public partial class NewFileForm : Form
+    public partial class ucNewFile : UserControl
     {
         string user;
-        public NewFileForm(string username)
+        public event EventHandler ExitButtonClicked;
+        public event Action<string> FileCreated;
+        public ucNewFile(string username)
         {
             InitializeComponent();
-            user= username;
+            user = username;
         }
-        
+
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         private void MakeFileButton_Click_1(object sender, EventArgs e)
         {
             string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string folder = Path.Combine(repoPath, "Operation","UserFiles",user,"FMFiles");
+            string folder = Path.Combine(repoPath, "Operation", "UserFiles", user, "FMFiles");
             string name = new CultureInfo("en-US").DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Expenses.csv";
             string path = Path.Combine(folder, name);
             FMFile file = new FMFile();
             file.Create(path);
-            this.Hide();
-            LoadFileForm l = new LoadFileForm(path);
-            this.Close();
-            l.Show();
+            FileCreated?.Invoke(path);
         }
     }
 }

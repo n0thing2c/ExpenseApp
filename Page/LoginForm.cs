@@ -44,8 +44,10 @@ namespace Login.Page
                 string convert = txtUsername.Text + ":" + txtPassword.Text;
                 File.AppendAllText(path, txtUsername.Text + Environment.NewLine);
                 File.AppendAllText(path, txtPassword.Text + Environment.NewLine);
-                new MenuForm(acc.getUserName()).Show();
+                MenuForm mForm =  new MenuForm(acc.getUserName());
+                mForm.Show();
                 this.Hide();
+                mForm.FormClosed += (s, args) => this.Show();
             }
             else
             {

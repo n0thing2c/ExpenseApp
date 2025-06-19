@@ -11,6 +11,7 @@ namespace Login.Operation.UserLog
     {
         private string user;
         private string pass;
+       
         public Account() { }
         public Account(string username, string password)
         {
@@ -19,6 +20,7 @@ namespace Login.Operation.UserLog
         }
         public void signUp()
         {
+            //Path pt = new Path("Operation",....)
             string convert = user + ":" + pass;
             string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
             string path = Path.Combine(repoPath, "Operation", "UserLog" , "userPass.txt");

@@ -50,17 +50,17 @@ namespace Login.Page
             // 
             this.panel2.Controls.Add(this.MonthPicker);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(21, 13);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(16, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 59);
+            this.panel2.Size = new System.Drawing.Size(258, 48);
             this.panel2.TabIndex = 0;
             // 
             // MonthPicker
             // 
             this.MonthPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthPicker.Location = new System.Drawing.Point(176, 17);
-            this.MonthPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MonthPicker.Location = new System.Drawing.Point(132, 14);
+            this.MonthPicker.Margin = new System.Windows.Forms.Padding(2);
             this.MonthPicker.Maximum = new decimal(new int[] {
             12,
             0,
@@ -72,7 +72,7 @@ namespace Login.Page
             0,
             0});
             this.MonthPicker.Name = "MonthPicker";
-            this.MonthPicker.Size = new System.Drawing.Size(150, 28);
+            this.MonthPicker.Size = new System.Drawing.Size(112, 24);
             this.MonthPicker.TabIndex = 3;
             this.MonthPicker.Value = new decimal(new int[] {
             6,
@@ -84,9 +84,10 @@ namespace Login.Page
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Location = new System.Drawing.Point(2, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 22);
+            this.label1.Size = new System.Drawing.Size(130, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Month of expense:";
             // 
@@ -94,17 +95,17 @@ namespace Login.Page
             // 
             this.panel3.Controls.Add(this.YearPicker);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(21, 87);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(16, 71);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(341, 66);
+            this.panel3.Size = new System.Drawing.Size(256, 54);
             this.panel3.TabIndex = 2;
             // 
             // YearPicker
             // 
             this.YearPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearPicker.Location = new System.Drawing.Point(176, 18);
-            this.YearPicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.YearPicker.Location = new System.Drawing.Point(132, 15);
+            this.YearPicker.Margin = new System.Windows.Forms.Padding(2);
             this.YearPicker.Maximum = new decimal(new int[] {
             1215752192,
             23,
@@ -116,7 +117,7 @@ namespace Login.Page
             0,
             0});
             this.YearPicker.Name = "YearPicker";
-            this.YearPicker.Size = new System.Drawing.Size(150, 28);
+            this.YearPicker.Size = new System.Drawing.Size(112, 24);
             this.YearPicker.TabIndex = 2;
             this.YearPicker.Value = new decimal(new int[] {
             2025,
@@ -128,9 +129,10 @@ namespace Login.Page
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 20);
+            this.label4.Location = new System.Drawing.Point(2, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 22);
+            this.label4.Size = new System.Drawing.Size(118, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "Year of expense:";
             // 
@@ -138,11 +140,12 @@ namespace Login.Page
             // 
             this.MakeFileButton.BackColor = System.Drawing.Color.Salmon;
             this.MakeFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MakeFileButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MakeFileButton.ForeColor = System.Drawing.Color.White;
-            this.MakeFileButton.Location = new System.Drawing.Point(243, 179);
-            this.MakeFileButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MakeFileButton.Location = new System.Drawing.Point(182, 145);
+            this.MakeFileButton.Margin = new System.Windows.Forms.Padding(2);
             this.MakeFileButton.Name = "MakeFileButton";
-            this.MakeFileButton.Size = new System.Drawing.Size(90, 30);
+            this.MakeFileButton.Size = new System.Drawing.Size(68, 24);
             this.MakeFileButton.TabIndex = 3;
             this.MakeFileButton.Text = "Make File";
             this.MakeFileButton.UseVisualStyleBackColor = false;
@@ -150,25 +153,26 @@ namespace Login.Page
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ExitButton);
             this.panel1.Controls.Add(this.MakeFileButton);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(4, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 9);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 221);
+            this.panel1.Size = new System.Drawing.Size(278, 180);
             this.panel1.TabIndex = 0;
             // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.Salmon;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(132, 179);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ExitButton.Location = new System.Drawing.Point(99, 145);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(90, 30);
+            this.ExitButton.Size = new System.Drawing.Size(68, 24);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Return";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -176,13 +180,13 @@ namespace Login.Page
             // 
             // NewFileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(381, 241);
+            this.ClientSize = new System.Drawing.Size(286, 196);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewFileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Them File";

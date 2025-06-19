@@ -1,13 +1,13 @@
 ﻿namespace Login.Page
 {
-    partial class LoadFileForm
+    partial class ucLoadFile
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,23 +20,27 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.MyExpenses = new System.Windows.Forms.DataGridView();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.resultpanel = new System.Windows.Forms.Panel();
             this.MostMakeDayRes = new System.Windows.Forms.Label();
             this.MostIncomeDay = new System.Windows.Forms.Label();
@@ -48,20 +52,87 @@
             this.SumOut = new System.Windows.Forms.Label();
             this.Sumres = new System.Windows.Forms.Label();
             this.Sumlabel = new System.Windows.Forms.Label();
-            this.MyExpenses = new System.Windows.Forms.DataGridView();
+            this.FileName = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Content = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.MoneyOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MoneyIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Means = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FileName = new System.Windows.Forms.Label();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.resultpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyExpenses)).BeginInit();
+            this.resultpanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // MyExpenses
+            // 
+            this.MyExpenses.AllowUserToResizeColumns = false;
+            this.MyExpenses.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyExpenses.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.MyExpenses.BackgroundColor = System.Drawing.Color.White;
+            this.MyExpenses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.MyExpenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.MyExpenses.ColumnHeadersHeight = 60;
+            this.MyExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.MyExpenses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Content,
+            this.MoneyOut,
+            this.MoneyIn,
+            this.Details,
+            this.Means});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MyExpenses.DefaultCellStyle = dataGridViewCellStyle9;
+            this.MyExpenses.GridColor = System.Drawing.Color.Black;
+            this.MyExpenses.Location = new System.Drawing.Point(185, 83);
+            this.MyExpenses.Margin = new System.Windows.Forms.Padding(2);
+            this.MyExpenses.Name = "MyExpenses";
+            this.MyExpenses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MyExpenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.MyExpenses.RowHeadersWidth = 45;
+            this.MyExpenses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyExpenses.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.MyExpenses.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyExpenses.RowTemplate.Height = 60;
+            this.MyExpenses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MyExpenses.Size = new System.Drawing.Size(732, 462);
+            this.MyExpenses.StandardTab = true;
+            this.MyExpenses.TabIndex = 5;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.Violet;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.PapayaWhip;
+            this.SaveButton.Location = new System.Drawing.Point(921, 499);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(91, 46);
+            this.SaveButton.TabIndex = 6;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // resultpanel
             // 
@@ -76,13 +147,12 @@
             this.resultpanel.Controls.Add(this.SumOut);
             this.resultpanel.Controls.Add(this.Sumres);
             this.resultpanel.Controls.Add(this.Sumlabel);
-            this.resultpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultpanel.ForeColor = System.Drawing.Color.White;
-            this.resultpanel.Location = new System.Drawing.Point(25, 143);
+            this.resultpanel.Location = new System.Drawing.Point(2, 124);
             this.resultpanel.Margin = new System.Windows.Forms.Padding(2);
             this.resultpanel.Name = "resultpanel";
-            this.resultpanel.Size = new System.Drawing.Size(177, 246);
-            this.resultpanel.TabIndex = 3;
+            this.resultpanel.Size = new System.Drawing.Size(179, 236);
+            this.resultpanel.TabIndex = 10;
             // 
             // MostMakeDayRes
             // 
@@ -199,66 +269,42 @@
             this.Sumlabel.TabIndex = 3;
             this.Sumlabel.Text = "Net Balance:";
             // 
-            // MyExpenses
+            // FileName
             // 
-            this.MyExpenses.AllowUserToResizeColumns = false;
-            this.MyExpenses.AllowUserToResizeRows = false;
-            this.MyExpenses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.MyExpenses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.MyExpenses.BackgroundColor = System.Drawing.Color.White;
-            this.MyExpenses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.MyExpenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.MyExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MyExpenses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Content,
-            this.MoneyOut,
-            this.MoneyIn,
-            this.Details,
-            this.Means});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MyExpenses.DefaultCellStyle = dataGridViewCellStyle8;
-            this.MyExpenses.GridColor = System.Drawing.Color.Black;
-            this.MyExpenses.Location = new System.Drawing.Point(206, 122);
-            this.MyExpenses.Margin = new System.Windows.Forms.Padding(2);
-            this.MyExpenses.Name = "MyExpenses";
-            this.MyExpenses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MyExpenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.MyExpenses.RowHeadersWidth = 45;
-            this.MyExpenses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.MyExpenses.Size = new System.Drawing.Size(1137, 661);
-            this.MyExpenses.TabIndex = 4;
-            this.MyExpenses.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.MyExpenses_CellBeginEdit);
-            this.MyExpenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.MyExpenses_CellFormatting);
-            this.MyExpenses.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.MyExpenses_CellParsing);
-            this.MyExpenses.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.CellValidating);
-            this.MyExpenses.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.MyExpenses_CellValueChanged);
+            this.FileName.AutoSize = true;
+            this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileName.Location = new System.Drawing.Point(216, 29);
+            this.FileName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FileName.Name = "FileName";
+            this.FileName.Size = new System.Drawing.Size(127, 29);
+            this.FileName.TabIndex = 11;
+            this.FileName.Text = "FileName";
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.Black;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.Color.PapayaWhip;
+            this.ExitButton.Location = new System.Drawing.Point(47, 499);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(91, 46);
+            this.ExitButton.TabIndex = 12;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // Date
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Date.FillWeight = 64.17112F;
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Date.FillWeight = 32F;
             this.Date.HeaderText = "Day";
             this.Date.MinimumWidth = 6;
             this.Date.Name = "Date";
@@ -266,9 +312,12 @@
             // 
             // Content
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Content.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Content.FillWeight = 78.60345F;
+            this.Content.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Content.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Content.FillWeight = 32F;
             this.Content.HeaderText = "Content";
             this.Content.Items.AddRange(new object[] {
             "Rent",
@@ -282,50 +331,68 @@
             "Medicals",
             "Entertainment",
             "Others"});
-            this.Content.MinimumWidth = 6;
+            this.Content.MinimumWidth = 8;
             this.Content.Name = "Content";
             this.Content.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Content.Width = 120;
             // 
             // MoneyOut
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Crimson;
-            this.MoneyOut.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MoneyOut.FillWeight = 102.711F;
+            this.MoneyOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MoneyOut.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MoneyOut.FillWeight = 20.94728F;
             this.MoneyOut.HeaderText = "Spend";
             this.MoneyOut.MinimumWidth = 6;
             this.MoneyOut.Name = "MoneyOut";
             this.MoneyOut.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MoneyOut.Width = 102;
             // 
             // MoneyIn
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen;
-            this.MoneyIn.DefaultCellStyle = dataGridViewCellStyle5;
-            this.MoneyIn.FillWeight = 95.73236F;
+            this.MoneyIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Format = "N0";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MoneyIn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MoneyIn.FillWeight = 19.52403F;
             this.MoneyIn.HeaderText = "Earn";
             this.MoneyIn.MinimumWidth = 6;
             this.MoneyIn.Name = "MoneyIn";
-            this.MoneyIn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.MoneyIn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.MoneyIn.Width = 102;
             // 
             // Details
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Details.FillWeight = 177.2692F;
+            this.Details.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Details.FillWeight = 19.00101F;
             this.Details.HeaderText = "Description";
-            this.Details.MinimumWidth = 6;
+            this.Details.MinimumWidth = 8;
             this.Details.Name = "Details";
             this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Details.Width = 153;
             // 
             // Means
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Means.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Means.FillWeight = 81.5128F;
+            this.Means.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Means.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Means.FillWeight = 16.62404F;
             this.Means.HeaderText = "Transaction method";
             this.Means.Items.AddRange(new object[] {
             "Momo",
@@ -343,71 +410,23 @@
             this.Means.MinimumWidth = 6;
             this.Means.Name = "Means";
             this.Means.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Means.Width = 108;
             // 
-            // label1
+            // ucLoadFile
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(447, 91);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 26);
-            this.label1.TabIndex = 7;
-            // 
-            // FileName
-            // 
-            this.FileName.AutoSize = true;
-            this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FileName.Location = new System.Drawing.Point(20, 26);
-            this.FileName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.FileName.Name = "FileName";
-            this.FileName.Size = new System.Drawing.Size(127, 29);
-            this.FileName.TabIndex = 8;
-            this.FileName.Text = "FileName";
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Location = new System.Drawing.Point(1139, 22);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(91, 46);
-            this.ExitButton.TabIndex = 6;
-            this.ExitButton.Text = "Return";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Location = new System.Drawing.Point(1252, 22);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(91, 46);
-            this.SaveButton.TabIndex = 5;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // LoadFileForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1536, 864);
-            this.Controls.Add(this.FileName);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.FileName);
+            this.Controls.Add(this.resultpanel);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.MyExpenses);
-            this.Controls.Add(this.resultpanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "LoadFileForm";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "LoadFile";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "ucLoadFile";
+            this.Size = new System.Drawing.Size(1031, 575);
+            ((System.ComponentModel.ISupportInitialize)(this.MyExpenses)).EndInit();
             this.resultpanel.ResumeLayout(false);
             this.resultpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MyExpenses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,6 +434,8 @@
 
         #endregion
 
+        private System.Windows.Forms.DataGridView MyExpenses;
+        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Panel resultpanel;
         private System.Windows.Forms.Label MostMakeDayRes;
         private System.Windows.Forms.Label MostIncomeDay;
@@ -426,11 +447,8 @@
         private System.Windows.Forms.Label SumOut;
         private System.Windows.Forms.Label Sumres;
         private System.Windows.Forms.Label Sumlabel;
-        private System.Windows.Forms.DataGridView MyExpenses;
-        private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label FileName;
+        private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewComboBoxColumn Content;
         private System.Windows.Forms.DataGridViewTextBoxColumn MoneyOut;

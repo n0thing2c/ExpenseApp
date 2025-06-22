@@ -9,7 +9,7 @@ namespace Login.Page
 {
     internal class AppFile
     {
-        private string fullpath;
+        protected string fullpath;
         public AppFile()
         {
             fullpath = "";
@@ -40,7 +40,7 @@ namespace Login.Page
                 MessageBox.Show("Error:\n" + ex.Message);
             }
         }
-        public void LoadTotable(DataGridView table)
+        public virtual void LoadTotable(DataGridView table)
         {
             table.Rows.Clear();
             using (var reader = new StreamReader(fullpath))
@@ -70,7 +70,7 @@ namespace Login.Page
             table.AllowUserToResizeColumns = false;
             table.AllowUserToResizeRows = false;
         }
-        public void SaveFrom(DataGridView table)
+        public virtual void SaveFrom(DataGridView table)
         {
             using (var writer = new StreamWriter(fullpath))
             {

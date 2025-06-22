@@ -53,6 +53,7 @@ namespace Login.Page
             {
                 string filePath = filePaths[idx];
                 File.Delete(filePath);
+                filePaths.RemoveAt(idx);
             }
         }
         public void LoadAllFilesToListBox(ListBox lb)

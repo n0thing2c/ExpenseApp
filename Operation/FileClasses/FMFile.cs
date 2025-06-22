@@ -10,7 +10,7 @@ namespace Login.Page
     //FM: Financial Management
     internal class FMFile:AppFile
     {
-        private string fullpath;
+        
         public FMFile()
         {
             fullpath = "";

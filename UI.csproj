@@ -87,6 +87,42 @@
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Operation\UserLog\Account.cs" />
+    <Compile Include="Page\ucLoadFMFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucLoadFMFile.Designer.cs">
+      <DependentUpon>ucLoadFMFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucNewFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucNewFile.Designer.cs">
+      <DependentUpon>ucNewFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucPickFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucPickFile.Designer.cs">
+      <DependentUpon>ucPickFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucLoadMDFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucLoadMDFile.Designer.cs">
+      <DependentUpon>ucLoadMDFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucPersonInfo.Designer.cs">
+      <DependentUpon>ucPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucPickFileType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucPickFileType.Designer.cs">
+      <DependentUpon>ucPickFileType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Page\LoadFileForm.resx">
@@ -103,6 +139,9 @@
     <EmbeddedResource Include="Page\NewFileForm.resx">
       <DependentUpon>NewFileForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucPersonInfo.resx">
+      <DependentUpon>ucPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Page\PickFileForm.resx">
       <DependentUpon>PickFileForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,20 +149,35 @@
       <DependentUpon>SignUpForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucLoadFMFile.resx">
+      <DependentUpon>ucLoadFMFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucNewFile.resx">
+      <DependentUpon>ucNewFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucPickFile.resx">
+      <DependentUpon>ucPickFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucLoadMDFile.resx">
+      <DependentUpon>ucLoadMDFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucPickFileType.resx">
+      <DependentUpon>ucPickFileType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -146,6 +200,8 @@
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
     <Content Include="Resources\close-eye.png" />
+    <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%291.png" />
+    <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%29.png" />
     <None Include="Resources\return.png" />
     <None Include="Resources\saveFile1.png" />
     <None Include="Resources\saveFile.png" />
@@ -154,6 +210,7 @@
     <None Include="Resources\close-eye2.png" />
     <None Include="Resources\LoadFileIcon.jpeg" />
     <None Include="Resources\ExitIcon.png" />
+    <None Include="Resources\legend.png" />
     <Content Include="Resources\open-eye.png" />
     <None Include="Resources\plus2.png" />
     <None Include="Resources\plus.jpg" />

@@ -1,0 +1,153 @@
+﻿namespace Login.Page
+{
+    partial class ucPickFile
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.OpenButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.FilesAreBelowLabel = new System.Windows.Forms.Label();
+            this.listBoxFiles = new System.Windows.Forms.ListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.ExitButton);
+            this.panel1.Controls.Add(this.OpenButton);
+            this.panel1.Controls.Add(this.DeleteButton);
+            this.panel1.Controls.Add(this.listBoxFiles);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(575, 343);
+            this.panel1.TabIndex = 3;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.Location = new System.Drawing.Point(235, 295);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(93, 33);
+            this.ExitButton.TabIndex = 5;
+            this.ExitButton.Text = "Return";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // OpenButton
+            // 
+            this.OpenButton.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.OpenButton.Location = new System.Drawing.Point(433, 295);
+            this.OpenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OpenButton.Name = "OpenButton";
+            this.OpenButton.Size = new System.Drawing.Size(93, 33);
+            this.OpenButton.TabIndex = 4;
+            this.OpenButton.Text = "Open";
+            this.OpenButton.UseVisualStyleBackColor = true;
+            this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.ForeColor = System.Drawing.Color.Maroon;
+            this.DeleteButton.Location = new System.Drawing.Point(334, 295);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(93, 33);
+            this.DeleteButton.TabIndex = 3;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // FilesAreBelowLabel
+            // 
+            this.FilesAreBelowLabel.AutoSize = true;
+            this.FilesAreBelowLabel.BackColor = System.Drawing.Color.Transparent;
+            this.FilesAreBelowLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilesAreBelowLabel.ForeColor = System.Drawing.Color.Black;
+            this.FilesAreBelowLabel.Location = new System.Drawing.Point(165, 4);
+            this.FilesAreBelowLabel.Name = "FilesAreBelowLabel";
+            this.FilesAreBelowLabel.Size = new System.Drawing.Size(238, 45);
+            this.FilesAreBelowLabel.TabIndex = 2;
+            this.FilesAreBelowLabel.Text = "Available Files";
+            // 
+            // listBoxFiles
+            // 
+            this.listBoxFiles.AccessibleName = "";
+            this.listBoxFiles.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxFiles.FormattingEnabled = true;
+            this.listBoxFiles.ItemHeight = 31;
+            this.listBoxFiles.Location = new System.Drawing.Point(25, 89);
+            this.listBoxFiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxFiles.Name = "listBoxFiles";
+            this.listBoxFiles.Size = new System.Drawing.Size(526, 190);
+            this.listBoxFiles.TabIndex = 1;
+            this.listBoxFiles.DoubleClick += new System.EventHandler(this.listBoxFiles_DoubleClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Salmon;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.FilesAreBelowLabel);
+            this.panel2.Location = new System.Drawing.Point(-1, -3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(578, 56);
+            this.panel2.TabIndex = 6;
+            // 
+            // ucPickFile
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "ucPickFile";
+            this.Size = new System.Drawing.Size(581, 347);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button OpenButton;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Label FilesAreBelowLabel;
+        private System.Windows.Forms.ListBox listBoxFiles;
+        private System.Windows.Forms.Panel panel2;
+    }
+}

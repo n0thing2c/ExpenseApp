@@ -123,6 +123,18 @@
     <Compile Include="Page\ucPickFileType.Designer.cs">
       <DependentUpon>ucPickFileType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Page\ucLogIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucLogIn.Designer.cs">
+      <DependentUpon>ucLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucSignUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucSignUp.Designer.cs">
+      <DependentUpon>ucSignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Page\LoadFileForm.resx">

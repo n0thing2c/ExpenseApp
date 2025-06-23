@@ -7,51 +7,48 @@ using System.Threading.Tasks;
 
 namespace Login.Operation.UserLog
 {
-    internal class Account
+    public class Account
     {
         private string user;
         private string pass;
-       
-        public Account() { }
+        private static Account currentAcc;
+        private Account() { }
         public Account(string username, string password)
         {
             user = username;
             pass = password;
         }
-        public void signUp()
+        public static Account GetCurrentAcc()
         {
-            //Path pt = new Path("Operation",....)
-            string convert = user + ":" + pass;
-            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string path = Path.Combine(repoPath, "Operation", "UserLog" , "userPass.txt");
-            try
+            if (currentAcc == null)
             {
-                File.AppendAllText(path, convert + Environment.NewLine);
+                throw new InvalidOperationException("No account is currently set.");
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("File error: " + ex.Message);
-            }
-           
+            return currentAcc;
         }
+        public static Account ModifyAcc(string username, string password)
+        {
+            if (currentAcc == null)
+            {
+                currentAcc = new Account(username, password);
+            }
+            else
+            {
+                currentAcc.user = username;
+                currentAcc.pass = password;
+            }    
+            return currentAcc;
+        }
+       
         public string getUserName()
         {
             return user;
         }
-        public void createUserFolder()
+        public string getPassword()
         {
-            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string path = Path.Combine(repoPath, "Operation", "UserFiles", user);
-            try
-            {
-                Directory.CreateDirectory(Path.Combine(path, "FMFiles"));
-                Directory.CreateDirectory(Path.Combine(path, "MDFiles"));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Can not create user mgmtfiles folder" + ex.Message);
-            }
+            return pass;
         }
+
         public bool isValid()
         {
             string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
@@ -73,5 +70,6 @@ namespace Login.Operation.UserLog
                 return false;
             }
         }
+
     }
 }

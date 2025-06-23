@@ -11,22 +11,13 @@ using System.Windows.Forms;
 using Login.Operation.UserLog;
 namespace Login.Page
 {
-    public partial class SignUpForm : Form
+    public partial class SignUpControl : Form
     {
-        public event EventHandler SignUpClicked;
-        public SignUpForm()
+        public SignUpControl()
         {
             InitializeComponent();
-            ucSignUp uc = new ucSignUp(this);
         }
-        public string getUserName()
-        {
-            return txtUsername.Text;
-        }
-        public string getPassword()
-        {
-            return txtPassword.Text;
-        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -43,7 +34,12 @@ namespace Login.Page
             }
             else
             {
-                SignUpClicked?.Invoke(this, EventArgs.Empty);
+                Account acc = new Account(txtUsername.Text, txtPassword.Text);
+                acc.signUp();
+                acc.createUserFolder();
+                MessageBox.Show("Sign up successfully, Log in to continue");
+                this.Hide();
+                new LoginControl().Show();
             }
         }
 

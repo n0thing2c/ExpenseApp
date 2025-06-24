@@ -33,40 +33,40 @@ namespace Login.Page
         private void NewFile_Button_Click(object sender, EventArgs e)
         {
             ucPickFileType ucPFT = new ucPickFileType(user, "New");
-            ucPFT.NewFile += uc_NewFile;
-            ucPFT.ExitClicked += uc_ExitButtonClicked;
+            ucPFT.NewFile += NewFileControl;
+            ucPFT.ExitClicked += ExitButtonClickedControl;
             LoadUserControl(ucPFT);
         }
 
         private void LoadFile_Button_Click(object sender, EventArgs e)
         {
             ucPickFileType ucPFT = new ucPickFileType(user, "Pick");
-            ucPFT.PickFile += uc_PickFile;
-            ucPFT.ExitClicked += uc_ExitButtonClicked;
+            ucPFT.PickFile += PickFileControl;
+            ucPFT.ExitClicked += ExitButtonClickedControl;
             LoadUserControl(ucPFT);
         }
-        private void uc_NewFile(string type)
+        private void NewFileControl(string type)
         {
             ucNewFile ucNF = new ucNewFile(user,type);
-            ucNF.ExitButtonClicked += uc_ExitButtonClicked;
-            ucNF.FileCreated += uc_OpenFMFileClicked;
+            ucNF.ExitButtonClicked += ExitButtonClickedControl;
+            ucNF.FileCreated += OpenFileClickedControl;
             LoadUserControl(ucNF);
         }
-        private void uc_PickFile(string type)
+        private void PickFileControl(string type)
         {
             ucPickFile ucPF = new ucPickFile(type);
             ucPF.LoadFilesForUser(user);
-            ucPF.ExitButtonClicked += uc_ExitButtonClicked;
-            ucPF.OpenFileClicked += uc_OpenFMFileClicked;
+            ucPF.ExitButtonClicked += ExitButtonClickedControl;
+            ucPF.OpenFileClicked += OpenFileClickedControl;
             LoadUserControl(ucPF);
         }
 
-        private void uc_ExitButtonClicked(object sender, EventArgs e)
+        private void ExitButtonClickedControl(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
         }
 
-        private void uc_OpenFMFileClicked(string filepath,string type)
+        private void OpenFileClickedControl(string filepath,string type)
         {
             if (panel2.Visible == panel1.Visible)
             {
@@ -80,7 +80,7 @@ namespace Login.Page
                 ucLF.Dock = DockStyle.Fill;
                 ucLF.Anchor = AnchorStyles.None;
                 LoadUserControl(ucLF);
-                ucLF.ExitButtonClicked += uc_ExitButtonClicked;
+                ucLF.ExitButtonClicked += ExitButtonClickedControl;
                 ucLF.LoadFile(filepath);
             }
             else if(type =="MD")
@@ -89,7 +89,7 @@ namespace Login.Page
                 ucMD.Dock = DockStyle.Fill;
                 ucMD.Anchor = AnchorStyles.None;
                 LoadUserControl(ucMD);
-                ucMD.ExitButtonClicked += uc_ExitButtonClicked;
+                ucMD.ExitButtonClicked += ExitButtonClickedControl;
                 ucMD.LoadFile(filepath);
             }
         }

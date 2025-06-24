@@ -19,11 +19,11 @@ namespace Login.Page
         public ucSignUp(SignUpForm form)
         {
             view = form;
-            view.SignUpClicked += SignUpClickedControll;
+            view.SignUpClicked += SignUpClickedControl;
             repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
             InitializeComponent();
         }
-        private void SignUpClickedControll(object sender, EventArgs e)
+        private void SignUpClickedControl(object sender, EventArgs e)
         {
             string user = view.getUserName();
             string pass = view.getPassword();

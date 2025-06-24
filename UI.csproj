@@ -80,6 +80,12 @@
     <Compile Include="Page\PickFileForm.Designer.cs">
       <DependentUpon>PickFileForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Page\ucRemovePersonPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucRemovePersonPicker.Designer.cs">
+      <DependentUpon>ucRemovePersonPicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Page\SignUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Page\NewFileForm.resx">
       <DependentUpon>NewFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucRemovePersonPicker.resx">
+      <DependentUpon>ucRemovePersonPicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page\ucPersonInfo.resx">
       <DependentUpon>ucPersonInfo.cs</DependentUpon>

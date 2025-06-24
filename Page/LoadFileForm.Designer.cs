@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             this.resultpanel = new System.Windows.Forms.Panel();
             this.MostMakeDayRes = new System.Windows.Forms.Label();
             this.MostIncomeDay = new System.Windows.Forms.Label();
@@ -65,7 +65,8 @@
             // 
             // resultpanel
             // 
-            this.resultpanel.BackColor = System.Drawing.Color.Salmon;
+            this.resultpanel.BackColor = System.Drawing.Color.FloralWhite;
+            this.resultpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.resultpanel.Controls.Add(this.MostMakeDayRes);
             this.resultpanel.Controls.Add(this.MostIncomeDay);
             this.resultpanel.Controls.Add(this.MostSpendDayRes);
@@ -78,19 +79,20 @@
             this.resultpanel.Controls.Add(this.Sumlabel);
             this.resultpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultpanel.ForeColor = System.Drawing.Color.White;
-            this.resultpanel.Location = new System.Drawing.Point(3, 152);
-            this.resultpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.resultpanel.Location = new System.Drawing.Point(2, 122);
+            this.resultpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.resultpanel.Name = "resultpanel";
-            this.resultpanel.Size = new System.Drawing.Size(249, 312);
+            this.resultpanel.Size = new System.Drawing.Size(199, 250);
             this.resultpanel.TabIndex = 3;
             // 
             // MostMakeDayRes
             // 
             this.MostMakeDayRes.AutoSize = true;
-            this.MostMakeDayRes.ForeColor = System.Drawing.Color.MistyRose;
-            this.MostMakeDayRes.Location = new System.Drawing.Point(27, 262);
+            this.MostMakeDayRes.ForeColor = System.Drawing.Color.SeaGreen;
+            this.MostMakeDayRes.Location = new System.Drawing.Point(22, 210);
+            this.MostMakeDayRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MostMakeDayRes.Name = "MostMakeDayRes";
-            this.MostMakeDayRes.Size = new System.Drawing.Size(57, 20);
+            this.MostMakeDayRes.Size = new System.Drawing.Size(48, 17);
             this.MostMakeDayRes.TabIndex = 11;
             this.MostMakeDayRes.Text = "NULL";
             // 
@@ -98,20 +100,22 @@
             // 
             this.MostIncomeDay.AutoSize = true;
             this.MostIncomeDay.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MostIncomeDay.ForeColor = System.Drawing.Color.White;
-            this.MostIncomeDay.Location = new System.Drawing.Point(23, 219);
+            this.MostIncomeDay.ForeColor = System.Drawing.Color.Salmon;
+            this.MostIncomeDay.Location = new System.Drawing.Point(18, 175);
+            this.MostIncomeDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MostIncomeDay.Name = "MostIncomeDay";
-            this.MostIncomeDay.Size = new System.Drawing.Size(174, 28);
+            this.MostIncomeDay.Size = new System.Drawing.Size(135, 21);
             this.MostIncomeDay.TabIndex = 10;
             this.MostIncomeDay.Text = "Most earned day:";
             // 
             // MostSpendDayRes
             // 
             this.MostSpendDayRes.AutoSize = true;
-            this.MostSpendDayRes.ForeColor = System.Drawing.Color.MistyRose;
-            this.MostSpendDayRes.Location = new System.Drawing.Point(27, 192);
+            this.MostSpendDayRes.ForeColor = System.Drawing.Color.Crimson;
+            this.MostSpendDayRes.Location = new System.Drawing.Point(22, 154);
+            this.MostSpendDayRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MostSpendDayRes.Name = "MostSpendDayRes";
-            this.MostSpendDayRes.Size = new System.Drawing.Size(57, 20);
+            this.MostSpendDayRes.Size = new System.Drawing.Size(48, 17);
             this.MostSpendDayRes.TabIndex = 9;
             this.MostSpendDayRes.Text = "NULL";
             // 
@@ -119,20 +123,22 @@
             // 
             this.MostSpendDayLabel.AutoSize = true;
             this.MostSpendDayLabel.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MostSpendDayLabel.ForeColor = System.Drawing.Color.White;
-            this.MostSpendDayLabel.Location = new System.Drawing.Point(23, 153);
+            this.MostSpendDayLabel.ForeColor = System.Drawing.Color.Salmon;
+            this.MostSpendDayLabel.Location = new System.Drawing.Point(18, 122);
+            this.MostSpendDayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MostSpendDayLabel.Name = "MostSpendDayLabel";
-            this.MostSpendDayLabel.Size = new System.Drawing.Size(167, 28);
+            this.MostSpendDayLabel.Size = new System.Drawing.Size(129, 21);
             this.MostSpendDayLabel.TabIndex = 8;
             this.MostSpendDayLabel.Text = "Most spent day: ";
             // 
             // InRes
             // 
             this.InRes.AutoSize = true;
-            this.InRes.ForeColor = System.Drawing.Color.MistyRose;
-            this.InRes.Location = new System.Drawing.Point(169, 123);
+            this.InRes.ForeColor = System.Drawing.Color.Red;
+            this.InRes.Location = new System.Drawing.Point(135, 98);
+            this.InRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InRes.Name = "InRes";
-            this.InRes.Size = new System.Drawing.Size(57, 20);
+            this.InRes.Size = new System.Drawing.Size(48, 17);
             this.InRes.TabIndex = 7;
             this.InRes.Text = "NULL";
             // 
@@ -140,20 +146,22 @@
             // 
             this.SumIn.AutoSize = true;
             this.SumIn.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SumIn.ForeColor = System.Drawing.Color.White;
-            this.SumIn.Location = new System.Drawing.Point(23, 113);
+            this.SumIn.ForeColor = System.Drawing.Color.Salmon;
+            this.SumIn.Location = new System.Drawing.Point(18, 90);
+            this.SumIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SumIn.Name = "SumIn";
-            this.SumIn.Size = new System.Drawing.Size(128, 28);
+            this.SumIn.Size = new System.Drawing.Size(99, 21);
             this.SumIn.TabIndex = 6;
             this.SumIn.Text = "Total spend:";
             // 
             // OutRes
             // 
             this.OutRes.AutoSize = true;
-            this.OutRes.ForeColor = System.Drawing.Color.MistyRose;
-            this.OutRes.Location = new System.Drawing.Point(169, 83);
+            this.OutRes.ForeColor = System.Drawing.Color.LightGreen;
+            this.OutRes.Location = new System.Drawing.Point(135, 66);
+            this.OutRes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OutRes.Name = "OutRes";
-            this.OutRes.Size = new System.Drawing.Size(57, 20);
+            this.OutRes.Size = new System.Drawing.Size(48, 17);
             this.OutRes.TabIndex = 4;
             this.OutRes.Text = "NULL";
             // 
@@ -161,20 +169,22 @@
             // 
             this.SumOut.AutoSize = true;
             this.SumOut.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SumOut.ForeColor = System.Drawing.Color.White;
-            this.SumOut.Location = new System.Drawing.Point(23, 73);
+            this.SumOut.ForeColor = System.Drawing.Color.Salmon;
+            this.SumOut.Location = new System.Drawing.Point(18, 58);
+            this.SumOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SumOut.Name = "SumOut";
-            this.SumOut.Size = new System.Drawing.Size(140, 28);
+            this.SumOut.Size = new System.Drawing.Size(110, 21);
             this.SumOut.TabIndex = 5;
             this.SumOut.Text = "Total income:";
             // 
             // Sumres
             // 
             this.Sumres.AutoSize = true;
-            this.Sumres.ForeColor = System.Drawing.Color.MistyRose;
-            this.Sumres.Location = new System.Drawing.Point(169, 42);
+            this.Sumres.ForeColor = System.Drawing.Color.Black;
+            this.Sumres.Location = new System.Drawing.Point(135, 34);
+            this.Sumres.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Sumres.Name = "Sumres";
-            this.Sumres.Size = new System.Drawing.Size(57, 20);
+            this.Sumres.Size = new System.Drawing.Size(48, 17);
             this.Sumres.TabIndex = 3;
             this.Sumres.Text = "NULL";
             // 
@@ -182,10 +192,11 @@
             // 
             this.Sumlabel.AutoSize = true;
             this.Sumlabel.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sumlabel.ForeColor = System.Drawing.Color.White;
-            this.Sumlabel.Location = new System.Drawing.Point(23, 32);
+            this.Sumlabel.ForeColor = System.Drawing.Color.Salmon;
+            this.Sumlabel.Location = new System.Drawing.Point(18, 26);
+            this.Sumlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Sumlabel.Name = "Sumlabel";
-            this.Sumlabel.Size = new System.Drawing.Size(131, 28);
+            this.Sumlabel.Size = new System.Drawing.Size(103, 21);
             this.Sumlabel.TabIndex = 3;
             this.Sumlabel.Text = "Net Balance:";
             // 
@@ -197,13 +208,13 @@
             this.MyExpenses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.MyExpenses.BackgroundColor = System.Drawing.Color.White;
             this.MyExpenses.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.MyExpenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.White;
+            this.MyExpenses.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.MyExpenses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MyExpenses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Date,
@@ -212,30 +223,30 @@
             this.MoneyIn,
             this.Details,
             this.Means});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MyExpenses.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MyExpenses.DefaultCellStyle = dataGridViewCellStyle35;
             this.MyExpenses.GridColor = System.Drawing.Color.Black;
-            this.MyExpenses.Location = new System.Drawing.Point(258, 152);
-            this.MyExpenses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MyExpenses.Location = new System.Drawing.Point(206, 122);
+            this.MyExpenses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MyExpenses.Name = "MyExpenses";
             this.MyExpenses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MyExpenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MyExpenses.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.MyExpenses.RowHeadersWidth = 45;
             this.MyExpenses.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.MyExpenses.Size = new System.Drawing.Size(1421, 826);
+            this.MyExpenses.Size = new System.Drawing.Size(1137, 661);
             this.MyExpenses.TabIndex = 4;
             this.MyExpenses.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.MyExpenses_CellBeginEdit);
             this.MyExpenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.MyExpenses_CellFormatting);
@@ -245,9 +256,9 @@
             // 
             // Date
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
-            this.Date.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.LightCyan;
+            this.Date.DefaultCellStyle = dataGridViewCellStyle29;
             this.Date.FillWeight = 64.17112F;
             this.Date.HeaderText = "Day";
             this.Date.MinimumWidth = 6;
@@ -256,8 +267,8 @@
             // 
             // Content
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Content.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Content.DefaultCellStyle = dataGridViewCellStyle30;
             this.Content.FillWeight = 78.60345F;
             this.Content.HeaderText = "Content";
             this.Content.Items.AddRange(new object[] {
@@ -278,9 +289,9 @@
             // 
             // MoneyOut
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Crimson;
-            this.MoneyOut.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.Crimson;
+            this.MoneyOut.DefaultCellStyle = dataGridViewCellStyle31;
             this.MoneyOut.FillWeight = 102.711F;
             this.MoneyOut.HeaderText = "Spend";
             this.MoneyOut.MinimumWidth = 6;
@@ -289,9 +300,9 @@
             // 
             // MoneyIn
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SeaGreen;
-            this.MoneyIn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.SeaGreen;
+            this.MoneyIn.DefaultCellStyle = dataGridViewCellStyle32;
             this.MoneyIn.FillWeight = 95.73236F;
             this.MoneyIn.HeaderText = "Earn";
             this.MoneyIn.MinimumWidth = 6;
@@ -300,10 +311,10 @@
             // 
             // Details
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.DefaultCellStyle = dataGridViewCellStyle33;
             this.Details.FillWeight = 177.2692F;
             this.Details.HeaderText = "Description";
             this.Details.MinimumWidth = 6;
@@ -313,8 +324,8 @@
             // 
             // Means
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Means.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Means.DefaultCellStyle = dataGridViewCellStyle34;
             this.Means.FillWeight = 81.5128F;
             this.Means.HeaderText = "Transaction method";
             this.Means.Items.AddRange(new object[] {
@@ -338,18 +349,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(559, 114);
+            this.label1.Location = new System.Drawing.Point(447, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 32);
+            this.label1.Size = new System.Drawing.Size(0, 26);
             this.label1.TabIndex = 7;
             // 
             // FileName
             // 
             this.FileName.AutoSize = true;
             this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FileName.Location = new System.Drawing.Point(912, 45);
+            this.FileName.Location = new System.Drawing.Point(730, 36);
+            this.FileName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FileName.Name = "FileName";
-            this.FileName.Size = new System.Drawing.Size(148, 36);
+            this.FileName.Size = new System.Drawing.Size(127, 29);
             this.FileName.TabIndex = 8;
             this.FileName.Text = "FileName";
             // 
@@ -361,10 +374,10 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.Color.White;
-            this.ExitButton.Location = new System.Drawing.Point(22, 17);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExitButton.Location = new System.Drawing.Point(18, 14);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(133, 77);
+            this.ExitButton.Size = new System.Drawing.Size(106, 62);
             this.ExitButton.TabIndex = 6;
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -377,11 +390,11 @@
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(245, 17);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveButton.Location = new System.Drawing.Point(196, 14);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.SaveButton.Size = new System.Drawing.Size(114, 71);
+            this.SaveButton.Size = new System.Drawing.Size(91, 57);
             this.SaveButton.TabIndex = 5;
             this.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -389,10 +402,10 @@
             // 
             // LoadFileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1040, 784);
             this.Controls.Add(this.FileName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitButton);
@@ -400,6 +413,7 @@
             this.Controls.Add(this.MyExpenses);
             this.Controls.Add(this.resultpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoadFileForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "LoadFile";

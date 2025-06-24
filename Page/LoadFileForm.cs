@@ -22,7 +22,7 @@ namespace Login.Page
             
             FileName.Text = path.Remove(path.Length - 4).Substring(path.LastIndexOf('\\') + 1).Replace('_', ' ');
             file.SetPath(path);
-            file.LoadTotable(MyExpenses);
+            file.LoadToTable(MyExpenses);
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("de-DE");
             Sumres_Calculate();
             OutRes_Calculate();

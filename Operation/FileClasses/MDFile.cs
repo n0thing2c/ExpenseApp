@@ -82,7 +82,7 @@ namespace Login.Page
             }
                 
         }
-        public override void LoadTotable(DataGridView table)
+        public override void LoadToTable(DataGridView table)
         {
             string[] lines = File.ReadAllLines(fullpath);
             if (lines.Length == 0)

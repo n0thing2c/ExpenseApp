@@ -33,24 +33,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupExpenses = new System.Windows.Forms.DataGridView();
+            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Content = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NamePicker = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Spend = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddpersonButton = new System.Windows.Forms.Button();
             this.FileName = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.Result = new System.Windows.Forms.DataGridView();
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Content = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NamePicker = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Spend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemovePersonButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GroupExpenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Result)).BeginInit();
             this.SuspendLayout();
@@ -88,8 +89,8 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.GroupExpenses.DefaultCellStyle = dataGridViewCellStyle8;
             this.GroupExpenses.GridColor = System.Drawing.Color.Black;
-            this.GroupExpenses.Location = new System.Drawing.Point(51, 132);
-            this.GroupExpenses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GroupExpenses.Location = new System.Drawing.Point(38, 107);
+            this.GroupExpenses.Margin = new System.Windows.Forms.Padding(2);
             this.GroupExpenses.Name = "GroupExpenses";
             this.GroupExpenses.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -107,98 +108,13 @@
             this.GroupExpenses.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupExpenses.RowTemplate.Height = 60;
             this.GroupExpenses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.GroupExpenses.Size = new System.Drawing.Size(1270, 442);
+            this.GroupExpenses.Size = new System.Drawing.Size(952, 359);
             this.GroupExpenses.StandardTab = true;
             this.GroupExpenses.TabIndex = 5;
             this.GroupExpenses.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.GroupExpenses_CellFormatting);
             this.GroupExpenses.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.GroupExpenses_CellParsing);
             this.GroupExpenses.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.CellValidating);
             this.GroupExpenses.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GroupExpenses_CellValueChanged);
-            // 
-            // AddpersonButton
-            // 
-            this.AddpersonButton.BackColor = System.Drawing.Color.MidnightBlue;
-            this.AddpersonButton.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddpersonButton.ForeColor = System.Drawing.Color.White;
-            this.AddpersonButton.Location = new System.Drawing.Point(51, 56);
-            this.AddpersonButton.Name = "AddpersonButton";
-            this.AddpersonButton.Size = new System.Drawing.Size(160, 70);
-            this.AddpersonButton.TabIndex = 1;
-            this.AddpersonButton.Text = "Add person";
-            this.AddpersonButton.UseVisualStyleBackColor = false;
-            this.AddpersonButton.Click += new System.EventHandler(this.AddpersonButton_Click);
-            // 
-            // FileName
-            // 
-            this.FileName.AutoSize = true;
-            this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FileName.Location = new System.Drawing.Point(448, 66);
-            this.FileName.Name = "FileName";
-            this.FileName.Size = new System.Drawing.Size(174, 38);
-            this.FileName.TabIndex = 2;
-            this.FileName.Text = "File Name";
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.Color.Violet;
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.SaveButton.Location = new System.Drawing.Point(1219, 623);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(121, 57);
-            this.SaveButton.TabIndex = 7;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // Result
-            // 
-            this.Result.BackgroundColor = System.Drawing.Color.White;
-            this.Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.Result.ColumnHeadersHeight = 40;
-            this.Result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Result.GridColor = System.Drawing.Color.Black;
-            this.Result.Location = new System.Drawing.Point(247, 579);
-            this.Result.Name = "Result";
-            this.Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.Result.RowHeadersWidth = 51;
-            this.Result.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Result.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Result.RowTemplate.Height = 45;
-            this.Result.Size = new System.Drawing.Size(758, 111);
-            this.Result.TabIndex = 9;
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.BackColor = System.Drawing.Color.Black;
-            this.ExitButton.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.ExitButton.Location = new System.Drawing.Point(25, 623);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(121, 57);
-            this.ExitButton.TabIndex = 13;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Login.Properties.Resources.legend;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(1013, 590);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 14;
             // 
             // Day
             // 
@@ -257,7 +173,7 @@
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Spend.DefaultCellStyle = dataGridViewCellStyle6;
             this.Spend.FillWeight = 21F;
-            this.Spend.HeaderText = "Spend (VND)";
+            this.Spend.HeaderText = "Spend";
             this.Spend.MinimumWidth = 6;
             this.Spend.Name = "Spend";
             this.Spend.Width = 160;
@@ -274,11 +190,115 @@
             this.Description.Name = "Description";
             this.Description.Width = 250;
             // 
+            // AddpersonButton
+            // 
+            this.AddpersonButton.BackColor = System.Drawing.Color.MidnightBlue;
+            this.AddpersonButton.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddpersonButton.ForeColor = System.Drawing.Color.White;
+            this.AddpersonButton.Location = new System.Drawing.Point(38, 46);
+            this.AddpersonButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddpersonButton.Name = "AddpersonButton";
+            this.AddpersonButton.Size = new System.Drawing.Size(120, 57);
+            this.AddpersonButton.TabIndex = 1;
+            this.AddpersonButton.Text = "Add person";
+            this.AddpersonButton.UseVisualStyleBackColor = false;
+            this.AddpersonButton.Click += new System.EventHandler(this.AddpersonButton_Click);
+            // 
+            // FileName
+            // 
+            this.FileName.AutoSize = true;
+            this.FileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FileName.Location = new System.Drawing.Point(336, 54);
+            this.FileName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FileName.Name = "FileName";
+            this.FileName.Size = new System.Drawing.Size(146, 31);
+            this.FileName.TabIndex = 2;
+            this.FileName.Text = "File Name";
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.Violet;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.PapayaWhip;
+            this.SaveButton.Location = new System.Drawing.Point(914, 506);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(91, 46);
+            this.SaveButton.TabIndex = 7;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // Result
+            // 
+            this.Result.BackgroundColor = System.Drawing.Color.White;
+            this.Result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.Result.ColumnHeadersHeight = 40;
+            this.Result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Result.GridColor = System.Drawing.Color.Black;
+            this.Result.Location = new System.Drawing.Point(185, 470);
+            this.Result.Margin = new System.Windows.Forms.Padding(2);
+            this.Result.Name = "Result";
+            this.Result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.Result.RowHeadersWidth = 51;
+            this.Result.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Result.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Result.RowTemplate.Height = 45;
+            this.Result.Size = new System.Drawing.Size(568, 90);
+            this.Result.TabIndex = 9;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.Black;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.Color.PapayaWhip;
+            this.ExitButton.Location = new System.Drawing.Point(19, 506);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(91, 46);
+            this.ExitButton.TabIndex = 13;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Login.Properties.Resources.legend;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(760, 479);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 81);
+            this.panel1.TabIndex = 14;
+            // 
+            // RemovePersonButton
+            // 
+            this.RemovePersonButton.BackColor = System.Drawing.Color.Maroon;
+            this.RemovePersonButton.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemovePersonButton.ForeColor = System.Drawing.Color.White;
+            this.RemovePersonButton.Location = new System.Drawing.Point(162, 46);
+            this.RemovePersonButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RemovePersonButton.Name = "RemovePersonButton";
+            this.RemovePersonButton.Size = new System.Drawing.Size(120, 57);
+            this.RemovePersonButton.TabIndex = 15;
+            this.RemovePersonButton.Text = "Remove person";
+            this.RemovePersonButton.UseVisualStyleBackColor = false;
+            this.RemovePersonButton.Click += new System.EventHandler(this.RemovePerson_Click);
+            // 
             // ucLoadMDFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.RemovePersonButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.Result);
@@ -286,8 +306,9 @@
             this.Controls.Add(this.FileName);
             this.Controls.Add(this.AddpersonButton);
             this.Controls.Add(this.GroupExpenses);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucLoadMDFile";
-            this.Size = new System.Drawing.Size(1375, 708);
+            this.Size = new System.Drawing.Size(1031, 575);
             ((System.ComponentModel.ISupportInitialize)(this.GroupExpenses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Result)).EndInit();
             this.ResumeLayout(false);
@@ -309,5 +330,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn NamePicker;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spend;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.Button RemovePersonButton;
     }
 }

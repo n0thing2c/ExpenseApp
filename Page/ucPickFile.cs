@@ -30,8 +30,7 @@ namespace Login.Page
                 ff.SetFolder("MDFiles");
             ff.LoadAllFilesToListBox(this.listBoxFiles);
         }
-
-        private void listBoxFiles_DoubleClick(object sender, EventArgs e)
+        private void OpenButton_Click(object sender, EventArgs e)
         {
             if (listBoxFiles.SelectedIndex < 0)
             {
@@ -41,7 +40,6 @@ namespace Login.Page
             string filePath = ff.GetFilePathAtIndex(listBoxFiles.SelectedIndex);
             OpenFileClicked?.Invoke(filePath, tp);
         }
-        
         private void DeleteButton_Click(object sender, EventArgs e)
         {
 
@@ -60,17 +58,6 @@ namespace Login.Page
         private void ExitButton_Click(object sender, EventArgs e)
         {
             ExitButtonClicked?.Invoke(this, EventArgs.Empty);
-        }
-
-        private void OpenButton_Click(object sender, EventArgs e)
-        {
-            if (listBoxFiles.SelectedIndex < 0)
-            {
-                MessageBox.Show("Please select a file", "File not selected yet", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            string filePath = ff.GetFilePathAtIndex(listBoxFiles.SelectedIndex);
-            OpenFileClicked?.Invoke(filePath,tp);
         }
     }
 }

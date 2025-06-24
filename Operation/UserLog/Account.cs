@@ -13,7 +13,7 @@ namespace Login.Operation.UserLog
         private string pass;
         private static Account currentAcc;
         private Account() { }
-        public Account(string username, string password)
+        private Account(string username, string password)
         {
             user = username;
             pass = password;

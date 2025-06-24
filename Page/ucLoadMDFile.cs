@@ -247,5 +247,21 @@ namespace Login.Page
             ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void GroupExpenses_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+        {
+            if (e.Column.Index == 3 || e.Column.Index == 0)
+            {
+                long val1 = 0;
+                long val2 = 0;
+
+                if (e.CellValue1 != null)
+                    long.TryParse(e.CellValue1.ToString().Replace("₫", "").Replace(".", "").Replace(",", ""), out val1);
+                if (e.CellValue2 != null)
+                    long.TryParse(e.CellValue2.ToString().Replace("₫", "").Replace(".", "").Replace(",", ""), out val2);
+
+                e.SortResult = val1.CompareTo(val2);
+                e.Handled = true;  // Handle only Spend and Earn
+            }
+        }
     }
 }

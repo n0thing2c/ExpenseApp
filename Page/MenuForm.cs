@@ -126,7 +126,7 @@ namespace Login.Page
         {
             if(e.CloseReason == CloseReason.UserClosing)
             {
-                DialogResult res = MessageBox.Show("Do you really want to log out", "Conform Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult res = MessageBox.Show("Do you really want to log out", "Confirm Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.No)
                 {
                     e.Cancel = true;

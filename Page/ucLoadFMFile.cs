@@ -194,7 +194,7 @@ namespace Login.Page
         
         private void MyExpenses_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
         {
-            if (e.Column.Index == 2 || e.Column.Index == 3)
+            if (e.Column.Index == 2 || e.Column.Index == 3||e.Column.Index==0)
             {
                 long val1 = 0;
                 long val2 = 0;

@@ -11,9 +11,9 @@ namespace Login.Page
 {
     internal class UserFolder
     {
-        Account acc;
         private string username;
-        private string targetFolder;
+        private string FolderPath; //Path to the folder containing user files
+        private string targetFolder; // Path to the specific folder (FM or MD files)
         private List<string> filePaths;
         public UserFolder()
         {
@@ -31,6 +31,8 @@ namespace Login.Page
         public void SetUserName(string name)
         {
             username = name;
+            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            FolderPath = Path.Combine(repoPath, "Operation", "UserFiles", username);
         }
         public void SetFolder(string location)
         {
@@ -39,6 +41,11 @@ namespace Login.Page
             targetFolder = folder;
             filePaths = new List<string>();
         }
+        public string GetFolderPath()
+        {
+            return FolderPath;
+        }
+    
         public int GetNumberOfFiles()
         {
             return filePaths.Count; 

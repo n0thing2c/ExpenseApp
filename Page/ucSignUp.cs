@@ -28,14 +28,13 @@ namespace Login.Page
             string user = view.getUserName();
             string pass = view.getPassword();
             this.signUp(user, pass);
-            this.createUserFolder(user);
             MessageBox.Show("Sign up successfully, Log in to continue");
             view.Hide();
             new LoginForm().Show();
         }
         public void signUp(string user, string pass)
         {
-            //Path pt = new Path("Operation",....)
+            
             string convert = user + ":" + pass;
             string path = Path.Combine(repoPath, "Operation", "UserLog", "userPass.txt");
             try
@@ -49,18 +48,6 @@ namespace Login.Page
             }
 
         }
-        public void createUserFolder(string user)
-        {
-            string path = Path.Combine(repoPath, "Operation", "UserFiles", user);
-            try
-            {
-                Directory.CreateDirectory(Path.Combine(path, "FMFiles"));
-                Directory.CreateDirectory(Path.Combine(path, "MDFiles"));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Can not create user mgmtfiles folder" + ex.Message);
-            }
-        }
+      
     }
 }

@@ -14,6 +14,9 @@ namespace Login.Page
     public partial class ucLoadFMFile: UserControl
     {
         public event EventHandler ExitButtonClicked;
+        private long[] spenddays = new long[31];
+        private long[] earndays = new long[31];
+        private bool isSaved = true;
         public ucLoadFMFile()
         {
             InitializeComponent();
@@ -107,9 +110,11 @@ namespace Login.Page
         }
         private void MyExpenses_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            isSaved = false;
             Sumres_Calculate();
             OutRes_Calculate();
             InRes_Calculate();
+            UpdateSpendAndEarnDays();
             MaxMoneyUsedDay();
             MaxMoneyMakedDay();
         }
@@ -153,44 +158,69 @@ namespace Login.Page
             }
             InRes.Text = sum.ToString("C0", new CultureInfo("vi-VN"));
         }
+        private void UpdateSpendAndEarnDays()
+        {
+            Array.Clear(spenddays, 0, spenddays.Length);
+            Array.Clear(earndays, 0, earndays.Length);
+            foreach(DataGridViewRow row in MyExpenses.Rows)
+            {
+                if ((!string.IsNullOrEmpty(row.Cells[2].Value?.ToString()))
+                    || (!string.IsNullOrEmpty(row.Cells[3].Value?.ToString())))
+                {
+                    int idx = (!string.IsNullOrEmpty(row.Cells[2].Value?.ToString())) ? 2 : 3;
+                    long value = Convert.ToInt64(row.Cells[idx].Value);
+                    int dayidx = -1;
+                    if (!string.IsNullOrEmpty(row.Cells[0].Value?.ToString()))
+                    {
+                        dayidx = Convert.ToInt32(row.Cells[0].Value) - 1;
+                    }
+                    if(dayidx < 0)
+                    {
+                        continue;
+                    }    
+                    else
+                    {
+                        if(idx == 2)
+                            spenddays[dayidx]+=value;
+                        else if(idx==3)
+                            earndays[dayidx]+=value;
+                    }    
+                }    
+            }    
+        }
         private void MaxMoneyUsedDay()
         {
+            UpdateSpendAndEarnDays();
             long max = 0;
             int idx = 0;
-            foreach (DataGridViewRow row in MyExpenses.Rows)
+            for(int i = 0;i < 31;i++)
             {
-                if (!string.IsNullOrEmpty(row.Cells[2].Value?.ToString()))
+                if (max < spenddays[i])
                 {
-                    long value = Convert.ToInt64(row.Cells[2].Value);
-                    if (value > max)
-                    {
-                        max = value;
-                        idx = row.Index;
-                    }
-                }
+                    max = spenddays[i];
+                    idx = i;
+                }    
             }
             max = -max;
-            MostSpendDayRes.Text = "Day " + Convert.ToString(MyExpenses.Rows[idx].Cells[0].Value) + ": " + max.ToString("C0", new CultureInfo("vi-VN"));
+            MostSpendDayRes.Text = "Day " + Convert.ToString(idx+1) + ": " + max.ToString("C0", new CultureInfo("vi-VN"));
         }
 
         private void MaxMoneyMakedDay()
         {
+            UpdateSpendAndEarnDays();
             long max = 0;
             int idx = 0;
-            foreach (DataGridViewRow row in MyExpenses.Rows)
+            for (int i = 0; i < 31; i++)
             {
-                if (!string.IsNullOrEmpty(row.Cells[3].Value?.ToString()))
+                if (max < earndays[i])
                 {
-                    long value = Convert.ToInt64(row.Cells[3].Value);
-                    if (value > max)
-                    {
-                        max = value;
-                        idx = row.Index;
-                    }
+                    max = earndays[i];
+                    idx = i;
                 }
             }
-            MostMakeDayRes.Text = "Day " + Convert.ToString(MyExpenses.Rows[idx].Cells[0].Value) + ": " + max.ToString("C0", new CultureInfo("vi-VN"));
+            MostMakeDayRes.Text = "Day " + Convert.ToString(idx + 1) + ": " + max.ToString("C0", new CultureInfo("vi-VN"));
         }
+        
         
         private void MyExpenses_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
         {
@@ -213,9 +243,22 @@ namespace Login.Page
         {
             file.SaveFrom(MyExpenses);
             MessageBox.Show("Saved successfully");
+            isSaved = true;
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            if(!isSaved)
+            {
+                DialogResult result=MessageBox.Show(
+                "Save your changes to this file?",
+                "File Not Saved",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    file.SaveFrom(MyExpenses);
+                }
+            }
             ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
     }

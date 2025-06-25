@@ -58,12 +58,12 @@ namespace Login.Page
             using (var writer = new StreamWriter(fullpath))
             {
                  for (int i = 4; i < table.Columns.Count - 1; i++)
-                {
+                 {
                     var header = table.Columns[i].HeaderText; // Optional: remove commas
                     writer.Write(header.Replace(","," "));
                     if (i < table.Columns.Count - 2)
                         writer.Write(",");
-                }
+                 }
                 writer.WriteLine();
                 foreach (DataGridViewRow row in table.Rows)
                 {
@@ -89,16 +89,16 @@ namespace Login.Page
                 return;
 
             // Split header line and add columns
+            
             string[] headers = lines[0].Split(',');
             int idx = 4;
             foreach (string header in headers)
             {
-                DataGridViewCheckBoxColumn personcol= new DataGridViewCheckBoxColumn(); 
+                DataGridViewCheckBoxColumn personcol = new DataGridViewCheckBoxColumn();
                 personcol.HeaderText = header;
                 table.Columns.Insert(idx, personcol);
                 idx++;
             }
-
             table.Rows.Clear();
             for (int i = 1; i < lines.Length; i++)
             {

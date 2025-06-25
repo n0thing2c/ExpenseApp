@@ -49,7 +49,7 @@ namespace Login.Page
         {
             ucNewFile ucNF = new ucNewFile(user,type);
             ucNF.ExitButtonClicked += ExitButtonClickedControl;
-            ucNF.FileCreated += OpenFileClickedControl;
+            ucNF.MakeFileClicked += LoadFileControl;
             LoadUserControl(ucNF);
         }
         private void PickFileControl(string type)
@@ -57,7 +57,7 @@ namespace Login.Page
             ucPickFile ucPF = new ucPickFile(type);
             ucPF.LoadFilesForUser(user);
             ucPF.ExitButtonClicked += ExitButtonClickedControl;
-            ucPF.OpenFileClicked += OpenFileClickedControl;
+            ucPF.OpenFileClicked += LoadFileControl;
             LoadUserControl(ucPF);
         }
 
@@ -66,7 +66,7 @@ namespace Login.Page
             panelContent.Controls.Clear();
         }
 
-        private void OpenFileClickedControl(string filepath,string type)
+        private void LoadFileControl(string filepath,string type)
         {
             if (panel2.Visible == panel1.Visible)
             {

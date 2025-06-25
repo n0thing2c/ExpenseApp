@@ -17,7 +17,7 @@ namespace Login.Page
         string user;
         string tp;
         public event EventHandler ExitButtonClicked;
-        public event Action<string,string> FileCreated;
+        public event Action<string,string> MakeFileClicked;
         public ucNewFile(string username,string type)
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace Login.Page
                 string path = Path.Combine(folder, name);
                 FMFile file = new FMFile();
                 file.Create(path);
-                FileCreated?.Invoke(path,tp);
+                MakeFileClicked?.Invoke(path,tp);
             }
             else if(tp == "MD")
             {
@@ -50,7 +50,7 @@ namespace Login.Page
                 string path = Path.Combine(folder, name);
                 MDFile file = new MDFile();
                 file.Create(path);
-                FileCreated?.Invoke(path,tp);
+                MakeFileClicked?.Invoke(path,tp);
             }
         }
     }

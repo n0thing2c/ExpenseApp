@@ -16,8 +16,6 @@ namespace Login.Page
     public partial class LoginForm : Form
     {
         public event EventHandler SignInClicked;
-
-        private readonly ucLogIn LogInController;
         public LoginForm()
         {
             InitializeComponent();

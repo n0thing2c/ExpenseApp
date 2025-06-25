@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Operation.UserLog;
 
 namespace Login.Page
 {
@@ -33,10 +34,10 @@ namespace Login.Page
 
         private void MakeFileButton_Click_1(object sender, EventArgs e)
         {
-            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string userFolderPath = Account.GetCurrentAcc().GetFolderPath();
             if (tp == "FM")
             {
-                string folder = Path.Combine(repoPath, "Operation", "UserFiles", user, "FMFiles");
+                string folder = Path.Combine(userFolderPath, "FMFiles"); 
                 string name = new CultureInfo("en-US").DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Expenses.csv";
                 string path = Path.Combine(folder, name);
                 FMFile file = new FMFile();
@@ -45,7 +46,7 @@ namespace Login.Page
             }
             else if(tp == "MD")
             {
-                string folder = Path.Combine(repoPath, "Operation", "UserFiles", user, "MDFiles");
+                string folder = Path.Combine(userFolderPath, "MDFiles");
                 string name = new CultureInfo("en-US").DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Group_Expenses.csv";
                 string path = Path.Combine(folder, name);
                 MDFile file = new MDFile();

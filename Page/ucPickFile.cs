@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Operation.UserLog;
 
 namespace Login.Page
 {
@@ -20,10 +21,9 @@ namespace Login.Page
             InitializeComponent();
             tp = type;
         }
-        UserFolder folder = new UserFolder();
+        UserFolder folder = Account.GetCurrentAcc().GetUserFolder();
         public void LoadFilesForUser(string username)
         {
-            folder.SetUserName(username);
             if(tp=="FM")
                 folder.SetFolder("FMFiles");
             else if(tp=="MD")

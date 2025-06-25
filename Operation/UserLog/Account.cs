@@ -66,6 +66,14 @@ namespace Login.Operation.UserLog
         {
             return pass;
         }
+        public UserFolder GetUserFolder()
+        {
+            return folder; 
+        }
+        public string GetFolderPath()
+        {
+            return folder.GetFolderPath();
+        }
 
         public bool isValid()
         {

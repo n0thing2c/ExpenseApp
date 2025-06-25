@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Login.Page
 {
-    internal class UserFolder
+    public class UserFolder
     {
         private string username;
         private string FolderPath; //Path to the folder containing user files

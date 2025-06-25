@@ -38,7 +38,7 @@ namespace Login.Page
             LoadUserControl(ucPFT);
         }
 
-        private void LoadFile_Button_Click(object sender, EventArgs e)
+        private void PickFile_Button_Click(object sender, EventArgs e)
         {
             ucPickFileType ucPFT = new ucPickFileType(user, "Pick");
             ucPFT.PickFile += PickFileControl;
@@ -97,7 +97,7 @@ namespace Login.Page
         private void Menu_Button_Click(object sender, EventArgs e)
         {
             panel2.Visible = !panel2.Visible;
-            LoadFile_Button.Visible = panel2.Visible;
+            PickFile_Button.Visible = panel2.Visible;
             NewFile_Button.Visible = panel2.Visible;
             Exit_Button.Visible = panel2.Visible;
             AboutUs_Button.Visible = panel2.Visible;

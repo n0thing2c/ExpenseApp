@@ -20,15 +20,15 @@ namespace Login.Page
             InitializeComponent();
             tp = type;
         }
-        UserFolder ff = new UserFolder();
+        UserFolder folder = new UserFolder();
         public void LoadFilesForUser(string username)
         {
-            ff.SetUserName(username);
+            folder.SetUserName(username);
             if(tp=="FM")
-                ff.SetFolder("FMFiles");
+                folder.SetFolder("FMFiles");
             else if(tp=="MD")
-                ff.SetFolder("MDFiles");
-            ff.LoadAllFilesToListBox(this.listBoxFiles);
+                folder.SetFolder("MDFiles");
+            folder.LoadAllFilesToListBox(this.listBoxFiles);
         }
         private void OpenButton_Click(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace Login.Page
                 MessageBox.Show("Please select a file", "File not selected yet", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            string filePath = ff.GetFilePathAtIndex(listBoxFiles.SelectedIndex);
+            string filePath = folder.GetFilePathAtIndex(listBoxFiles.SelectedIndex);
             OpenFileClicked?.Invoke(filePath, tp);
         }
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Login.Page
             else
             {
                 int index = listBoxFiles.SelectedIndex;
-                ff.DeleteFileAtIndex(index);
+                folder.DeleteFileAtIndex(index);
                 listBoxFiles.Items.RemoveAt(index);
             }
         }

@@ -43,7 +43,7 @@ namespace Login.Page
             this.AboutUs_Button = new System.Windows.Forms.Button();
             this.Exit_Button = new System.Windows.Forms.Button();
             this.NewFile_Button = new System.Windows.Forms.Button();
-            this.LoadFile_Button = new System.Windows.Forms.Button();
+            this.PickFile_Button = new System.Windows.Forms.Button();
             this.NotificationList_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.User_Panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -139,7 +139,7 @@ namespace Login.Page
             this.panel2.Controls.Add(this.AboutUs_Button);
             this.panel2.Controls.Add(this.Exit_Button);
             this.panel2.Controls.Add(this.NewFile_Button);
-            this.panel2.Controls.Add(this.LoadFile_Button);
+            this.panel2.Controls.Add(this.PickFile_Button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(0, 69);
@@ -200,23 +200,23 @@ namespace Login.Page
             this.NewFile_Button.Visible = false;
             this.NewFile_Button.Click += new System.EventHandler(this.NewFile_Button_Click);
             // 
-            // LoadFile_Button
+            // PickFile_Button
             // 
-            this.LoadFile_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
-            this.LoadFile_Button.FlatAppearance.BorderSize = 0;
-            this.LoadFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoadFile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadFile_Button.ForeColor = System.Drawing.Color.LightPink;
-            this.LoadFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("LoadFile_Button.Image")));
-            this.LoadFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LoadFile_Button.Location = new System.Drawing.Point(16, 203);
-            this.LoadFile_Button.Name = "LoadFile_Button";
-            this.LoadFile_Button.Size = new System.Drawing.Size(230, 55);
-            this.LoadFile_Button.TabIndex = 5;
-            this.LoadFile_Button.Text = "Load File";
-            this.LoadFile_Button.UseVisualStyleBackColor = true;
-            this.LoadFile_Button.Visible = false;
-            this.LoadFile_Button.Click += new System.EventHandler(this.LoadFile_Button_Click);
+            this.PickFile_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
+            this.PickFile_Button.FlatAppearance.BorderSize = 0;
+            this.PickFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PickFile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PickFile_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.PickFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("PickFile_Button.Image")));
+            this.PickFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PickFile_Button.Location = new System.Drawing.Point(16, 203);
+            this.PickFile_Button.Name = "PickFile_Button";
+            this.PickFile_Button.Size = new System.Drawing.Size(230, 55);
+            this.PickFile_Button.TabIndex = 5;
+            this.PickFile_Button.Text = "Pick File";
+            this.PickFile_Button.UseVisualStyleBackColor = true;
+            this.PickFile_Button.Visible = false;
+            this.PickFile_Button.Click += new System.EventHandler(this.PickFile_Button_Click);
             // 
             // NotificationList_panel
             // 
@@ -332,7 +332,7 @@ namespace Login.Page
         private Button Personal_Button;
         private Button Notification_Button;
         private Button NewFile_Button;
-        private Button LoadFile_Button;
+        private Button PickFile_Button;
         private Button Exit_Button;
         private FlowLayoutPanel NotificationList_panel;
         private Button AboutUs_Button;

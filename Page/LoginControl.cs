@@ -13,25 +13,22 @@ using Login.Operation.UserLog;
 
 namespace Login.Page
 {
-    public partial class LoginForm : Form
+    public partial class LoginControl : Form
     {
-        public event EventHandler SignInClicked;
-
-        private readonly ucLogIn LogInController;
-        public LoginForm()
+        public LoginControl()
         {
             InitializeComponent();
         }
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            new SignUpForm().Show();
+            new SignUpControl().Show();
+
             this.Hide();
         }
         private void Login_Button(object sender, EventArgs e)
         {
-            Account acc = Account.ModifyAcc(txtUsername.Text, txtPassword.Text);
-            ucLogIn uc = new ucLogIn(this,acc);
+            Account acc = new Account(txtUsername.Text, txtPassword.Text);
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Username or password is not filled, please try again");
@@ -39,9 +36,25 @@ namespace Login.Page
                 txtUsername.Clear();
                 txtUsername.Focus();
             }
+
+            else if (acc.isValid())
+            {
+                string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string path = Path.Combine(repoPath, "Operation", "UserInfo", "info.txt");
+                string convert = txtUsername.Text + ":" + txtPassword.Text;
+                File.AppendAllText(path, txtUsername.Text + Environment.NewLine);
+                File.AppendAllText(path, txtPassword.Text + Environment.NewLine);
+                MenuForm mForm =  new MenuForm(acc.getUserName());
+                mForm.Show();
+                this.Hide();
+                mForm.FormClosed += (s, args) => this.Show();
+            }
             else
             {
-                SignInClicked?.Invoke(this, EventArgs.Empty);
+                MessageBox.Show("Username or password is incorrect, please try again");
+                txtPassword.Clear();
+                txtUsername.Clear();
+                txtUsername.Focus();
             }
         }
 

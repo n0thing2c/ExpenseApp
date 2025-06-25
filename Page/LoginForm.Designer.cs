@@ -232,6 +232,7 @@ namespace Login.Page
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
@@ -251,12 +252,12 @@ namespace Login.Page
         private System.Windows.Forms.Label Exit;
         private System.Windows.Forms.Label Label3;
         private System.Windows.Forms.Button signUpButton;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox passIcon;
         private System.Windows.Forms.PictureBox userIcon;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.PictureBox openEye;
         private System.Windows.Forms.PictureBox closeEye;
+        public TextBox txtUsername;
+        public TextBox txtPassword;
     }
 }

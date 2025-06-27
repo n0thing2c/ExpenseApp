@@ -47,19 +47,19 @@
             this.panel1.Controls.Add(this.DeleteButton);
             this.panel1.Controls.Add(this.listBoxFiles);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(432, 279);
+            this.panel1.Size = new System.Drawing.Size(575, 343);
             this.panel1.TabIndex = 3;
             // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitButton.Location = new System.Drawing.Point(176, 240);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ExitButton.Location = new System.Drawing.Point(235, 295);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(70, 27);
+            this.ExitButton.Size = new System.Drawing.Size(93, 33);
             this.ExitButton.TabIndex = 5;
             this.ExitButton.Text = "Return";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -68,10 +68,10 @@
             // OpenButton
             // 
             this.OpenButton.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.OpenButton.Location = new System.Drawing.Point(325, 240);
-            this.OpenButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OpenButton.Location = new System.Drawing.Point(433, 295);
+            this.OpenButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OpenButton.Name = "OpenButton";
-            this.OpenButton.Size = new System.Drawing.Size(70, 27);
+            this.OpenButton.Size = new System.Drawing.Size(93, 33);
             this.OpenButton.TabIndex = 4;
             this.OpenButton.Text = "Open";
             this.OpenButton.UseVisualStyleBackColor = true;
@@ -80,10 +80,10 @@
             // DeleteButton
             // 
             this.DeleteButton.ForeColor = System.Drawing.Color.Maroon;
-            this.DeleteButton.Location = new System.Drawing.Point(250, 240);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteButton.Location = new System.Drawing.Point(333, 295);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(70, 27);
+            this.DeleteButton.Size = new System.Drawing.Size(93, 33);
             this.DeleteButton.TabIndex = 3;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -94,12 +94,13 @@
             this.listBoxFiles.AccessibleName = "";
             this.listBoxFiles.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxFiles.FormattingEnabled = true;
-            this.listBoxFiles.ItemHeight = 25;
-            this.listBoxFiles.Location = new System.Drawing.Point(19, 72);
-            this.listBoxFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxFiles.ItemHeight = 31;
+            this.listBoxFiles.Location = new System.Drawing.Point(25, 89);
+            this.listBoxFiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxFiles.Name = "listBoxFiles";
-            this.listBoxFiles.Size = new System.Drawing.Size(396, 154);
+            this.listBoxFiles.Size = new System.Drawing.Size(527, 159);
             this.listBoxFiles.TabIndex = 1;
+            this.listBoxFiles.SelectedIndexChanged += new System.EventHandler(this.listBoxFiles_SelectedIndexChanged);
             this.listBoxFiles.DoubleClick += new System.EventHandler(this.OpenButton_Click);
             // 
             // panel2
@@ -108,9 +109,9 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.FilesAreBelowLabel);
             this.panel2.Location = new System.Drawing.Point(-1, -2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(434, 46);
+            this.panel2.Size = new System.Drawing.Size(578, 56);
             this.panel2.TabIndex = 6;
             // 
             // FilesAreBelowLabel
@@ -119,21 +120,21 @@
             this.FilesAreBelowLabel.BackColor = System.Drawing.Color.Transparent;
             this.FilesAreBelowLabel.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilesAreBelowLabel.ForeColor = System.Drawing.Color.Black;
-            this.FilesAreBelowLabel.Location = new System.Drawing.Point(124, 3);
-            this.FilesAreBelowLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FilesAreBelowLabel.Location = new System.Drawing.Point(165, 4);
             this.FilesAreBelowLabel.Name = "FilesAreBelowLabel";
-            this.FilesAreBelowLabel.Size = new System.Drawing.Size(200, 37);
+            this.FilesAreBelowLabel.Size = new System.Drawing.Size(238, 45);
             this.FilesAreBelowLabel.TabIndex = 2;
             this.FilesAreBelowLabel.Text = "Available Files";
             // 
             // ucPickFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucPickFile";
-            this.Size = new System.Drawing.Size(436, 282);
+            this.Size = new System.Drawing.Size(581, 347);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

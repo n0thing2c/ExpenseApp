@@ -108,5 +108,10 @@ namespace Login.Page
                 e.Cancel = true;
             }
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

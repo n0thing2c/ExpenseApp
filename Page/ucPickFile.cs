@@ -59,5 +59,10 @@ namespace Login.Page
         {
             ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
+
+        private void listBoxFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

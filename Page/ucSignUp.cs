@@ -48,6 +48,10 @@ namespace Login.Page
             }
 
         }
-      
+
+        private void ucSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -62,5 +62,10 @@ namespace Login.Page
         {
             this.Close();
         }
+
+        private void listBoxFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

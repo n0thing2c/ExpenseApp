@@ -42,7 +42,12 @@ namespace Login.Page
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            ExitClicked?.Invoke(this, EventArgs.Empty);
+            
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

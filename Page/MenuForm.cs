@@ -107,6 +107,7 @@ namespace Login.Page
         {
             Application.Exit();
         }
+
         private void Notification_Button_Click(object sender, EventArgs e)
         {
             NotificationList_panel.Visible = !NotificationList_panel.Visible;
@@ -134,6 +135,14 @@ namespace Login.Page
             }
         }
 
+        private void Profile_Button_Click(object sender, EventArgs e)
+        {
+            new ProfileForm().Show();
+        }
 
+        private void Reports_Button_Click(object sender, EventArgs e)
+        {
+            new ReportForm().Show();
+        }
     }
 }

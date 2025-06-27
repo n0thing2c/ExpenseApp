@@ -55,6 +55,7 @@ namespace Login.Page
             this.listBoxFiles.Name = "listBoxFiles";
             this.listBoxFiles.Size = new System.Drawing.Size(501, 252);
             this.listBoxFiles.TabIndex = 1;
+            this.listBoxFiles.SelectedIndexChanged += new System.EventHandler(this.listBoxFiles_SelectedIndexChanged);
             this.listBoxFiles.DoubleClick += new System.EventHandler(this.listBoxFiles_DoubleClick);
             // 
             // panel1

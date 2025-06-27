@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.MDFilePick = new System.Windows.Forms.Button();
+            this.FMFilePick = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PickTypeLabel = new System.Windows.Forms.Label();
-            this.FMFilePick = new System.Windows.Forms.Button();
+            this.MDFilePick = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -50,29 +50,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(591, 349);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // ExitButton
+            // FMFilePick
             // 
-            this.ExitButton.Location = new System.Drawing.Point(33, 295);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(93, 37);
-            this.ExitButton.TabIndex = 0;
-            this.ExitButton.Text = "Cancel";
-            this.ExitButton.UseVisualStyleBackColor = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
-            // 
-            // MDFilePick
-            // 
-            this.MDFilePick.BackColor = System.Drawing.Color.Salmon;
-            this.MDFilePick.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MDFilePick.ForeColor = System.Drawing.Color.White;
-            this.MDFilePick.Location = new System.Drawing.Point(298, 102);
-            this.MDFilePick.Name = "MDFilePick";
-            this.MDFilePick.Size = new System.Drawing.Size(237, 178);
-            this.MDFilePick.TabIndex = 1;
-            this.MDFilePick.Text = "Group Money Divider File";
-            this.MDFilePick.UseVisualStyleBackColor = false;
-            this.MDFilePick.Click += new System.EventHandler(this.MDFilePick_Click);
+            this.FMFilePick.BackColor = System.Drawing.Color.Salmon;
+            this.FMFilePick.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FMFilePick.ForeColor = System.Drawing.Color.White;
+            this.FMFilePick.Location = new System.Drawing.Point(33, 102);
+            this.FMFilePick.Name = "FMFilePick";
+            this.FMFilePick.Size = new System.Drawing.Size(237, 178);
+            this.FMFilePick.TabIndex = 0;
+            this.FMFilePick.Text = "Financial Management File";
+            this.FMFilePick.UseVisualStyleBackColor = false;
+            this.FMFilePick.Click += new System.EventHandler(this.FMFilePick_Click);
             // 
             // panel3
             // 
@@ -96,18 +87,28 @@
             this.PickTypeLabel.TabIndex = 2;
             this.PickTypeLabel.Text = "Please choose a file type";
             // 
-            // FMFilePick
+            // MDFilePick
             // 
-            this.FMFilePick.BackColor = System.Drawing.Color.Salmon;
-            this.FMFilePick.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FMFilePick.ForeColor = System.Drawing.Color.White;
-            this.FMFilePick.Location = new System.Drawing.Point(33, 102);
-            this.FMFilePick.Name = "FMFilePick";
-            this.FMFilePick.Size = new System.Drawing.Size(237, 178);
-            this.FMFilePick.TabIndex = 0;
-            this.FMFilePick.Text = "Financial Management File";
-            this.FMFilePick.UseVisualStyleBackColor = false;
-            this.FMFilePick.Click += new System.EventHandler(this.FMFilePick_Click);
+            this.MDFilePick.BackColor = System.Drawing.Color.Salmon;
+            this.MDFilePick.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MDFilePick.ForeColor = System.Drawing.Color.White;
+            this.MDFilePick.Location = new System.Drawing.Point(298, 102);
+            this.MDFilePick.Name = "MDFilePick";
+            this.MDFilePick.Size = new System.Drawing.Size(237, 178);
+            this.MDFilePick.TabIndex = 1;
+            this.MDFilePick.Text = "Group Money Divider File";
+            this.MDFilePick.UseVisualStyleBackColor = false;
+            this.MDFilePick.Click += new System.EventHandler(this.MDFilePick_Click);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(33, 295);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(93, 37);
+            this.ExitButton.TabIndex = 0;
+            this.ExitButton.Text = "Cancel";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // panel1
             // 

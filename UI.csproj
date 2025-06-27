@@ -50,6 +50,24 @@
     <Compile Include="Operation\FileClasses\FMFile.cs" />
     <Compile Include="Operation\FileClasses\MDFile.cs" />
     <Compile Include="Operation\FileClasses\UserFolder.cs" />
+    <Compile Include="Page\ChangeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\ChangeInfoForm.Designer.cs">
+      <DependentUpon>ChangeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Page\LoadFileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +161,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Page\ChangeInfoForm.resx">
+      <DependentUpon>ChangeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Page\LoadFileForm.resx">
       <DependentUpon>LoadFileForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Page\ucPickFileType.resx">
       <DependentUpon>ucPickFileType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucSignUp.resx">
+      <DependentUpon>ucSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

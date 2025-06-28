@@ -16,6 +16,7 @@ namespace Login.Page
         int numofpeople = 0;
         List<string> peoplenames;
         public event EventHandler ExitButtonClicked;
+        private bool isSaved = true;
         public ucLoadMDFile()
         {
             InitializeComponent();
@@ -235,18 +236,8 @@ namespace Login.Page
         private void GroupExpenses_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             Calculate();
+            isSaved = false;
         }
-        private void SaveButton_Click(object sender, EventArgs e)
-        {
-            file.SaveFrom(GroupExpenses);
-            MessageBox.Show("Saved successfully");
-            Calculate();
-        }
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            ExitButtonClicked?.Invoke(this, EventArgs.Empty);
-        }
-
         private void GroupExpenses_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
         {
             if (e.Column.Index == 3 || e.Column.Index == 0)
@@ -262,6 +253,29 @@ namespace Login.Page
                 e.SortResult = val1.CompareTo(val2);
                 e.Handled = true;  // Handle only Spend and Earn
             }
+        }
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            file.SaveFrom(GroupExpenses);
+            MessageBox.Show("Saved successfully");
+            Calculate();
+        }
+        
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            if (!isSaved)
+            {
+                DialogResult result = MessageBox.Show(
+                "Save your changes to this file?",
+                "File Not Saved",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    file.SaveFrom(GroupExpenses);
+                }
+            }
+            ExitButtonClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

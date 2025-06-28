@@ -84,7 +84,7 @@
             this.MakeFileButton.TabIndex = 3;
             this.MakeFileButton.Text = "Make File";
             this.MakeFileButton.UseVisualStyleBackColor = false;
-            this.MakeFileButton.Click += new System.EventHandler(this.MakeFileButton_Click_1);
+            this.MakeFileButton.Click += new System.EventHandler(this.MakeFileButton_Click);
             // 
             // panel3
             // 

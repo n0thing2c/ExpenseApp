@@ -135,6 +135,10 @@ namespace Login.Page
             }
         }
 
-
+        private void AboutUs_Button_Click(object sender, EventArgs e)
+        {
+            var aboutForm = new AboutUsForm();
+            aboutForm.ShowDialog();
+        }
     }
 }

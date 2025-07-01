@@ -154,7 +154,7 @@ namespace Login.Page
             this.AboutUs_Button.FlatAppearance.BorderSize = 0;
             this.AboutUs_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AboutUs_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutUs_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.AboutUs_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.AboutUs_Button.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs_Button.Image")));
             this.AboutUs_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AboutUs_Button.Location = new System.Drawing.Point(10, 264);
@@ -188,7 +188,7 @@ namespace Login.Page
             this.NewFile_Button.FlatAppearance.BorderSize = 0;
             this.NewFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewFile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewFile_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.NewFile_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.NewFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("NewFile_Button.Image")));
             this.NewFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewFile_Button.Location = new System.Drawing.Point(10, 141);
@@ -206,7 +206,7 @@ namespace Login.Page
             this.PickFile_Button.FlatAppearance.BorderSize = 0;
             this.PickFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PickFile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PickFile_Button.ForeColor = System.Drawing.Color.LightPink;
+            this.PickFile_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.PickFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("PickFile_Button.Image")));
             this.PickFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PickFile_Button.Location = new System.Drawing.Point(16, 203);

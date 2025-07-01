@@ -29,12 +29,15 @@ namespace Login.Page
         {
             if(acc.isValid())
             {
-                string user = acc.getUserName();
-                string pass = acc.getPassword();
-                string path = Path.Combine(repoPath, "Operation", "UserInfo", "info.txt");
-                string convert = user + ":" + pass;
-                File.AppendAllText(path, user + Environment.NewLine);
-                File.AppendAllText(path, pass + Environment.NewLine);
+                if (!checkWrittenInfo())
+                { 
+                    string user = acc.getUserName();
+                    string pass = acc.getPassword();
+                    string path = Path.Combine(repoPath, "Operation", "UserInfo", "info.txt");
+                    File.AppendAllText(path, user + Environment.NewLine);
+                    File.AppendAllText(path, pass + Environment.NewLine);
+                }
+
                 new MenuForm(acc.getUserName()).Show();
                 view.Hide();
             }
@@ -45,6 +48,26 @@ namespace Login.Page
                 view.txtUsername.Clear();
                 view.txtUsername.Focus();
             }    
+        }
+        private bool checkWrittenInfo()
+        {
+            string path = Path.Combine(repoPath, "Operation", "UserInfo", "info.txt");
+            try
+            {
+                List<string> infos = new List<string>(File.ReadAllLines(path));
+                string find = acc.getUserName();
+                foreach (string info in infos)
+                {
+                    if (info == find)
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("File error: " + ex.Message);
+                return false;
+            }
         }
    
     }

@@ -27,19 +27,28 @@ namespace Login.Page
         {
             string user = view.getUserName();
             string pass = view.getPassword();
-            this.signUp(user, pass);
-            MessageBox.Show("Sign up successfully, Log in to continue");
-            view.Hide();
-            new LoginForm().Show();
+            if (checkExistedUsername(user))
+            {
+                MessageBox.Show("Username already existed, please choose another one");
+                view.txtUsername.Clear();
+                view.txtPassword.Clear();
+                view.txtUsername.Focus();
+            }
+            else
+            {
+                this.signUp(user, pass);
+                MessageBox.Show("Sign up successfully, Log in to continue");
+                view.Hide();
+                new LoginForm().Show();
+            }
         }
         public void signUp(string user, string pass)
         {
-            
             string convert = user + ":" + pass;
             string path = Path.Combine(repoPath, "Operation", "UserLog", "userPass.txt");
             try
             {
-                Account.ModifyAcc(user, pass); //Create new account
+                //Account.ModifyAcc(user, pass); //Create new account
                 File.AppendAllText(path, convert + Environment.NewLine);
             }
             catch (Exception ex)
@@ -47,6 +56,19 @@ namespace Login.Page
                 Console.WriteLine("File error: " + ex.Message);
             }
 
+        }
+        private bool checkExistedUsername(string username)
+        {
+            string path = Path.Combine(repoPath, "Operation", "UserLog", "userPass.txt");
+            List<string> infos = new List<string>(File.ReadAllLines(path));
+            string find = username;
+            foreach (string info in infos)
+            {
+                string user = info.Split(':')[0];
+                if (user == find)
+                    return true;
+            }
+            return false;
         }
       
     }

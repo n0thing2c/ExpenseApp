@@ -16,8 +16,6 @@ namespace Login.Page
     public partial class LoginForm : Form
     {
         public event EventHandler SignInClicked;
-
-        private readonly ucLogIn LogInController;
         public LoginForm()
         {
             InitializeComponent();
@@ -32,7 +30,7 @@ namespace Login.Page
         {
             Account acc = Account.ModifyAcc(txtUsername.Text, txtPassword.Text);
             ucLogIn uc = new ucLogIn(this,acc);
-            if (txtUsername.Text == "" || txtPassword.Text == "")
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Username or password is not filled, please try again");
                 txtPassword.Clear();

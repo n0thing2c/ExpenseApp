@@ -221,14 +221,14 @@ namespace Login.Page
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Label Exit;
         private System.Windows.Forms.PictureBox openEye;
         private System.Windows.Forms.PictureBox closeEye;
+        public TextBox txtUsername;
+        public TextBox txtPassword;
     }
 }

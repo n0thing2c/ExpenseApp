@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Operation.ChartHandle;
 namespace Login.Page
 {
     public partial class MenuForm : Form
     {
         string user;
+        private ExpenseRecord expenseRecord = new ExpenseRecord();
+        private DrawChart ucDrawChart;
         public MenuForm(string username)
         {
             user= username;
@@ -135,6 +139,25 @@ namespace Login.Page
             }
         }
 
+        private void DrawChart_button_Click(object sender, EventArgs e)
+        {
+            ucPickFile ucPF = new ucPickFile("FM");
+            ucPF.LoadFilesForUser(user);
+            ucPF.ExitButtonClicked += ExitButtonClickedControl;
+            ucPF.OpenFileClicked += drawChartControl;
+            LoadUserControl(ucPF);
+        }
+        private void drawChartControl(string filepath, string type)
+        {
+            type = "FM";
+            var records = expenseRecord.ReadCSV(filepath);
+            var categoryExpenses = expenseRecord.GetCategoryExpenses(records);
+            ucDrawChart = new DrawChart(expenseRecord);
+            ucDrawChart.drawChart(categoryExpenses);
 
+            ucDrawChart.Dock = DockStyle.Fill;
+            ucDrawChart.Anchor = AnchorStyles.None;
+            LoadUserControl(ucDrawChart);
+        }
     }
 }

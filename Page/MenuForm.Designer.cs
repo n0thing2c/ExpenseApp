@@ -52,6 +52,7 @@ namespace Login.Page
             this.Reports_Button = new System.Windows.Forms.Button();
             this.LogOut_Button = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.DrawChart_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.User_Panel.SuspendLayout();
@@ -136,6 +137,7 @@ namespace Login.Page
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.panel2.Controls.Add(this.DrawChart_button);
             this.panel2.Controls.Add(this.AboutUs_Button);
             this.panel2.Controls.Add(this.Exit_Button);
             this.panel2.Controls.Add(this.NewFile_Button);
@@ -153,11 +155,11 @@ namespace Login.Page
             this.AboutUs_Button.FlatAppearance.BorderColor = System.Drawing.Color.LightPink;
             this.AboutUs_Button.FlatAppearance.BorderSize = 0;
             this.AboutUs_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AboutUs_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AboutUs_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AboutUs_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.AboutUs_Button.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs_Button.Image")));
             this.AboutUs_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AboutUs_Button.Location = new System.Drawing.Point(10, 264);
+            this.AboutUs_Button.Location = new System.Drawing.Point(10, 325);
             this.AboutUs_Button.Name = "AboutUs_Button";
             this.AboutUs_Button.Size = new System.Drawing.Size(237, 55);
             this.AboutUs_Button.TabIndex = 8;
@@ -298,6 +300,20 @@ namespace Login.Page
             this.panelContent.Size = new System.Drawing.Size(1031, 575);
             this.panelContent.TabIndex = 4;
             // 
+            // DrawChart_button
+            // 
+            this.DrawChart_button.FlatAppearance.BorderSize = 0;
+            this.DrawChart_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DrawChart_button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrawChart_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
+            this.DrawChart_button.Location = new System.Drawing.Point(16, 264);
+            this.DrawChart_button.Name = "DrawChart_button";
+            this.DrawChart_button.Size = new System.Drawing.Size(237, 55);
+            this.DrawChart_button.TabIndex = 9;
+            this.DrawChart_button.Text = "Draw Chart";
+            this.DrawChart_button.UseVisualStyleBackColor = true;
+            this.DrawChart_button.Click += new System.EventHandler(this.DrawChart_button_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,5 +359,6 @@ namespace Login.Page
         private Button Reports_Button;
         private Button LogOut_Button;
         private Panel panelContent;
+        private Button DrawChart_button;
     }
 }

@@ -93,8 +93,7 @@ namespace Login.Page
 
             chartArea.AxisX.LabelStyle.Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold);
             chartArea.AxisY.LabelStyle.Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold);
-            chartArea.AxisX.LabelAutoFitMinFontSize = 10;
-            chartArea.AxisY.LabelAutoFitMinFontSize = 10;
+            chartArea.AxisY.LabelStyle.Format = "{0:0,0}";
 
             chartArea.AxisX.MajorGrid.LineDashStyle = ChartDashStyle.Dot;
             chartArea.AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dot;
@@ -117,7 +116,7 @@ namespace Login.Page
                 LabelForeColor = Color.Crimson,
                 Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold),
                 LabelFormat = "{0:0,0}",
-                Color = Color.Crimson
+                Color = Color.DarkSalmon
             };
             lineChart.Series.Add(series);
 
@@ -126,6 +125,10 @@ namespace Login.Page
                 series.Points.AddXY(month.Key, month.Value);
                 series.Points[series.Points.Count - 1].MarkerStyle = MarkerStyle.Circle;
                 series.Points[series.Points.Count - 1].MarkerSize = 7;
+                if(month.Value > 0)
+                {
+                    series.Points[series.Points.Count - 1].LabelForeColor = Color.DarkGreen;
+                }
             }
 
             this.Controls.Add(lineChart);

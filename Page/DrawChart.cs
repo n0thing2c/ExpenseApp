@@ -37,9 +37,9 @@ namespace Login.Page
             Title chartTitle = new Title
             {
                 Text = "Spend Money Chart",
-                Font = new System.Drawing.Font("Microsoft New Tai Lue", 17, System.Drawing.FontStyle.Bold),
-                ForeColor = System.Drawing.Color.Crimson,
-                Alignment = System.Drawing.ContentAlignment.TopCenter
+                Font = new Font("Microsoft New Tai Lue", 17, FontStyle.Bold),
+                ForeColor = Color.Crimson,
+                Alignment = ContentAlignment.TopCenter
             };
             pieChart.Titles.Add(chartTitle);
 
@@ -53,6 +53,9 @@ namespace Login.Page
 
             foreach (var category in categoryExpenses)
             {
+                if(category.Value <= 0) 
+                    continue;
+
                 double percentage = (category.Value / (double)total) * 100;
                 //Add points
                 series.Points.AddXY(category.Key, category.Value);
@@ -65,8 +68,8 @@ namespace Login.Page
             {
                 Docking = Docking.Bottom,
                 Alignment = StringAlignment.Center,
-                Font = new System.Drawing.Font("Microsoft New Tai Lue", 10, System.Drawing.FontStyle.Regular),
-                ForeColor = System.Drawing.Color.Crimson
+                Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Regular),
+                ForeColor = Color.Crimson
             };
             legend.Title = "Categories";
             legend.Position = new ElementPosition(0, 70, 100, 30);
@@ -74,6 +77,59 @@ namespace Login.Page
 
             this.Controls.Add(pieChart);
             pieChart.Dock = DockStyle.Fill;
+        }
+
+        public void drawLineChart(Dictionary<string, long> monthlyExpense)
+        {
+            Chart lineChart = new Chart();
+            ChartArea chartArea = new ChartArea();
+
+            chartArea.AxisX.Title = "Month-Year";
+            chartArea.AxisY.Title = "Expense";
+            chartArea.AxisX.TitleFont = new Font("Microsoft New Tai Lue", 12, FontStyle.Bold);
+            chartArea.AxisY.TitleFont = new Font("Microsoft New Tai Lue", 12, FontStyle.Bold);
+            chartArea.AxisX.TitleForeColor = Color.Crimson;
+            chartArea.AxisY.TitleForeColor = Color.Crimson;
+
+            chartArea.AxisX.LabelStyle.Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold);
+            chartArea.AxisY.LabelStyle.Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold);
+            chartArea.AxisX.LabelAutoFitMinFontSize = 10;
+            chartArea.AxisY.LabelAutoFitMinFontSize = 10;
+
+            chartArea.AxisX.MajorGrid.LineDashStyle = ChartDashStyle.Dot;
+            chartArea.AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dot;
+
+            lineChart.ChartAreas.Add(chartArea);
+
+            Title chartTitle = new Title
+            {
+                Text = "Monthly Expense Chart",
+                Font = new Font("Microsoft New Tai Lue", 17, FontStyle.Bold),
+                ForeColor = Color.Crimson,
+                Alignment = ContentAlignment.TopCenter
+            };
+            lineChart.Titles.Add(chartTitle);
+
+            Series series = new Series
+            {
+                ChartType = SeriesChartType.Line,
+                IsValueShownAsLabel = true,
+                LabelForeColor = Color.Crimson,
+                Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold),
+                LabelFormat = "{0:0,0}",
+                Color = Color.Crimson
+            };
+            lineChart.Series.Add(series);
+
+            foreach (var month in monthlyExpense)
+            {
+                series.Points.AddXY(month.Key, month.Value);
+                series.Points[series.Points.Count - 1].MarkerStyle = MarkerStyle.Circle;
+                series.Points[series.Points.Count - 1].MarkerSize = 7;
+            }
+
+            this.Controls.Add(lineChart);
+            lineChart.Dock = DockStyle.Fill;
         }
     }
 }

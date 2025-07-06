@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using Login.Operation.ChartHandle;
+using Login.Operation.UserLog;
 namespace Login.Page
 {
     public partial class MenuForm : Form
     {
+        private readonly Account acc;
         string user;
         private ExpenseRecord expenseRecord = new ExpenseRecord();
         private DrawChart ucDrawChart;
@@ -141,19 +144,52 @@ namespace Login.Page
 
         private void DrawChart_button_Click(object sender, EventArgs e)
         {
+            ucPickChartType ucPCT = new ucPickChartType();
+            ucPCT.PieChart += PickFile;
+            ucPCT.LineChart += DrawLineChartControl;
+            ucPCT.ExitClicked += ExitButtonClickedControl;
+            LoadUserControl(ucPCT);
+        }
+
+        private void PickFile(object sender, EventArgs e)
+        {
             ucPickFile ucPF = new ucPickFile("FM");
             ucPF.LoadFilesForUser(user);
             ucPF.ExitButtonClicked += ExitButtonClickedControl;
-            ucPF.OpenFileClicked += drawChartControl;
+            ucPF.OpenFileClicked += drawPieChartControl;
             LoadUserControl(ucPF);
         }
-        private void drawChartControl(string filepath, string type)
+
+        private void drawPieChartControl(string filepath, string type)
         {
             type = "FM";
             var records = expenseRecord.ReadCSV(filepath);
             var categoryExpenses = expenseRecord.GetCategoryExpenses(records);
             ucDrawChart = new DrawChart(expenseRecord);
             ucDrawChart.drawPieChart(categoryExpenses);
+            LoadUserControl(ucDrawChart);
+        }
+
+        private string GetFMFolder()
+        {
+            string folderPath = Account.GetCurrentAcc().GetUserFolder().GetFolderPath();
+            string FMFolderPath = Path.Combine(folderPath, "FMFiles");
+            return FMFolderPath;
+        }
+
+        private void DrawLineChartControl(object sender, EventArgs e)
+        {
+            string folder = GetFMFolder();
+            var CSVFiles = Directory.GetFiles(folder, "*.csv");
+            if (CSVFiles.Length == 0)
+            {
+                MessageBox.Show("No data to show");
+                return;
+            }
+
+            Dictionary<string, long> monthlyExpense = expenseRecord.GetMonthlyExpense(CSVFiles);
+            ucDrawChart = new DrawChart(expenseRecord);
+            ucDrawChart.drawLineChart(monthlyExpense);
             LoadUserControl(ucDrawChart);
         }
     }

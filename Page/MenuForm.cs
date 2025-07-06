@@ -153,10 +153,7 @@ namespace Login.Page
             var records = expenseRecord.ReadCSV(filepath);
             var categoryExpenses = expenseRecord.GetCategoryExpenses(records);
             ucDrawChart = new DrawChart(expenseRecord);
-            ucDrawChart.drawChart(categoryExpenses);
-
-            ucDrawChart.Dock = DockStyle.Fill;
-            ucDrawChart.Anchor = AnchorStyles.None;
+            ucDrawChart.drawPieChart(categoryExpenses);
             LoadUserControl(ucDrawChart);
         }
     }

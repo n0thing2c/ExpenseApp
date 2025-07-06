@@ -232,6 +232,7 @@
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
     <Content Include="Resources\close-eye.png" />
+    <None Include="Resources\pie.png" />
     <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%291.png" />
     <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%29.png" />
     <None Include="Resources\return.png" />

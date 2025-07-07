@@ -102,7 +102,7 @@ namespace Login.Page
 
             Title chartTitle = new Title
             {
-                Text = "Monthly Expense Chart",
+                Text = "Monthly Savings Chart",
                 Font = new Font("Microsoft New Tai Lue", 17, FontStyle.Bold),
                 ForeColor = Color.Crimson,
                 Alignment = ContentAlignment.TopCenter

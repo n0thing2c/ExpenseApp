@@ -86,7 +86,7 @@
             this.LineChartButton.Name = "LineChartButton";
             this.LineChartButton.Size = new System.Drawing.Size(178, 145);
             this.LineChartButton.TabIndex = 10;
-            this.LineChartButton.Text = "Monthly Expense";
+            this.LineChartButton.Text = "Monthly Savings";
             this.LineChartButton.UseVisualStyleBackColor = false;
             this.LineChartButton.Click += new System.EventHandler(this.LineChartButton_Click);
             // 

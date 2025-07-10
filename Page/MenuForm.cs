@@ -142,6 +142,7 @@ namespace Login.Page
             }
         }
 
+
         private void DrawChart_button_Click(object sender, EventArgs e)
         {
             ucPickChartType ucPCT = new ucPickChartType();
@@ -191,6 +192,11 @@ namespace Login.Page
             ucDrawChart = new DrawChart(expenseRecord);
             ucDrawChart.drawLineChart(monthlyExpense);
             LoadUserControl(ucDrawChart);
+
+        private void AboutUs_Button_Click(object sender, EventArgs e)
+        {
+            var aboutForm = new AboutUsForm();
+            aboutForm.ShowDialog();
         }
     }
 }

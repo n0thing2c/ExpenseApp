@@ -133,9 +133,9 @@ namespace Login.Page
             if (sum == 0)
                 Sumres.ForeColor = Color.Black;
             else if(sum < 0)
-                Sumres.ForeColor = Color.Red;
+                Sumres.ForeColor = Color.Crimson;
             else
-                Sumres.ForeColor = Color.Lime;
+                Sumres.ForeColor = Color.FromArgb(21, 82, 35);
         }
         private void OutRes_Calculate()
         {

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,10 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operation\ChartHandle\ExpenseRecord.cs" />
     <Compile Include="Operation\FileClasses\AppFile.cs" />
     <Compile Include="Operation\FileClasses\FMFile.cs" />
     <Compile Include="Operation\FileClasses\MDFile.cs" />
     <Compile Include="Operation\FileClasses\UserFolder.cs" />
+    <Compile Include="Page\DrawChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\DrawChart.Designer.cs">
+      <DependentUpon>DrawChart.cs</DependentUpon>
     <Compile Include="Page\AboutUsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +92,12 @@
     </Compile>
     <Compile Include="Page\PickFileForm.Designer.cs">
       <DependentUpon>PickFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ucPickChartType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\ucPickChartType.Designer.cs">
+      <DependentUpon>ucPickChartType.cs</DependentUpon>
     </Compile>
     <Compile Include="Page\ucRemovePersonPicker.cs">
       <SubType>UserControl</SubType>
@@ -149,6 +162,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Page\DrawChart.resx">
+      <DependentUpon>DrawChart.cs</DependentUpon>
     <EmbeddedResource Include="Page\AboutUsForm.resx">
       <DependentUpon>AboutUsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Page\NewFileForm.resx">
       <DependentUpon>NewFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ucPickChartType.resx">
+      <DependentUpon>ucPickChartType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page\ucRemovePersonPicker.resx">
       <DependentUpon>ucRemovePersonPicker.cs</DependentUpon>
@@ -230,6 +248,7 @@
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
     <Content Include="Resources\close-eye.png" />
+    <None Include="Resources\pie.png" />
     <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%291.png" />
     <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%29.png" />
     <None Include="Resources\return.png" />

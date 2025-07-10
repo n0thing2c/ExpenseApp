@@ -113,6 +113,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Layer_0 {
+            get {
+                object obj = ResourceManager.GetObject("Layer 0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap legend {
             get {
                 object obj = ResourceManager.GetObject("legend", resourceCulture);
@@ -186,6 +196,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap plus2 {
             get {
                 object obj = ResourceManager.GetObject("plus2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pro5 {
+            get {
+                object obj = ResourceManager.GetObject("pro5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

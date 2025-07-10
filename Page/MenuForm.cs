@@ -21,7 +21,7 @@ namespace Login.Page
         private DrawChart ucDrawChart;
         public MenuForm(string username)
         {
-            user= username;
+            user = username;
             InitializeComponent();
         }
 
@@ -54,7 +54,7 @@ namespace Login.Page
         }
         private void NewFileControl(string type)
         {
-            ucNewFile ucNF = new ucNewFile(user,type);
+            ucNewFile ucNF = new ucNewFile(user, type);
             ucNF.ExitButtonClicked += ExitButtonClickedControl;
             ucNF.MakeFileClicked += LoadFileControl;
             LoadUserControl(ucNF);
@@ -73,7 +73,7 @@ namespace Login.Page
             panelContent.Controls.Clear();
         }
 
-        private void LoadFileControl(string filepath,string type)
+        private void LoadFileControl(string filepath, string type)
         {
             if (panel2.Visible == panel1.Visible)
             {
@@ -90,7 +90,7 @@ namespace Login.Page
                 ucLF.ExitButtonClicked += ExitButtonClickedControl;
                 ucLF.LoadFile(filepath);
             }
-            else if(type =="MD")
+            else if (type == "MD")
             {
                 ucLoadMDFile ucMD = new ucLoadMDFile();
                 ucMD.Dock = DockStyle.Fill;
@@ -132,7 +132,7 @@ namespace Login.Page
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(e.CloseReason == CloseReason.UserClosing)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
                 DialogResult res = MessageBox.Show("Do you really want to log out", "Confirm Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.No)
@@ -192,11 +192,12 @@ namespace Login.Page
             ucDrawChart = new DrawChart(expenseRecord);
             ucDrawChart.drawLineChart(monthlyExpense);
             LoadUserControl(ucDrawChart);
-
+        }
         private void AboutUs_Button_Click(object sender, EventArgs e)
         {
             var aboutForm = new AboutUsForm();
             aboutForm.ShowDialog();
         }
-    }
+
+    } 
 }

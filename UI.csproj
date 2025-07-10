@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Page\DrawChart.Designer.cs">
       <DependentUpon>DrawChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Page\AboutUsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +165,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Page\DrawChart.resx">
       <DependentUpon>DrawChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Page\AboutUsForm.resx">
       <DependentUpon>AboutUsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +250,7 @@
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
     <Content Include="Resources\close-eye.png" />
+    <None Include="Resources\pro5.png" />
     <None Include="Resources\pie.png" />
     <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%291.png" />
     <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%29.png" />
@@ -260,6 +263,7 @@
     <None Include="Resources\LoadFileIcon.jpeg" />
     <None Include="Resources\ExitIcon.png" />
     <None Include="Resources\legend.png" />
+    <None Include="Resources\Layer 0.png" />
     <Content Include="Resources\open-eye.png" />
     <None Include="Resources\plus2.png" />
     <None Include="Resources\plus.jpg" />

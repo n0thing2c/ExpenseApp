@@ -253,6 +253,7 @@ namespace Login.Page
                 e.SortResult = val1.CompareTo(val2);
                 e.Handled = true;  // Handle only Spend and Earn
             }
+            isSaved = false;
         }
         private void SaveButton_Click(object sender, EventArgs e)
         {

@@ -264,6 +264,8 @@
     <None Include="Resources\ExitIcon.png" />
     <None Include="Resources\legend.png" />
     <None Include="Resources\Layer 0.png" />
+    <None Include="Resources\LoadFileIcon-removebg.png" />
+    <None Include="Resources\file.png" />
     <Content Include="Resources\open-eye.png" />
     <None Include="Resources\plus2.png" />
     <None Include="Resources\plus.jpg" />

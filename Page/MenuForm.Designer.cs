@@ -37,7 +37,6 @@ namespace Login.Page
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PickFile_Button = new System.Windows.Forms.Button();
             this.NotificationList_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.User_Panel = new System.Windows.Forms.FlowLayoutPanel();
@@ -50,6 +49,7 @@ namespace Login.Page
             this.AboutUs_Button = new System.Windows.Forms.Button();
             this.Exit_Button = new System.Windows.Forms.Button();
             this.NewFile_Button = new System.Windows.Forms.Button();
+            this.PickFile_Button = new System.Windows.Forms.Button();
             this.Notification_Button = new System.Windows.Forms.Button();
             this.Personal_Button = new System.Windows.Forms.Button();
             this.Menu_Button = new System.Windows.Forms.Button();
@@ -101,19 +101,6 @@ namespace Login.Page
             this.panel2.Size = new System.Drawing.Size(223, 571);
             this.panel2.TabIndex = 1;
             this.panel2.Visible = false;
-            // 
-            // PickFile_Button
-            // 
-            this.PickFile_Button.FlatAppearance.BorderSize = 0;
-            this.PickFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PickFile_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PickFile_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
-            this.PickFile_Button.Location = new System.Drawing.Point(0, 146);
-            this.PickFile_Button.Name = "PickFile_Button";
-            this.PickFile_Button.Size = new System.Drawing.Size(237, 55);
-            this.PickFile_Button.TabIndex = 11;
-            this.PickFile_Button.Text = "Pick File";
-            this.PickFile_Button.Click += new System.EventHandler(this.PickFile_Button_Click);
             // 
             // NotificationList_panel
             // 
@@ -203,7 +190,7 @@ namespace Login.Page
             this.DrawChart_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.DrawChart_button.Image = global::Login.Properties.Resources.pie;
             this.DrawChart_button.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.DrawChart_button.Location = new System.Drawing.Point(10, 214);
+            this.DrawChart_button.Location = new System.Drawing.Point(10, 235);
             this.DrawChart_button.Margin = new System.Windows.Forms.Padding(2);
             this.DrawChart_button.Name = "DrawChart_button";
             this.DrawChart_button.Size = new System.Drawing.Size(235, 45);
@@ -221,7 +208,7 @@ namespace Login.Page
             this.AboutUs_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.AboutUs_Button.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs_Button.Image")));
             this.AboutUs_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AboutUs_Button.Location = new System.Drawing.Point(10, 264);
+            this.AboutUs_Button.Location = new System.Drawing.Point(12, 303);
             this.AboutUs_Button.Name = "AboutUs_Button";
             this.AboutUs_Button.Size = new System.Drawing.Size(237, 55);
             this.AboutUs_Button.TabIndex = 8;
@@ -256,7 +243,7 @@ namespace Login.Page
             this.NewFile_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
             this.NewFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("NewFile_Button.Image")));
             this.NewFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewFile_Button.Location = new System.Drawing.Point(0, 85);
+            this.NewFile_Button.Location = new System.Drawing.Point(10, 85);
             this.NewFile_Button.Name = "NewFile_Button";
             this.NewFile_Button.Size = new System.Drawing.Size(237, 55);
             this.NewFile_Button.TabIndex = 6;
@@ -264,6 +251,21 @@ namespace Login.Page
             this.NewFile_Button.UseVisualStyleBackColor = true;
             this.NewFile_Button.Visible = false;
             this.NewFile_Button.Click += new System.EventHandler(this.NewFile_Button_Click);
+            // 
+            // PickFile_Button
+            // 
+            this.PickFile_Button.FlatAppearance.BorderSize = 0;
+            this.PickFile_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PickFile_Button.Font = new System.Drawing.Font("Microsoft Tai Le", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PickFile_Button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(9)))));
+            this.PickFile_Button.Image = global::Login.Properties.Resources.file;
+            this.PickFile_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.PickFile_Button.Location = new System.Drawing.Point(10, 157);
+            this.PickFile_Button.Name = "PickFile_Button";
+            this.PickFile_Button.Size = new System.Drawing.Size(237, 55);
+            this.PickFile_Button.TabIndex = 11;
+            this.PickFile_Button.Text = "Pick File";
+            this.PickFile_Button.Click += new System.EventHandler(this.PickFile_Button_Click);
             // 
             // Notification_Button
             // 

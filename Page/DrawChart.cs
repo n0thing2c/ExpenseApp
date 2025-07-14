@@ -116,7 +116,8 @@ namespace Login.Page
                 LabelForeColor = Color.Crimson,
                 Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold),
                 LabelFormat = "{0:0,0}",
-                Color = Color.DarkSalmon
+                Color = Color.MidnightBlue
+                //Color = Color.FromArgb(100, 127, 214)
             };
             lineChart.Series.Add(series);
 

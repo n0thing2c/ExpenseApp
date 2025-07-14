@@ -116,7 +116,8 @@ namespace Login.Page
                 LabelForeColor = Color.Crimson,
                 Font = new Font("Microsoft New Tai Lue", 10, FontStyle.Bold),
                 LabelFormat = "{0:0,0}",
-                Color = Color.DarkSalmon
+                Color = Color.MidnightBlue
+                //Color = Color.FromArgb(100, 127, 214)
             };
             lineChart.Series.Add(series);
 
@@ -124,7 +125,7 @@ namespace Login.Page
             {
                 series.Points.AddXY(month.Key, month.Value);
                 series.Points[series.Points.Count - 1].MarkerStyle = MarkerStyle.Circle;
-                series.Points[series.Points.Count - 1].MarkerSize = 7;
+                series.Points[series.Points.Count - 1].MarkerSize = 6;
                 if(month.Value > 0)
                 {
                     series.Points[series.Points.Count - 1].LabelForeColor = Color.DarkGreen;

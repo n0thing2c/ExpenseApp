@@ -81,7 +81,10 @@ namespace Login.Page
             // 
             // pictureBoxGroup
             // 
-            this.pictureBoxGroup.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBoxGroup.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxGroup.BackgroundImage = global::Login.Properties.Resources.bank_pig;
+            this.pictureBoxGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxGroup.ErrorImage = global::Login.Properties.Resources.bank_pig;
             this.pictureBoxGroup.Location = new System.Drawing.Point(0, 55);
             this.pictureBoxGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxGroup.Name = "pictureBoxGroup";
@@ -145,7 +148,7 @@ namespace Login.Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1120, 703);
             this.Controls.Add(this.LLGitHub);
             this.Controls.Add(this.LLFacebook);

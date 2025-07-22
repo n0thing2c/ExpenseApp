@@ -52,6 +52,8 @@
     <Compile Include="Operation\FileClasses\FMFile.cs" />
     <Compile Include="Operation\FileClasses\MDFile.cs" />
     <Compile Include="Operation\FileClasses\UserFolder.cs" />
+    <Compile Include="Operation\Interface\IAuthView.cs" />
+    <Compile Include="Operation\Presenter\LoginPresenter.cs" />
     <Compile Include="Page\DrawChart.cs">
       <SubType>UserControl</SubType>
     </Compile>

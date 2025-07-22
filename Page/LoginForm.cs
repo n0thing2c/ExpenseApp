@@ -8,17 +8,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Login;   
+using Login;
+using Login.Operation.Interface;
+using Login.Operation.Presenter;
 using Login.Operation.UserLog;
 
 namespace Login.Page
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : Form, IAuthView
     {
-        public event EventHandler SignInClicked;
+        private LoginPresenter presenter;
         public LoginForm()
         {
             InitializeComponent();
+            presenter = new LoginPresenter(this);
+        }
+
+        public string Username => txtUsername.Text;
+        public string Password => txtPassword.Text;
+
+        public void ShowError(string message)
+        {
+            MessageBox.Show(message);
+        }
+
+        public void ClearFields()
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtUsername.Focus();
+        }
+
+        public void NavigateToMenu(string username)
+        {
+            new MenuForm(username).Show();
+            this.Hide();
         }
 
         private void signUpButton_Click(object sender, EventArgs e)
@@ -28,19 +52,7 @@ namespace Login.Page
         }
         private void Login_Button(object sender, EventArgs e)
         {
-            Account acc = Account.ModifyAcc(txtUsername.Text, txtPassword.Text);
-            ucLogIn uc = new ucLogIn(this,acc);
-            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
-            {
-                MessageBox.Show("Username or password is not filled, please try again");
-                txtPassword.Clear();
-                txtUsername.Clear();
-                txtUsername.Focus();
-            }
-            else
-            {
-                SignInClicked?.Invoke(this, EventArgs.Empty);
-            }
+            presenter.HandleLogin();
         }
 
         private void Exit_Click_1(object sender, EventArgs e)
@@ -67,16 +79,6 @@ namespace Login.Page
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-           
         }
 
         private void closeEye_Click(object sender, EventArgs e)

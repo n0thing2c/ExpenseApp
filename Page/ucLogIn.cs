@@ -22,7 +22,7 @@ namespace Login.Page
             view = form;
             acc = account;
             repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            view.SignInClicked += LogInClickedControl;
+            //view.SignInClicked += LogInClickedControl;
             InitializeComponent();
         }
        private void LogInClickedControl(object sender, EventArgs e)

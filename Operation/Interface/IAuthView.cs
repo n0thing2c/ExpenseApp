@@ -10,8 +10,8 @@ namespace Login.Operation.Interface
     {
         string Username { get; }
         string Password { get; }
-        void ShowError(string message);
+        void ShowMessage(string message);
         void ClearFields();
-        void NavigateToMenu(string username);
+        void NavigateTo(string username);
     }
 }

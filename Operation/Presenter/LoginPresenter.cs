@@ -26,7 +26,7 @@ namespace Login.Operation.Presenter
 
             if (string.IsNullOrEmpty(view.Username) || string.IsNullOrEmpty(view.Password))
             {
-                view.ShowError("Username or password is not filled, please try again");
+                view.ShowMessage("Username or password is not filled, please try again");
                 view.ClearFields();
                 return;
             }
@@ -34,11 +34,11 @@ namespace Login.Operation.Presenter
             if (acc.isValid())
             {
                 SaveUserInfo(acc);
-                view.NavigateToMenu(acc.getUserName());
+                view.NavigateTo(acc.getUserName());
             }
             else
             {
-                view.ShowError("Username or password is incorrect, please try again");
+                view.ShowMessage("Username or password is incorrect, please try again");
                 view.ClearFields();
             }
         }

@@ -27,7 +27,7 @@ namespace Login.Page
         public string Username => txtUsername.Text;
         public string Password => txtPassword.Text;
 
-        public void ShowError(string message)
+        public void ShowMessage(string message)
         {
             MessageBox.Show(message);
         }
@@ -39,7 +39,7 @@ namespace Login.Page
             txtUsername.Focus();
         }
 
-        public void NavigateToMenu(string username)
+        public void NavigateTo(string username)
         {
             new MenuForm(username).Show();
             this.Hide();

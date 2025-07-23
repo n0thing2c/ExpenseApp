@@ -8,50 +8,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login.Operation.Interface;
+using Login.Operation.Presenter;
 using Login.Operation.UserLog;
 namespace Login.Page
 {
-    public partial class SignUpForm : Form
+    public partial class SignUpForm : Form,IAuthView
     {
-        public event EventHandler SignUpClicked;
+        private readonly SignUpPresenter presenter;
         public SignUpForm()
         {
             InitializeComponent();
-            ucSignUp uc = new ucSignUp(this);
+            presenter = new SignUpPresenter(this);
         }
-        public string getUserName()
-        {
-            return txtUsername.Text;
-        }
-        public string getPassword()
-        {
-            return txtPassword.Text;
-        }
-        private void Form2_Load(object sender, EventArgs e)
-        {
+        public string Username => txtUsername.Text;
+        public string Password => txtPassword.Text;
 
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message);
+        }
+        public void ClearFields()
+        {
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtUsername.Focus();
+        }
+        public void NavigateTo(string username)
+        {
+            new LoginForm().Show();
+            this.Hide();
         }
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
-            {
-                MessageBox.Show("Please fill in all information");
-                txtPassword.Clear();
-                txtUsername.Clear();
-                txtUsername.Focus();
-            }
-            else
-            {
-                SignUpClicked?.Invoke(this, EventArgs.Empty);
-            }
+           presenter.HandleSignUp();
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
 
         private void txtUsername_KeyDown(object sender, KeyEventArgs e)
         {

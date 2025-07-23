@@ -11,29 +11,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Login.Operation.Interface;
+using Login.Operation.Presenter;
 using Login.Operation.UserLog;
 
 namespace Login.Page
 {
-    public partial class ucNewFile : UserControl
+    public partial class ucNewFile : UserControl, INewFileView
     {
-        string user;
         string tp;
-        public event EventHandler ExitButtonClicked;
-        public event Action<string,string> MakeFileClicked;
+        NewFilePresenter presenter;
+
+        public event EventHandler ExitClicked;
+        public event Action<string, string> MakeFileClicked;
+        public event EventHandler MakeFileRequested;
         public ucNewFile(string username,string type)
         {
             InitializeComponent();
-            user = username;
             tp = type;
+            presenter = new NewFilePresenter(this);
         }
+        public string userFolderPath => Account.GetCurrentAcc().GetFolderPath();
+        public string type => tp;
+        public int selectedMonth => Convert.ToInt32(MonthPicker.Value);
+        public int selectedYear => Convert.ToInt32(YearPicker.Value);
 
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            ExitButtonClicked?.Invoke(this, EventArgs.Empty);
+            ExitClicked?.Invoke(this, EventArgs.Empty);
         }
-        private bool OverWriteExistFile(string name)
+        public void NotifyFileCreated(string path, string type)
+        {
+            MakeFileClicked?.Invoke(path, type);
+        }
+        public bool OverWriteExistFile(string name)
         {
             DialogResult result = MessageBox.Show(
             "The file for " + name.Replace("_", " ").Replace(".csv", "") + 
@@ -42,41 +54,11 @@ namespace Login.Page
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question);
 
-            if (result == DialogResult.No)
-            {
-                return false; // Cancel the operation
-            }
-            else
-                return true;
+            return result == DialogResult.Yes;
         }
         private void MakeFileButton_Click(object sender, EventArgs e)
         {
-            string userFolderPath = Account.GetCurrentAcc().GetFolderPath();
-            if (tp == "FM")
-            {
-                string folder = Path.Combine(userFolderPath, "FMFiles"); 
-                string name = new CultureInfo("en-US").DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Expenses.csv";
-                string path = Path.Combine(folder, name);
-                if(!File.Exists(path) || OverWriteExistFile(name))
-                {
-                    FMFile file = new FMFile();
-                    file.Create(path);
-                    MakeFileClicked?.Invoke(path, tp);
-                }
-
-            }
-            else if(tp == "MD")
-            {
-                string folder = Path.Combine(userFolderPath, "MDFiles");
-                string name = new CultureInfo("en-US").DateTimeFormat.GetMonthName(Convert.ToInt32(MonthPicker.Value)) + "_" + Convert.ToString(YearPicker.Value) + "_Group_Expenses.csv";
-                string path = Path.Combine(folder, name);
-                if (!File.Exists(path) || OverWriteExistFile(name))
-                {
-                    MDFile file = new MDFile();
-                    file.Create(path);
-                    MakeFileClicked?.Invoke(path, tp);
-                }
-            }
+            MakeFileRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }

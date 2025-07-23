@@ -55,7 +55,7 @@ namespace Login.Page
         private void NewFileControl(string type)
         {
             ucNewFile ucNF = new ucNewFile(user, type);
-            ucNF.ExitButtonClicked += ExitButtonClickedControl;
+            ucNF.ExitClicked += ExitButtonClickedControl;
             ucNF.MakeFileClicked += LoadFileControl;
             LoadUserControl(ucNF);
         }

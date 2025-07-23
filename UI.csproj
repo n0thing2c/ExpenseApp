@@ -53,7 +53,10 @@
     <Compile Include="Operation\FileClasses\MDFile.cs" />
     <Compile Include="Operation\FileClasses\UserFolder.cs" />
     <Compile Include="Operation\Interface\IAuthView.cs" />
+    <Compile Include="Operation\Interface\IFileCreator.cs" />
+    <Compile Include="Operation\Interface\INewFileView.cs" />
     <Compile Include="Operation\Presenter\LoginPresenter.cs" />
+    <Compile Include="Operation\Presenter\NewFilePresenter.cs" />
     <Compile Include="Operation\Presenter\SignUpPresenter.cs" />
     <Compile Include="Page\DrawChart.cs">
       <SubType>UserControl</SubType>

@@ -21,7 +21,7 @@ namespace Login.Operation.Interface
         event Action<string, string> MakeFileClicked;
         bool OverWriteExistFile(string name);
 
-        //Presenter notify to view that file is created, relay to MakeFileClicked event
+        //Presenter notify to view that file is created, relay to menu to do MakeFileClicked event
         void NotifyFileCreated(string path, string type);
     }
 }

@@ -62,7 +62,7 @@ namespace Login.Page
         private void PickFileControl(string type)
         {
             ucPickFile ucPF = new ucPickFile(type);
-            ucPF.LoadFilesForUser(user);
+            ucPF.LoadFilesToBox();
             ucPF.ExitButtonClicked += ExitButtonClickedControl;
             ucPF.OpenFileClicked += LoadFileControl;
             LoadUserControl(ucPF);
@@ -155,7 +155,7 @@ namespace Login.Page
         private void PickFile(object sender, EventArgs e)
         {
             ucPickFile ucPF = new ucPickFile("FM");
-            ucPF.LoadFilesForUser(user);
+            ucPF.LoadFilesToBox();
             ucPF.ExitButtonClicked += ExitButtonClickedControl;
             ucPF.OpenFileClicked += drawPieChartControl;
             LoadUserControl(ucPF);

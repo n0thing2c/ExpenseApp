@@ -29,7 +29,6 @@ namespace Login.Operation.Presenter
             paths = service.GetFilePaths(view.type).ToArray();
             if (paths.Length == 0)
             {
-                view.ShowMessage("No files found.", "Information");
                 view.ShowFiles(Array.Empty<string>());
             }
             else

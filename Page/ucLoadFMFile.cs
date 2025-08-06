@@ -133,9 +133,9 @@ namespace Login.Page
             if (sum == 0)
                 Sumres.ForeColor = Color.Black;
             else if(sum < 0)
-                Sumres.ForeColor = Color.Red;
+                Sumres.ForeColor = Color.Crimson;
             else
-                Sumres.ForeColor = Color.Lime;
+                Sumres.ForeColor = Color.FromArgb(21, 82, 35);
         }
         private void OutRes_Calculate()
         {
@@ -237,6 +237,7 @@ namespace Login.Page
                 e.SortResult = val1.CompareTo(val2);
                 e.Handled = true;  // Handle only Spend and Earn
             }
+            isSaved= false;
             // Let default sorting work for other columns like "Day"
         }
         private void SaveButton_Click(object sender, EventArgs e)

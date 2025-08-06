@@ -139,7 +139,7 @@ namespace Login.Page
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(204, 24);
             this.txtPassword.TabIndex = 2;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+          
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // LoginButton
@@ -233,7 +233,7 @@ namespace Login.Page
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
-            this.Load += new System.EventHandler(this.Login_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pig)).EndInit();

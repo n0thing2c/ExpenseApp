@@ -18,20 +18,28 @@ namespace Login.Page
         {
             InitializeComponent();
 
-            //this.Size = new Size(900, 675);
-            //this.MinimumSize = this.Size;  // Ngăn người dùng resize nhỏ hơn
-            ////this.MaximumSize = this.Size;  // Giữ tỉ lệ cố định nếu muốn
-            ////this.MaximizeBox = false;
+            int lastCharIndex = RTBDescription.TextLength;
+            int y = RTBDescription.GetPositionFromCharIndex(lastCharIndex).Y;
+
+            // Ước lượng chiều cao cần thiết (cộng thêm chiều cao 1 dòng + padding)
+            int neededHeight = y + RTBDescription.Font.Height + 50;
+
+            // Gán chiều cao cho RichTextBox và panel chứa nó
+            RTBDescription.Height = neededHeight;
+            Panel_RTBDescription.Height = neededHeight;
 
             LoadTeamInfo();
             this.MouseDown += Form_MouseDown;
-            CenterExitButton();
+            Debug.WriteLine("Total body content height: " + BodyPanel.DisplayRectangle.Height);
+            Debug.WriteLine("Client height: " + BodyPanel.ClientSize.Height);
         }
         private void LoadTeamInfo()
         {
             // Thêm thông tin từng thành viên
-            AddMember("Huỳnh Gia Khang", "Developer, report writer", "Design classes for file handling\r\nDesign UI and logics for Management windows\r\n\r\n");
-            AddMember("Trần Nguyễn Duy Thịnh", "Developer, report writer", "Design classes for user account handling\r\nDesign UI and authentication for Login/Sign up windows\r\n");
+            AddMember("Huỳnh Gia Khang", "Developer, report writer", "Design classes for file handling\r\n" +
+                                                                     "Design UI and logics for Management windows\r\n\r\n");
+            AddMember("Trần Nguyễn Duy Thịnh", "Developer, report writer", "Design classes for user account handling\r\n" +
+                                                                           "Design UI and authentication for Login/Sign up windows\r\n");
             AddMember("Trương Tấn Dũng", "Interface and System Designer, report writer", "Design system structure and GUI for Menu");
             AddMember("Trần Công Hoàng Tấn", "Developer, report writer", "Design UI and logics for Reports and Profile windows");
             AddMember("Nguyễn Kinh Quốc", "Developer, report writer", "Design UI and logics for About us window");
@@ -83,10 +91,6 @@ namespace Login.Page
         {
 
         }
-
-
-
-
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

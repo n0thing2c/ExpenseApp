@@ -81,10 +81,10 @@ namespace Login.Page
             this.Notification_Button.ForeColor = System.Drawing.Color.LightPink;
             this.Notification_Button.Image = ((System.Drawing.Image)(resources.GetObject("Notification_Button.Image")));
             this.Notification_Button.Location = new System.Drawing.Point(1212, 14);
-            this.Notification_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Notification_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Notification_Button.Name = "Notification_Button";
             this.Notification_Button.Size = new System.Drawing.Size(71, 68);
-            this.Notification_Button.TabIndex = 4;
+            this.Notification_Button.TabIndex = 2;
             this.toolTip1.SetToolTip(this.Notification_Button, "Notifications");
             this.Notification_Button.UseVisualStyleBackColor = true;
             this.Notification_Button.Click += new System.EventHandler(this.Notification_Button_Click);
@@ -97,10 +97,10 @@ namespace Login.Page
             this.Personal_Button.ForeColor = System.Drawing.Color.LightPink;
             this.Personal_Button.Image = ((System.Drawing.Image)(resources.GetObject("Personal_Button.Image")));
             this.Personal_Button.Location = new System.Drawing.Point(1291, 14);
-            this.Personal_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Personal_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Personal_Button.Name = "Personal_Button";
             this.Personal_Button.Size = new System.Drawing.Size(71, 68);
-            this.Personal_Button.TabIndex = 2;
+            this.Personal_Button.TabIndex = 3;
             this.toolTip1.SetToolTip(this.Personal_Button, "User");
             this.Personal_Button.UseVisualStyleBackColor = true;
             this.Personal_Button.Click += new System.EventHandler(this.Personal_Button_Click);
@@ -114,7 +114,7 @@ namespace Login.Page
             this.Menu_Button.ForeColor = System.Drawing.SystemColors.MenuText;
             this.Menu_Button.Image = ((System.Drawing.Image)(resources.GetObject("Menu_Button.Image")));
             this.Menu_Button.Location = new System.Drawing.Point(269, 14);
-            this.Menu_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Menu_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Menu_Button.Name = "Menu_Button";
             this.Menu_Button.Size = new System.Drawing.Size(76, 55);
             this.Menu_Button.TabIndex = 1;
@@ -134,7 +134,6 @@ namespace Login.Page
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 43);
-            this.label1.TabIndex = 0;
             this.label1.Text = "Expense App";
             // 
             // panel2
@@ -147,7 +146,7 @@ namespace Login.Page
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(0, 85);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(297, 708);
             this.panel2.TabIndex = 1;
@@ -163,10 +162,10 @@ namespace Login.Page
             this.AboutUs_Button.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs_Button.Image")));
             this.AboutUs_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AboutUs_Button.Location = new System.Drawing.Point(13, 325);
-            this.AboutUs_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AboutUs_Button.Margin = new System.Windows.Forms.Padding(4);
             this.AboutUs_Button.Name = "AboutUs_Button";
             this.AboutUs_Button.Size = new System.Drawing.Size(316, 68);
-            this.AboutUs_Button.TabIndex = 8;
+            this.AboutUs_Button.TabIndex = 6;
             this.AboutUs_Button.Text = "About us";
             this.AboutUs_Button.UseVisualStyleBackColor = true;
             this.AboutUs_Button.Visible = false;
@@ -181,7 +180,7 @@ namespace Login.Page
             this.Exit_Button.ForeColor = System.Drawing.Color.LightPink;
             this.Exit_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exit_Button.Image")));
             this.Exit_Button.Location = new System.Drawing.Point(13, 609);
-            this.Exit_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Exit_Button.Name = "Exit_Button";
             this.Exit_Button.Size = new System.Drawing.Size(273, 68);
             this.Exit_Button.TabIndex = 7;
@@ -200,10 +199,10 @@ namespace Login.Page
             this.NewFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("NewFile_Button.Image")));
             this.NewFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewFile_Button.Location = new System.Drawing.Point(13, 174);
-            this.NewFile_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NewFile_Button.Margin = new System.Windows.Forms.Padding(4);
             this.NewFile_Button.Name = "NewFile_Button";
             this.NewFile_Button.Size = new System.Drawing.Size(316, 68);
-            this.NewFile_Button.TabIndex = 6;
+            this.NewFile_Button.TabIndex = 4;
             this.NewFile_Button.Text = "New File";
             this.NewFile_Button.UseVisualStyleBackColor = true;
             this.NewFile_Button.Visible = false;
@@ -219,7 +218,7 @@ namespace Login.Page
             this.PickFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("PickFile_Button.Image")));
             this.PickFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PickFile_Button.Location = new System.Drawing.Point(21, 250);
-            this.PickFile_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PickFile_Button.Margin = new System.Windows.Forms.Padding(4);
             this.PickFile_Button.Name = "PickFile_Button";
             this.PickFile_Button.Size = new System.Drawing.Size(307, 68);
             this.PickFile_Button.TabIndex = 5;
@@ -296,7 +295,7 @@ namespace Login.Page
             this.LogOut_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogOut_Button.Name = "LogOut_Button";
             this.LogOut_Button.Size = new System.Drawing.Size(120, 37);
-            this.LogOut_Button.TabIndex = 3;
+            this.LogOut_Button.TabIndex = 7;
             this.LogOut_Button.Text = "Log out";
             this.LogOut_Button.UseVisualStyleBackColor = true;
             this.LogOut_Button.Click += new System.EventHandler(this.LogOut_Button_Click);
@@ -304,7 +303,7 @@ namespace Login.Page
             // panelContent
             // 
             this.panelContent.Location = new System.Drawing.Point(0, 85);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(4);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1375, 708);
             this.panelContent.TabIndex = 4;
@@ -322,7 +321,7 @@ namespace Login.Page
             this.Controls.Add(this.panelContent);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

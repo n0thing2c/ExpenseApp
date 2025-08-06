@@ -52,6 +52,15 @@
     <Compile Include="Operation\FileClasses\FMFile.cs" />
     <Compile Include="Operation\FileClasses\MDFile.cs" />
     <Compile Include="Operation\FileClasses\UserFolder.cs" />
+    <Compile Include="Operation\Interface\IAuthView.cs" />
+    <Compile Include="Operation\Interface\IFileCreator.cs" />
+    <Compile Include="Operation\Interface\IFileService.cs" />
+    <Compile Include="Operation\Interface\INewFileView.cs" />
+    <Compile Include="Operation\Interface\IPickFileView.cs" />
+    <Compile Include="Operation\Presenter\LoginPresenter.cs" />
+    <Compile Include="Operation\Presenter\NewFilePresenter.cs" />
+    <Compile Include="Operation\Presenter\PickFilePresenter.cs" />
+    <Compile Include="Operation\Presenter\SignUpPresenter.cs" />
     <Compile Include="Page\DrawChart.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,18 +157,6 @@
     </Compile>
     <Compile Include="Page\ucPickFileType.Designer.cs">
       <DependentUpon>ucPickFileType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucLogIn.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucLogIn.Designer.cs">
-      <DependentUpon>ucLogIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucSignUp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucSignUp.Designer.cs">
-      <DependentUpon>ucSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

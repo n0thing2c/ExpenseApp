@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RTBDescription.Text" xml:space="preserve">
+    <value>Expense App is a personal and group financial management application developed by the VNG Dev Team, students of the Faculty of Information Technology, University of Science – VNU HCM.
+The app aims to help users record detailed daily transactions, analyze their spending habits, and most importantly, manage shared expenses transparently within groups such as friends, families, or roommates.
+
+With a clean and user-friendly interface, Expense App offers an efficient and intuitive experience. It integrates essential features such as account management, personal income/expense tracking, group expense sharing, financial reports, and user feedback – all within a single system.
+
+This project was developed as part of the Object-Oriented Programming (OOP) course, under the guidance of Mr. Vo Nhat Tan and Mr. Truong Tan Khoa. We believe that the app is not only a valuable academic exercise but also a practical tool for effective everyday financial management.</value>
+  </data>
 </root>

@@ -18,47 +18,31 @@ namespace Login.Page
         {
             InitializeComponent();
 
-            //this.Size = new Size(900, 675);
-            //this.MinimumSize = this.Size;  // Ngăn người dùng resize nhỏ hơn
-            ////this.MaximumSize = this.Size;  // Giữ tỉ lệ cố định nếu muốn
-            ////this.MaximizeBox = false;
+            int lastCharIndex = RTBDescription.TextLength;
+            int y = RTBDescription.GetPositionFromCharIndex(lastCharIndex).Y;
+
+            // Ước lượng chiều cao cần thiết (cộng thêm chiều cao 1 dòng + padding)
+            int neededHeight = y + RTBDescription.Font.Height + 50;
+
+            // Gán chiều cao cho RichTextBox và panel chứa nó
+            RTBDescription.Height = neededHeight;
+            Panel_RTBDescription.Height = neededHeight;
 
             LoadTeamInfo();
             this.MouseDown += Form_MouseDown;
-            CenterLabel(labelTitle);
-            CenterLabel(labelDescription);
-            CenterFlowLayoutPanel();
-            CenterExitButton();
+            Debug.WriteLine("Total body content height: " + BodyPanel.DisplayRectangle.Height);
+            Debug.WriteLine("Client height: " + BodyPanel.ClientSize.Height);
         }
         private void LoadTeamInfo()
         {
-            labelTitle.Text = "ABOUT US";
-            labelProject.Text = "Dự án: ...";
-            pictureBoxGroup.Size = new Size(100, 100); // hoặc theo ảnh bạn muốn
-            pictureBoxGroup.SizeMode = PictureBoxSizeMode.Zoom; // hiển thị ảnh đẹp
-            pictureBoxGroup.Left = (this.ClientSize.Width - pictureBoxGroup.Width) / 2;
-            pictureBoxGroup.Top = labelProject.Bottom + 10;
-            labelDescription.Text = "Đây là ứng dụng quản lý...., hỗ trợ thêm, sửa, xoá " +
-                        "và tìm kiếm thông tin .....";
-            labelDescription.MaximumSize = new Size((int)(this.ClientSize.Width * 0.8), 0);
-            labelDescription.AutoSize = true;
-            labelDescription.TextAlign = ContentAlignment.MiddleCenter;
-            labelDescription.Left = (this.ClientSize.Width - labelDescription.Width) / 2;
-            labelDescription.Top = pictureBoxGroup.Bottom + 10; 
-            flowLayoutPanelMembers.Top = labelDescription.Bottom + 20; 
-
-
-
-            btnClose.Text = "Exit";
             // Thêm thông tin từng thành viên
-            AddMember("Nguyễn Kinh Quốc", "...", "Phụ trách thiết kế About us.");
-            AddMember("Trần Công Hoàng Tấn", "...", "....");
-            AddMember("Trần Nguyễn Duy Thịnh", "...", "....");
-            AddMember("Huỳnh Gia Khang", "...", "....");
-            AddMember("Trương Tấn Dũng", "...", "....");
-            labelDescription.MaximumSize = new Size((int)(this.ClientSize.Width * 0.8), 0);
-            labelDescription.AutoSize = true;
-            CenterSocialLinks();
+            AddMember("Huỳnh Gia Khang", "Developer, report writer", "Design classes for file handling\r\n" +
+                                                                     "Design UI and logics for Management windows\r\n\r\n");
+            AddMember("Trần Nguyễn Duy Thịnh", "Developer, report writer", "Design classes for user account handling\r\n" +
+                                                                           "Design UI and authentication for Login/Sign up windows\r\n");
+            AddMember("Trương Tấn Dũng", "Interface and System Designer, report writer", "Design system structure and GUI for Menu");
+            AddMember("Trần Công Hoàng Tấn", "Developer, report writer", "Design UI and logics for Reports and Profile windows");
+            AddMember("Nguyễn Kinh Quốc", "Developer, report writer", "Design UI and logics for About us window");
             ToolTip tip = new ToolTip();
             tip.SetToolTip(LLFacebook, "Facebook của nhóm");
             tip.SetToolTip(LLGitHub, "GitHub của nhóm");
@@ -71,6 +55,7 @@ namespace Login.Page
             lbl.AutoSize = true;
             lbl.Margin = new Padding(10);
             lbl.Font = new Font("Segoe UI", 9);
+            lbl.ForeColor = Color.Black;
             flowLayoutPanelMembers.Controls.Add(lbl); // flowLayoutPanelMembers đã có sẵn trong Form
         }
 
@@ -78,32 +63,11 @@ namespace Login.Page
         {
             this.Close();
         }
-        private void CenterLabel(Label lbl)
-        {
-            lbl.Left = (this.ClientSize.Width - lbl.Width) / 2;
-        }
 
         private void CenterExitButton()
         {
             // Căn giữa theo chiều ngang
             btnClose.Left = (this.ClientSize.Width - btnClose.Width) / 2;
-
-            // Đặt ở dưới cùng cách đáy 20px
-            btnClose.Top = this.ClientSize.Height - btnClose.Height - 20;
-        }
-
-        private void CenterFlowLayoutPanel()
-        {
-            int targetWidth = (int)(this.ClientSize.Width * 0.8);
-            flowLayoutPanelMembers.Width = targetWidth;
-
-            // Đặt chiều cao hợp lý
-            flowLayoutPanelMembers.Height = 180; // hoặc tùy chỉnh
-
-            flowLayoutPanelMembers.Left = (this.ClientSize.Width - targetWidth) / 2;
-
-            // Căn phía dưới labelDescription
-            flowLayoutPanelMembers.Top = labelDescription.Bottom + 20; // cách 20px
         }
 
         private void LLFacebook_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -125,31 +89,8 @@ namespace Login.Page
         }
         private void AboutUsForm_Resize(object sender, EventArgs e)
         {
-            CenterExitButton();
-            CenterFlowLayoutPanel();
-            CenterLabel(labelTitle);
-            CenterLabel(labelDescription);
-            CenterSocialLinks();
+
         }
-        private void CenterSocialLinks()
-        {
-            int spacing = 20;
-            int totalWidth = LLFacebook.Width + spacing + LLGitHub.Width;
-
-            int startX = (this.ClientSize.Width - totalWidth) / 2;
-
-            LLFacebook.Left = startX;
-            LLGitHub.Left = LLFacebook.Right + spacing;
-
-            // Nằm sát đáy: đặt TOP phía trên nút Exit 5px
-            int linkTop = this.ClientSize.Height - btnClose.Height - LLFacebook.Height - 20;
-
-            LLFacebook.Top = LLGitHub.Top = linkTop;
-        }
-
-
-
-
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

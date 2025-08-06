@@ -34,7 +34,7 @@ namespace Login.Page
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "" || txtPassword.Text == "")
+            if(string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Please fill in all information");
                 txtPassword.Clear();

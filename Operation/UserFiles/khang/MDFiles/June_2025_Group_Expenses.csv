@@ -1,5 +1,3 @@
-khang,quoc,tan
-1,Transportation,tan,120000,True,False,True,
-2,Utilities bill,khang,130000,True,,True,
-3,Rent,khang,50000,,True,,
-4,Job,quoc,12000,True,,,
+khang,bao
+,,bao,50000,True,False,
+,,khang,1321300,True,True,

@@ -44,13 +44,19 @@ namespace Login.Operation.UserLog
             {
                 string oldUser = currentAcc.user;
                 string newUser = username;
+                string oldPass = currentAcc.pass;
+                string newPass = password;
                 // Update the folder path
                 if (oldUser != newUser)
                 {
                     string oldPath = currentAcc.folder.GetFolderPath();
                     currentAcc.folder.SetUserName(username);
                     string newPath = currentAcc.folder.GetFolderPath();
-                    Directory.Move(oldPath, newPath);
+                    if(!Directory.Exists(newPath))
+                    {
+                        Directory.Move(oldPath, newPath);
+                    }
+                    
                 }
                 currentAcc.user = username;
                 currentAcc.pass = password;
@@ -85,7 +91,7 @@ namespace Login.Operation.UserLog
                 string find = user + ":" + pass;
                 foreach (string info in infos)
                 {
-                    if (info.Contains(find))
+                    if (info == find)
                         return true;
                 }
                 return false;

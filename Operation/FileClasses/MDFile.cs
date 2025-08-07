@@ -16,10 +16,7 @@ namespace Login.Page
         {
             fullpath = "";
         }
-        public MDFile(string path)
-        {
-            fullpath = path;
-        }
+        
         public int GetNumberOfPeople()
         {
             if (File.Exists(fullpath))

@@ -10,22 +10,12 @@ namespace Login.Page
     internal abstract class AppFile
     {
         protected string fullpath;
-        public AppFile()
-        {
-            fullpath = "";
-        }
-        public AppFile(string path)
-        {
-            fullpath = path;
-        }
+        
         public void SetPath(string path)
         {
             fullpath = path;
         }
-        public string GetFullPath()
-        {
-            return fullpath;
-        }
+        
         public void Create(string path)
         {
             this.fullpath = path;

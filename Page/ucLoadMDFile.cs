@@ -13,8 +13,8 @@ namespace Login.Page
 {
     public partial class ucLoadMDFile : UserControl
     {
-        int numofpeople = 0;
-        List<string> peoplenames;
+        private int numofpeople = 0;
+        private List<string> peoplenames;
         public event EventHandler ExitButtonClicked;
         private bool isSaved = true;
         public ucLoadMDFile()

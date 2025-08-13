@@ -20,7 +20,6 @@ namespace Login.Page
     public partial class ucNewFile : UserControl, INewFileView
     {
         string tp;
-        NewFilePresenter presenter;
 
         public event EventHandler ExitClicked;
         public event Action<string, string> MakeFileClicked;
@@ -29,7 +28,7 @@ namespace Login.Page
         {
             InitializeComponent();
             tp = type;
-            presenter = new NewFilePresenter(this);
+            NewFilePresenter presenter = new NewFilePresenter(this);
         }
         public string userFolderPath => Account.GetCurrentAcc().GetFolderPath();
         public string type => tp;

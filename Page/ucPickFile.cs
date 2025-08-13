@@ -16,7 +16,6 @@ namespace Login.Page
     public partial class ucPickFile : UserControl, IPickFileView
     {
         public string type { get; }
-        private readonly PickFilePresenter presenter;
 
         public event Action<string,string> OpenFileClicked;
         public event EventHandler ExitButtonClicked;
@@ -28,7 +27,7 @@ namespace Login.Page
         {
             InitializeComponent();
             type = tp;
-            presenter = new PickFilePresenter(this, new FileService());
+            PickFilePresenter presenter = new PickFilePresenter(this, new FileService());
         }
 
         //UserFolder folder = Account.GetCurrentAcc().GetUserFolder();

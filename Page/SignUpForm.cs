@@ -95,5 +95,10 @@ namespace Login.Page
         {
             
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

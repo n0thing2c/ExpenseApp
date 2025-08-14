@@ -199,5 +199,19 @@ namespace Login.Page
             aboutForm.ShowDialog();
         }
 
+        private void Profile_Button_Click(object sender, EventArgs e)
+        {
+            new ProfileForm().Show();
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Reports_Button_Click(object sender, EventArgs e)
+        {
+            new ReportForm().Show();
+        }
     } 
 }

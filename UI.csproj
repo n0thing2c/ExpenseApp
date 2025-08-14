@@ -85,6 +85,18 @@
     <Compile Include="Page\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Page\ProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\ProfileForm.Designer.cs">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Page\ucPickChartType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +167,12 @@
     <EmbeddedResource Include="Page\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ProfileForm.resx">
+      <DependentUpon>ProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page\ucPickChartType.resx">
       <DependentUpon>ucPickChartType.cs</DependentUpon>

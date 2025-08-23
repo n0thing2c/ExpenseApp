@@ -128,7 +128,6 @@ namespace Login.Page
         private void LogOut_Button_Click(object sender, EventArgs e)
         {
             this.Close();
-            new LoginForm().Show();
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -140,6 +139,8 @@ namespace Login.Page
                 {
                     e.Cancel = true;
                 }
+                else
+                    new LoginForm().Show();
             }
         }
 

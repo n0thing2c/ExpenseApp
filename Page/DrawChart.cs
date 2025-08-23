@@ -26,6 +26,7 @@ namespace Login.Page
             if (total == 0)
             {
                 MessageBox.Show("No data to display.");
+                this.Hide();
                 return;
             }
 

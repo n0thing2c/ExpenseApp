@@ -50,9 +50,10 @@
             // 
             this.username_label.AutoSize = true;
             this.username_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_label.Location = new System.Drawing.Point(254, 49);
+            this.username_label.Location = new System.Drawing.Point(190, 40);
+            this.username_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.username_label.Name = "username_label";
-            this.username_label.Size = new System.Drawing.Size(145, 36);
+            this.username_label.Size = new System.Drawing.Size(120, 29);
             this.username_label.TabIndex = 0;
             this.username_label.Text = "username";
             this.username_label.Click += new System.EventHandler(this.username_label_Click);
@@ -60,10 +61,11 @@
             // Username_show_label
             // 
             this.Username_show_label.AutoSize = true;
-            this.Username_show_label.Font = new System.Drawing.Font("Franklin Gothic Demi", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_show_label.Location = new System.Drawing.Point(47, 47);
+            this.Username_show_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_show_label.Location = new System.Drawing.Point(35, 38);
+            this.Username_show_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Username_show_label.Name = "Username_show_label";
-            this.Username_show_label.Size = new System.Drawing.Size(172, 38);
+            this.Username_show_label.Size = new System.Drawing.Size(147, 31);
             this.Username_show_label.TabIndex = 1;
             this.Username_show_label.Text = "Username:";
             this.Username_show_label.Click += new System.EventHandler(this.Username_show_label_Click);
@@ -75,9 +77,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(93, 369);
+            this.button3.Location = new System.Drawing.Point(70, 300);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 39);
+            this.button3.Size = new System.Drawing.Size(70, 32);
             this.button3.TabIndex = 4;
             this.button3.Text = "Return";
             this.button3.UseVisualStyleBackColor = false;
@@ -90,9 +93,10 @@
             this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_button.ForeColor = System.Drawing.Color.LightGray;
-            this.save_button.Location = new System.Drawing.Point(274, 369);
+            this.save_button.Location = new System.Drawing.Point(206, 300);
+            this.save_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(94, 38);
+            this.save_button.Size = new System.Drawing.Size(70, 31);
             this.save_button.TabIndex = 5;
             this.save_button.Text = "Save";
             this.save_button.UseVisualStyleBackColor = false;
@@ -101,10 +105,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Demi", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 134);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(68, 109);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 38);
+            this.label1.Size = new System.Drawing.Size(236, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Change Password";
             // 
@@ -112,11 +117,12 @@
             // 
             this.confirm_pass_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.confirm_pass_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.confirm_pass_box.Font = new System.Drawing.Font("Franklin Gothic Heavy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirm_pass_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirm_pass_box.ForeColor = System.Drawing.Color.LightGray;
-            this.confirm_pass_box.Location = new System.Drawing.Point(93, 305);
+            this.confirm_pass_box.Location = new System.Drawing.Point(70, 248);
+            this.confirm_pass_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.confirm_pass_box.Name = "confirm_pass_box";
-            this.confirm_pass_box.Size = new System.Drawing.Size(275, 25);
+            this.confirm_pass_box.Size = new System.Drawing.Size(207, 21);
             this.confirm_pass_box.TabIndex = 7;
             this.confirm_pass_box.Text = "CONFIRM PASSWORD";
             this.confirm_pass_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -127,11 +133,12 @@
             // 
             this.new_pass_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.new_pass_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.new_pass_box.Font = new System.Drawing.Font("Franklin Gothic Heavy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.new_pass_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.new_pass_box.ForeColor = System.Drawing.Color.LightGray;
-            this.new_pass_box.Location = new System.Drawing.Point(93, 254);
+            this.new_pass_box.Location = new System.Drawing.Point(70, 206);
+            this.new_pass_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.new_pass_box.Name = "new_pass_box";
-            this.new_pass_box.Size = new System.Drawing.Size(275, 25);
+            this.new_pass_box.Size = new System.Drawing.Size(207, 21);
             this.new_pass_box.TabIndex = 8;
             this.new_pass_box.Text = "NEW PASSWORD";
             this.new_pass_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -142,11 +149,12 @@
             // 
             this.current_pass_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.current_pass_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.current_pass_box.Font = new System.Drawing.Font("Franklin Gothic Heavy", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.current_pass_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.current_pass_box.ForeColor = System.Drawing.Color.LightGray;
-            this.current_pass_box.Location = new System.Drawing.Point(93, 202);
+            this.current_pass_box.Location = new System.Drawing.Point(70, 164);
+            this.current_pass_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.current_pass_box.Name = "current_pass_box";
-            this.current_pass_box.Size = new System.Drawing.Size(275, 25);
+            this.current_pass_box.Size = new System.Drawing.Size(207, 21);
             this.current_pass_box.TabIndex = 9;
             this.current_pass_box.Text = "CURRENT PASSWORD";
             this.current_pass_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -156,10 +164,9 @@
             // closeEye
             // 
             this.closeEye.Image = global::Login.Properties.Resources.close_eye1;
-            this.closeEye.Location = new System.Drawing.Point(334, 254);
-            this.closeEye.Margin = new System.Windows.Forms.Padding(4);
+            this.closeEye.Location = new System.Drawing.Point(250, 206);
             this.closeEye.Name = "closeEye";
-            this.closeEye.Size = new System.Drawing.Size(33, 25);
+            this.closeEye.Size = new System.Drawing.Size(25, 20);
             this.closeEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closeEye.TabIndex = 10;
             this.closeEye.TabStop = false;
@@ -168,10 +175,9 @@
             // close_eye_confirm
             // 
             this.close_eye_confirm.Image = global::Login.Properties.Resources.close_eye1;
-            this.close_eye_confirm.Location = new System.Drawing.Point(335, 306);
-            this.close_eye_confirm.Margin = new System.Windows.Forms.Padding(4);
+            this.close_eye_confirm.Location = new System.Drawing.Point(251, 249);
             this.close_eye_confirm.Name = "close_eye_confirm";
-            this.close_eye_confirm.Size = new System.Drawing.Size(33, 25);
+            this.close_eye_confirm.Size = new System.Drawing.Size(25, 20);
             this.close_eye_confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close_eye_confirm.TabIndex = 11;
             this.close_eye_confirm.TabStop = false;
@@ -180,10 +186,9 @@
             // openEye
             // 
             this.openEye.Image = global::Login.Properties.Resources.open_eye;
-            this.openEye.Location = new System.Drawing.Point(333, 254);
-            this.openEye.Margin = new System.Windows.Forms.Padding(4);
+            this.openEye.Location = new System.Drawing.Point(251, 207);
             this.openEye.Name = "openEye";
-            this.openEye.Size = new System.Drawing.Size(34, 25);
+            this.openEye.Size = new System.Drawing.Size(26, 20);
             this.openEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.openEye.TabIndex = 12;
             this.openEye.TabStop = false;
@@ -192,10 +197,9 @@
             // open_eye_confirm
             // 
             this.open_eye_confirm.Image = global::Login.Properties.Resources.open_eye;
-            this.open_eye_confirm.Location = new System.Drawing.Point(336, 305);
-            this.open_eye_confirm.Margin = new System.Windows.Forms.Padding(4);
+            this.open_eye_confirm.Location = new System.Drawing.Point(252, 249);
             this.open_eye_confirm.Name = "open_eye_confirm";
-            this.open_eye_confirm.Size = new System.Drawing.Size(32, 25);
+            this.open_eye_confirm.Size = new System.Drawing.Size(26, 20);
             this.open_eye_confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.open_eye_confirm.TabIndex = 13;
             this.open_eye_confirm.TabStop = false;
@@ -203,10 +207,10 @@
             // 
             // ProfileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(455, 467);
+            this.ClientSize = new System.Drawing.Size(341, 379);
             this.Controls.Add(this.open_eye_confirm);
             this.Controls.Add(this.openEye);
             this.Controls.Add(this.close_eye_confirm);
@@ -221,6 +225,7 @@
             this.Controls.Add(this.username_label);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfileForm";

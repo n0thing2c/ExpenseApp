@@ -71,6 +71,7 @@ namespace Login.Page
         private void ExitButtonClickedControl(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
+            panelContent.Controls.Add(gif);
         }
 
         private void LoadFileControl(string filepath, string type)
@@ -212,6 +213,11 @@ namespace Login.Page
         private void Reports_Button_Click(object sender, EventArgs e)
         {
             new ReportForm().Show();
+        }
+
+        private void panelContent_Click(object sender, EventArgs e)
+        {
+            panelContent.Controls.Add(gif);
         }
     } 
 }

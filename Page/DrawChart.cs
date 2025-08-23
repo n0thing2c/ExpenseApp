@@ -135,5 +135,10 @@ namespace Login.Page
             this.Controls.Add(lineChart);
             lineChart.Dock = DockStyle.Fill;
         }
+
+        private void Exit_button_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

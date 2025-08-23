@@ -14,10 +14,7 @@ namespace Login.Page
         {
             fullpath = "";
         }
-        public FMFile(string path)
-        {
-            fullpath = path;
-        }
+        
         public override void SaveFrom(DataGridView table)
         {
             using (var writer = new StreamWriter(fullpath))

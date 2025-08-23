@@ -41,7 +41,6 @@ namespace Login.Page
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.User_Panel = new System.Windows.Forms.FlowLayoutPanel();
             this.Profile_Button = new System.Windows.Forms.Button();
-            this.Calendar_Button = new System.Windows.Forms.Button();
             this.Reports_Button = new System.Windows.Forms.Button();
             this.LogOut_Button = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
@@ -53,9 +52,12 @@ namespace Login.Page
             this.Notification_Button = new System.Windows.Forms.Button();
             this.Personal_Button = new System.Windows.Forms.Button();
             this.Menu_Button = new System.Windows.Forms.Button();
+            this.gif = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.User_Panel.SuspendLayout();
+            this.panelContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gif)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +71,7 @@ namespace Login.Page
             this.panel1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1031, 69);
             this.panel1.TabIndex = 0;
@@ -108,7 +110,7 @@ namespace Login.Page
             this.NotificationList_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NotificationList_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.NotificationList_panel.Location = new System.Drawing.Point(810, 83);
-            this.NotificationList_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.NotificationList_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NotificationList_panel.Name = "NotificationList_panel";
             this.NotificationList_panel.Size = new System.Drawing.Size(197, 283);
             this.NotificationList_panel.TabIndex = 2;
@@ -119,12 +121,11 @@ namespace Login.Page
             this.User_Panel.BackColor = System.Drawing.Color.White;
             this.User_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.User_Panel.Controls.Add(this.Profile_Button);
-            this.User_Panel.Controls.Add(this.Calendar_Button);
             this.User_Panel.Controls.Add(this.Reports_Button);
             this.User_Panel.Controls.Add(this.LogOut_Button);
             this.User_Panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.User_Panel.Location = new System.Drawing.Point(924, 83);
-            this.User_Panel.Margin = new System.Windows.Forms.Padding(2);
+            this.User_Panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.User_Panel.Name = "User_Panel";
             this.User_Panel.Size = new System.Drawing.Size(98, 143);
             this.User_Panel.TabIndex = 3;
@@ -134,40 +135,31 @@ namespace Login.Page
             // 
             this.Profile_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Profile_Button.Location = new System.Drawing.Point(2, 2);
-            this.Profile_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Profile_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Profile_Button.Name = "Profile_Button";
-            this.Profile_Button.Size = new System.Drawing.Size(90, 30);
+            this.Profile_Button.Size = new System.Drawing.Size(90, 63);
             this.Profile_Button.TabIndex = 0;
-            this.Profile_Button.Text = "Profile";
+            this.Profile_Button.Text = "Change Password";
             this.Profile_Button.UseVisualStyleBackColor = true;
-            // 
-            // Calendar_Button
-            // 
-            this.Calendar_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendar_Button.Location = new System.Drawing.Point(2, 36);
-            this.Calendar_Button.Margin = new System.Windows.Forms.Padding(2);
-            this.Calendar_Button.Name = "Calendar_Button";
-            this.Calendar_Button.Size = new System.Drawing.Size(90, 30);
-            this.Calendar_Button.TabIndex = 1;
-            this.Calendar_Button.Text = "Calendar";
-            this.Calendar_Button.UseVisualStyleBackColor = true;
+            this.Profile_Button.Click += new System.EventHandler(this.Profile_Button_Click);
             // 
             // Reports_Button
             // 
             this.Reports_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reports_Button.Location = new System.Drawing.Point(2, 70);
-            this.Reports_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Reports_Button.Location = new System.Drawing.Point(2, 69);
+            this.Reports_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Reports_Button.Name = "Reports_Button";
             this.Reports_Button.Size = new System.Drawing.Size(90, 30);
             this.Reports_Button.TabIndex = 2;
             this.Reports_Button.Text = "Reports";
             this.Reports_Button.UseVisualStyleBackColor = true;
+            this.Reports_Button.Click += new System.EventHandler(this.Reports_Button_Click);
             // 
             // LogOut_Button
             // 
             this.LogOut_Button.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOut_Button.Location = new System.Drawing.Point(2, 104);
-            this.LogOut_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.LogOut_Button.Location = new System.Drawing.Point(2, 103);
+            this.LogOut_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogOut_Button.Name = "LogOut_Button";
             this.LogOut_Button.Size = new System.Drawing.Size(90, 30);
             this.LogOut_Button.TabIndex = 3;
@@ -177,10 +169,14 @@ namespace Login.Page
             // 
             // panelContent
             // 
+            this.panelContent.BackColor = System.Drawing.Color.White;
+            this.panelContent.Controls.Add(this.gif);
             this.panelContent.Location = new System.Drawing.Point(0, 69);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1031, 575);
             this.panelContent.TabIndex = 4;
+            this.panelContent.Click += new System.EventHandler(this.panelContent_Click);
+            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
             // DrawChart_button
             // 
@@ -315,6 +311,16 @@ namespace Login.Page
             this.Menu_Button.UseVisualStyleBackColor = true;
             this.Menu_Button.Click += new System.EventHandler(this.Menu_Button_Click);
             // 
+            // gif
+            // 
+            this.gif.Image = global::Login.Properties.Resources.giphy;
+            this.gif.Location = new System.Drawing.Point(411, 0);
+            this.gif.Name = "gif";
+            this.gif.Size = new System.Drawing.Size(394, 358);
+            this.gif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gif.TabIndex = 0;
+            this.gif.TabStop = false;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +342,8 @@ namespace Login.Page
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.User_Panel.ResumeLayout(false);
+            this.panelContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gif)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,10 +364,10 @@ namespace Login.Page
         private ToolTip toolTip1;
         private FlowLayoutPanel User_Panel;
         private Button Profile_Button;
-        private Button Calendar_Button;
         private Button Reports_Button;
         private Button LogOut_Button;
         private Panel panelContent;
         private Button DrawChart_button;
+        private PictureBox gif;
     }
 }

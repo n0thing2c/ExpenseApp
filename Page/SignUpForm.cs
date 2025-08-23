@@ -91,14 +91,6 @@ namespace Login.Page
             }
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

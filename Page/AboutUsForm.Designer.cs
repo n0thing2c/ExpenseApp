@@ -134,7 +134,7 @@ namespace Login.Page
             this.LLGitHub.Location = new System.Drawing.Point(26, 26);
             this.LLGitHub.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LLGitHub.Name = "LLGitHub";
-            this.LLGitHub.Size = new System.Drawing.Size(56, 20);
+            this.LLGitHub.Size = new System.Drawing.Size(71, 25);
             this.LLGitHub.TabIndex = 7;
             this.LLGitHub.TabStop = true;
             this.LLGitHub.Text = "GitHub";
@@ -189,7 +189,7 @@ namespace Login.Page
             // 
             // AboutUsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 600);
@@ -197,6 +197,7 @@ namespace Login.Page
             this.Controls.Add(this.labelTitle);
             this.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AboutUsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

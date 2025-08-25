@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.usercontact = new System.Windows.Forms.TextBox();
             this.report_bug_label = new System.Windows.Forms.Label();
             this.bug_des_label = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.save_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,17 +46,17 @@
             // 
             this.usercontact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usercontact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usercontact.Location = new System.Drawing.Point(223, 134);
+            this.usercontact.Location = new System.Drawing.Point(232, 134);
             this.usercontact.Name = "usercontact";
-            this.usercontact.Size = new System.Drawing.Size(331, 30);
+            this.usercontact.Size = new System.Drawing.Size(322, 30);
             this.usercontact.TabIndex = 0;
             // 
             // report_bug_label
             // 
             this.report_bug_label.AutoSize = true;
             this.report_bug_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.report_bug_label.ForeColor = System.Drawing.Color.White;
-            this.report_bug_label.Location = new System.Drawing.Point(158, 22);
+            this.report_bug_label.ForeColor = System.Drawing.Color.Salmon;
+            this.report_bug_label.Location = new System.Drawing.Point(137, 21);
             this.report_bug_label.Name = "report_bug_label";
             this.report_bug_label.Size = new System.Drawing.Size(293, 38);
             this.report_bug_label.TabIndex = 1;
@@ -78,9 +80,9 @@
             this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(85)))), ((int)(((byte)(149)))));
             this.email_label.Location = new System.Drawing.Point(50, 136);
             this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(157, 25);
+            this.email_label.Size = new System.Drawing.Size(162, 25);
             this.email_label.TabIndex = 3;
-            this.email_label.Text = "Your Contact     :";
+            this.email_label.Text = "Your Contact      :";
             // 
             // bugtextbox
             // 
@@ -132,11 +134,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(174, 139);
+            this.label1.Location = new System.Drawing.Point(185, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "*";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(1, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(602, 489);
+            this.panel2.TabIndex = 9;
             // 
             // ReportForm
             // 
@@ -152,7 +162,9 @@
             this.Controls.Add(this.bug_des_label);
             this.Controls.Add(this.usercontact);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReportForm";
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

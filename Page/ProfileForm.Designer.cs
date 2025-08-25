@@ -56,7 +56,7 @@
             this.username_label.Size = new System.Drawing.Size(120, 29);
             this.username_label.TabIndex = 0;
             this.username_label.Text = "username";
-            this.username_label.Click += new System.EventHandler(this.username_label_Click);
+
             // 
             // Username_show_label
             // 
@@ -68,7 +68,7 @@
             this.Username_show_label.Size = new System.Drawing.Size(147, 31);
             this.Username_show_label.TabIndex = 1;
             this.Username_show_label.Text = "Username:";
-            this.Username_show_label.Click += new System.EventHandler(this.Username_show_label_Click);
+
             // 
             // button3
             // 
@@ -127,7 +127,7 @@
             this.confirm_pass_box.Text = "CONFIRM PASSWORD";
             this.confirm_pass_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.confirm_pass_box.Click += new System.EventHandler(this.textBox1_Click);
-            this.confirm_pass_box.TextChanged += new System.EventHandler(this.confirm_pass_box_TextChanged);
+           
             // 
             // new_pass_box
             // 
@@ -143,7 +143,7 @@
             this.new_pass_box.Text = "NEW PASSWORD";
             this.new_pass_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.new_pass_box.Click += new System.EventHandler(this.textBox2_Click);
-            this.new_pass_box.TextChanged += new System.EventHandler(this.new_pass_box_TextChanged);
+
             // 
             // current_pass_box
             // 
@@ -159,7 +159,7 @@
             this.current_pass_box.Text = "CURRENT PASSWORD";
             this.current_pass_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.current_pass_box.Click += new System.EventHandler(this.textBox3_Click);
-            this.current_pass_box.TextChanged += new System.EventHandler(this.current_pass_box_TextChanged);
+           
             // 
             // closeEye
             // 
@@ -229,7 +229,7 @@
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfileForm";
-            this.Load += new System.EventHandler(this.ProfileForm_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.closeEye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_eye_confirm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.openEye)).EndInit();

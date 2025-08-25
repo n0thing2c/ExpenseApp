@@ -50,7 +50,6 @@ namespace Login.Operation.Presenter
             if (!infos.Contains(acc.getUserName()))
             {
                 File.AppendAllText(path, acc.getUserName() + Environment.NewLine);
-                File.AppendAllText(path, acc.getPassword() + Environment.NewLine);
             }
         }
     }

@@ -83,7 +83,7 @@ namespace Login.Page
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
-                FileName = "https://github.com/n0thing2c",
+                FileName = "https://github.com/n0thing2c/ExpenseApp",
                 UseShellExecute = true
             });
         }

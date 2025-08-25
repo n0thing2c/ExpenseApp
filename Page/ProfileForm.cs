@@ -20,46 +20,26 @@ namespace Login.Page
             Account a = Account.GetCurrentAcc();
             username_label.Text = a.getUserName();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void username_label_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ProfileForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Username_show_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        bool clicked = false;
         private void textBox3_Click(object sender, EventArgs e)
         {
+            clicked = true;
             current_pass_box.Text = string.Empty;
             current_pass_box.PasswordChar = '•';
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
+            clicked = true;
             new_pass_box.Text = string.Empty;
             new_pass_box.PasswordChar = '•';
-
-
         }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
+            clicked = true;
             confirm_pass_box.Text = string.Empty;
             confirm_pass_box.PasswordChar = '•';
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -67,22 +47,6 @@ namespace Login.Page
             this.Close();
         }
 
-        private void current_pass_box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void new_pass_box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void confirm_pass_box_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-   
 
         private void closeEye_Click(object sender, EventArgs e)
         {
@@ -115,7 +79,19 @@ namespace Login.Page
         private void save_button_Click(object sender, EventArgs e)
         {
             Account acc = Account.GetCurrentAcc();
-
+            
+            if(!clicked)
+            {
+                MessageBox.Show("Please fill all the information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(current_pass_box.Text) ||
+               string.IsNullOrEmpty(new_pass_box.Text) ||
+               string.IsNullOrEmpty(confirm_pass_box.Text))
+            {
+                MessageBox.Show("Please fill all the information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
        
             if (current_pass_box.Text != acc.getPassword())
             {

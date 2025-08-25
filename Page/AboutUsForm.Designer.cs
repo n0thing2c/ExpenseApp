@@ -201,7 +201,7 @@ namespace Login.Page
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AboutUsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AboutUsForm";
+            this.Text = "About Us";
             this.BodyPanel.ResumeLayout(false);
             this.BodyPanel.PerformLayout();
             this.FooterPanel.ResumeLayout(false);

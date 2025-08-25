@@ -226,7 +226,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Change Password";
+            this.Text = "ProfileForm";
             ((System.ComponentModel.ISupportInitialize)(this.closeEye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_eye_confirm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.openEye)).EndInit();

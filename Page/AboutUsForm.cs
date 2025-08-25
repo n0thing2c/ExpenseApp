@@ -36,22 +36,20 @@ namespace Login.Page
         private void LoadTeamInfo()
         {
             // Thêm thông tin từng thành viên
-            AddMember("Huỳnh Gia Khang", "Developer, report writer", "Design classes for file handling\r\n" +
-                                                                     "Design UI and logics for Management windows\r\n\r\n");
-            AddMember("Trần Nguyễn Duy Thịnh", "Developer, report writer", "Design classes for user account handling\r\n" +
-                                                                           "Design UI and authentication for Login/Sign up windows\r\n");
-            AddMember("Trương Tấn Dũng", "Interface and System Designer, report writer", "Design system structure and GUI for Menu");
-            AddMember("Trần Công Hoàng Tấn", "Developer, report writer", "Design UI and logics for Reports and Profile windows");
-            AddMember("Nguyễn Kinh Quốc", "Developer, report writer", "Design UI and logics for About us window");
+            AddMember("Developer Team:");
+            AddMember("Huỳnh Gia Khang");
+            AddMember("Trần Nguyễn Duy Thịnh");
+            AddMember("Trương Tấn Dũng");
+            AddMember("Trần Công Hoàng Tấn");
+            AddMember("Nguyễn Kinh Quốc");
             ToolTip tip = new ToolTip();
-            tip.SetToolTip(LLFacebook, "Facebook của nhóm");
             tip.SetToolTip(LLGitHub, "GitHub của nhóm");
         }
 
-        private void AddMember(string name, string role, string description)
+        private void AddMember(string name)
         {
             Label lbl = new Label();
-            lbl.Text = $"{name} - {role}\n{description}";
+            lbl.Text = name;
             lbl.AutoSize = true;
             lbl.Margin = new Padding(10);
             lbl.Font = new Font("Segoe UI", 9);
@@ -70,15 +68,6 @@ namespace Login.Page
             btnClose.Left = (this.ClientSize.Width - btnClose.Width) / 2;
         }
 
-        private void LLFacebook_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start(new ProcessStartInfo
-            {
-                FileName = "https://www.facebook.com/khang.huynh.630954",
-                UseShellExecute = true
-            });
-        }
-
         private void LLGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
@@ -87,10 +76,7 @@ namespace Login.Page
                 UseShellExecute = true
             });
         }
-        private void AboutUsForm_Resize(object sender, EventArgs e)
-        {
-
-        }
+       
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

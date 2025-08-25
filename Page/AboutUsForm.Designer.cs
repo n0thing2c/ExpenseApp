@@ -39,7 +39,6 @@ namespace Login.Page
             this.FooterPanel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.LLGitHub = new System.Windows.Forms.LinkLabel();
-            this.LLFacebook = new System.Windows.Forms.LinkLabel();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMembers = new System.Windows.Forms.FlowLayoutPanel();
             this.Panel_RTBDescription = new System.Windows.Forms.Panel();
@@ -108,9 +107,8 @@ namespace Login.Page
             this.FooterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(142)))), ((int)(((byte)(158)))));
             this.FooterPanel.Controls.Add(this.btnClose);
             this.FooterPanel.Controls.Add(this.LLGitHub);
-            this.FooterPanel.Controls.Add(this.LLFacebook);
             this.FooterPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FooterPanel.Location = new System.Drawing.Point(0, 437);
+            this.FooterPanel.Location = new System.Drawing.Point(0, 111);
             this.FooterPanel.Name = "FooterPanel";
             this.FooterPanel.Size = new System.Drawing.Size(800, 65);
             this.FooterPanel.TabIndex = 8;
@@ -121,7 +119,7 @@ namespace Login.Page
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClose.Location = new System.Drawing.Point(726, 10);
+            this.btnClose.Location = new System.Drawing.Point(721, 10);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 41);
@@ -133,49 +131,38 @@ namespace Login.Page
             // LLGitHub
             // 
             this.LLGitHub.AutoSize = true;
-            this.LLGitHub.Location = new System.Drawing.Point(112, 26);
+            this.LLGitHub.Location = new System.Drawing.Point(26, 26);
             this.LLGitHub.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LLGitHub.Name = "LLGitHub";
-            this.LLGitHub.Size = new System.Drawing.Size(71, 25);
+            this.LLGitHub.Size = new System.Drawing.Size(56, 20);
             this.LLGitHub.TabIndex = 7;
             this.LLGitHub.TabStop = true;
             this.LLGitHub.Text = "GitHub";
             this.LLGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLGitHub_LinkClicked);
             // 
-            // LLFacebook
-            // 
-            this.LLFacebook.AutoSize = true;
-            this.LLFacebook.Location = new System.Drawing.Point(13, 26);
-            this.LLFacebook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LLFacebook.Name = "LLFacebook";
-            this.LLFacebook.Size = new System.Drawing.Size(91, 25);
-            this.LLFacebook.TabIndex = 5;
-            this.LLFacebook.TabStop = true;
-            this.LLFacebook.Text = "Facebook";
-            this.LLFacebook.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLFacebook_LinkClicked);
-            // 
             // ContentPanel
             // 
+            this.ContentPanel.AutoSize = true;
             this.ContentPanel.Controls.Add(this.flowLayoutPanelMembers);
             this.ContentPanel.Controls.Add(this.Panel_RTBDescription);
             this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ContentPanel.Location = new System.Drawing.Point(0, 80);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.AutoSize = true;
+            this.ContentPanel.Size = new System.Drawing.Size(800, 31);
             this.ContentPanel.TabIndex = 9;
             // 
             // flowLayoutPanelMembers
             // 
+            this.flowLayoutPanelMembers.AutoSize = true;
             this.flowLayoutPanelMembers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanelMembers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelMembers.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelMembers.Location = new System.Drawing.Point(0, 27);
             this.flowLayoutPanelMembers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanelMembers.Name = "flowLayoutPanelMembers";
-            this.flowLayoutPanelMembers.Size = new System.Drawing.Size(800, 330);
+            this.flowLayoutPanelMembers.Size = new System.Drawing.Size(800, 4);
             this.flowLayoutPanelMembers.TabIndex = 8;
             this.flowLayoutPanelMembers.WrapContents = false;
-            this.flowLayoutPanelMembers.AutoSize = true;
             // 
             // Panel_RTBDescription
             // 
@@ -202,7 +189,7 @@ namespace Login.Page
             // 
             // AboutUsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 600);
@@ -215,9 +202,11 @@ namespace Login.Page
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutUsForm";
             this.BodyPanel.ResumeLayout(false);
+            this.BodyPanel.PerformLayout();
             this.FooterPanel.ResumeLayout(false);
             this.FooterPanel.PerformLayout();
             this.ContentPanel.ResumeLayout(false);
+            this.ContentPanel.PerformLayout();
             this.Panel_RTBDescription.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -228,7 +217,6 @@ namespace Login.Page
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label LBProject1;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.LinkLabel LLFacebook;
         private System.Windows.Forms.LinkLabel LLGitHub;
         private Panel BodyPanel;
         private Panel FooterPanel;

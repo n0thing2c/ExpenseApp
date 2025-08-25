@@ -84,7 +84,7 @@ namespace Login.Page
             this.Notification_Button.ForeColor = System.Drawing.Color.LightPink;
             this.Notification_Button.Image = global::Login.Properties.Resources.Layer_0;
             this.Notification_Button.Location = new System.Drawing.Point(1212, 14);
-            this.Notification_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Notification_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Notification_Button.Name = "Notification_Button";
             this.Notification_Button.Size = new System.Drawing.Size(71, 68);
             this.Notification_Button.TabIndex = 4;
@@ -100,7 +100,7 @@ namespace Login.Page
             this.Personal_Button.ForeColor = System.Drawing.Color.LightPink;
             this.Personal_Button.Image = global::Login.Properties.Resources.pro5;
             this.Personal_Button.Location = new System.Drawing.Point(1291, 14);
-            this.Personal_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Personal_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Personal_Button.Name = "Personal_Button";
             this.Personal_Button.Size = new System.Drawing.Size(71, 68);
             this.Personal_Button.TabIndex = 2;
@@ -117,7 +117,7 @@ namespace Login.Page
             this.Menu_Button.ForeColor = System.Drawing.SystemColors.MenuText;
             this.Menu_Button.Image = ((System.Drawing.Image)(resources.GetObject("Menu_Button.Image")));
             this.Menu_Button.Location = new System.Drawing.Point(269, 14);
-            this.Menu_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Menu_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Menu_Button.Name = "Menu_Button";
             this.Menu_Button.Size = new System.Drawing.Size(76, 55);
             this.Menu_Button.TabIndex = 1;
@@ -151,7 +151,7 @@ namespace Login.Page
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel2.Location = new System.Drawing.Point(0, 85);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(297, 703);
             this.panel2.TabIndex = 1;
@@ -184,7 +184,7 @@ namespace Login.Page
             this.AboutUs_Button.Image = ((System.Drawing.Image)(resources.GetObject("AboutUs_Button.Image")));
             this.AboutUs_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AboutUs_Button.Location = new System.Drawing.Point(16, 373);
-            this.AboutUs_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AboutUs_Button.Margin = new System.Windows.Forms.Padding(4);
             this.AboutUs_Button.Name = "AboutUs_Button";
             this.AboutUs_Button.Size = new System.Drawing.Size(316, 68);
             this.AboutUs_Button.TabIndex = 8;
@@ -202,7 +202,7 @@ namespace Login.Page
             this.Exit_Button.ForeColor = System.Drawing.Color.LightPink;
             this.Exit_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exit_Button.Image")));
             this.Exit_Button.Location = new System.Drawing.Point(13, 609);
-            this.Exit_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Exit_Button.Margin = new System.Windows.Forms.Padding(4);
             this.Exit_Button.Name = "Exit_Button";
             this.Exit_Button.Size = new System.Drawing.Size(273, 68);
             this.Exit_Button.TabIndex = 7;
@@ -221,7 +221,7 @@ namespace Login.Page
             this.NewFile_Button.Image = ((System.Drawing.Image)(resources.GetObject("NewFile_Button.Image")));
             this.NewFile_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewFile_Button.Location = new System.Drawing.Point(13, 105);
-            this.NewFile_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NewFile_Button.Margin = new System.Windows.Forms.Padding(4);
             this.NewFile_Button.Name = "NewFile_Button";
             this.NewFile_Button.Size = new System.Drawing.Size(316, 68);
             this.NewFile_Button.TabIndex = 6;
@@ -239,7 +239,7 @@ namespace Login.Page
             this.PickFile_Button.Image = global::Login.Properties.Resources.file;
             this.PickFile_Button.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.PickFile_Button.Location = new System.Drawing.Point(13, 193);
-            this.PickFile_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PickFile_Button.Margin = new System.Windows.Forms.Padding(4);
             this.PickFile_Button.Name = "PickFile_Button";
             this.PickFile_Button.Size = new System.Drawing.Size(316, 68);
             this.PickFile_Button.TabIndex = 11;
@@ -314,7 +314,7 @@ namespace Login.Page
             this.panelContent.BackColor = System.Drawing.Color.White;
             this.panelContent.Controls.Add(this.gif);
             this.panelContent.Location = new System.Drawing.Point(0, 85);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(4);
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1375, 708);
             this.panelContent.TabIndex = 4;
@@ -325,7 +325,7 @@ namespace Login.Page
             // 
             this.gif.Image = global::Login.Properties.Resources.giphy;
             this.gif.Location = new System.Drawing.Point(548, 0);
-            this.gif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gif.Margin = new System.Windows.Forms.Padding(4);
             this.gif.Name = "gif";
             this.gif.Size = new System.Drawing.Size(525, 441);
             this.gif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -346,7 +346,7 @@ namespace Login.Page
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

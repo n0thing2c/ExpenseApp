@@ -70,7 +70,7 @@ namespace Login.Page
             // 
             this.Panel1.BackColor = System.Drawing.Color.Firebrick;
             this.Panel1.Location = new System.Drawing.Point(35, 254);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(315, 1);
             this.Panel1.TabIndex = 3;
@@ -79,7 +79,7 @@ namespace Login.Page
             // 
             this.Panel2.BackColor = System.Drawing.Color.Firebrick;
             this.Panel2.Location = new System.Drawing.Point(35, 340);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(315, 1);
             this.Panel2.TabIndex = 3;
@@ -115,7 +115,7 @@ namespace Login.Page
             this.signUpButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.ForeColor = System.Drawing.Color.Tomato;
             this.signUpButton.Location = new System.Drawing.Point(241, 437);
-            this.signUpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signUpButton.Margin = new System.Windows.Forms.Padding(4);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(93, 33);
             this.signUpButton.TabIndex = 7;
@@ -129,7 +129,7 @@ namespace Login.Page
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Salmon;
             this.txtUsername.Location = new System.Drawing.Point(77, 218);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(272, 30);
@@ -142,7 +142,7 @@ namespace Login.Page
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Salmon;
             this.txtPassword.Location = new System.Drawing.Point(76, 303);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
@@ -157,7 +157,7 @@ namespace Login.Page
             this.LoginButton.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
             this.LoginButton.Location = new System.Drawing.Point(35, 380);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(4);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(315, 41);
             this.LoginButton.TabIndex = 3;
@@ -169,7 +169,7 @@ namespace Login.Page
             // 
             this.userIcon.Image = global::Login.Properties.Resources.pro5_icon;
             this.userIcon.Location = new System.Drawing.Point(35, 215);
-            this.userIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userIcon.Margin = new System.Windows.Forms.Padding(4);
             this.userIcon.Name = "userIcon";
             this.userIcon.Size = new System.Drawing.Size(33, 31);
             this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -180,7 +180,7 @@ namespace Login.Page
             // 
             this.passIcon.Image = global::Login.Properties.Resources.lock_icon2;
             this.passIcon.Location = new System.Drawing.Point(35, 302);
-            this.passIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passIcon.Margin = new System.Windows.Forms.Padding(4);
             this.passIcon.Name = "passIcon";
             this.passIcon.Size = new System.Drawing.Size(33, 31);
             this.passIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,7 +191,7 @@ namespace Login.Page
             // 
             this.pig.Image = global::Login.Properties.Resources.bank_pig;
             this.pig.Location = new System.Drawing.Point(132, 12);
-            this.pig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pig.Margin = new System.Windows.Forms.Padding(4);
             this.pig.Name = "pig";
             this.pig.Size = new System.Drawing.Size(116, 87);
             this.pig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -202,7 +202,7 @@ namespace Login.Page
             // 
             this.openEye.Image = global::Login.Properties.Resources.open_eye;
             this.openEye.Location = new System.Drawing.Point(316, 302);
-            this.openEye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openEye.Margin = new System.Windows.Forms.Padding(4);
             this.openEye.Name = "openEye";
             this.openEye.Size = new System.Drawing.Size(33, 31);
             this.openEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -214,7 +214,7 @@ namespace Login.Page
             // 
             this.closeEye.Image = global::Login.Properties.Resources.close_eye1;
             this.closeEye.Location = new System.Drawing.Point(315, 302);
-            this.closeEye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeEye.Margin = new System.Windows.Forms.Padding(4);
             this.closeEye.Name = "closeEye";
             this.closeEye.Size = new System.Drawing.Size(33, 31);
             this.closeEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +244,7 @@ namespace Login.Page
             this.Controls.Add(this.Label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

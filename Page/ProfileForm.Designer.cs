@@ -158,7 +158,7 @@
             // 
             this.closeEye.Image = global::Login.Properties.Resources.close_eye1;
             this.closeEye.Location = new System.Drawing.Point(333, 254);
-            this.closeEye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeEye.Margin = new System.Windows.Forms.Padding(4);
             this.closeEye.Name = "closeEye";
             this.closeEye.Size = new System.Drawing.Size(33, 25);
             this.closeEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,7 +170,7 @@
             // 
             this.close_eye_confirm.Image = global::Login.Properties.Resources.close_eye1;
             this.close_eye_confirm.Location = new System.Drawing.Point(335, 306);
-            this.close_eye_confirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.close_eye_confirm.Margin = new System.Windows.Forms.Padding(4);
             this.close_eye_confirm.Name = "close_eye_confirm";
             this.close_eye_confirm.Size = new System.Drawing.Size(33, 25);
             this.close_eye_confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +182,7 @@
             // 
             this.openEye.Image = global::Login.Properties.Resources.open_eye;
             this.openEye.Location = new System.Drawing.Point(335, 255);
-            this.openEye.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.openEye.Margin = new System.Windows.Forms.Padding(4);
             this.openEye.Name = "openEye";
             this.openEye.Size = new System.Drawing.Size(35, 25);
             this.openEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -194,7 +194,7 @@
             // 
             this.open_eye_confirm.Image = global::Login.Properties.Resources.open_eye;
             this.open_eye_confirm.Location = new System.Drawing.Point(336, 306);
-            this.open_eye_confirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.open_eye_confirm.Margin = new System.Windows.Forms.Padding(4);
             this.open_eye_confirm.Name = "open_eye_confirm";
             this.open_eye_confirm.Size = new System.Drawing.Size(35, 25);
             this.open_eye_confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

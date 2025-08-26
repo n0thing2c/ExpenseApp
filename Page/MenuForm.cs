@@ -71,6 +71,7 @@ namespace Login.Page
         private void ExitButtonClickedControl(object sender, EventArgs e)
         {
             panelContent.Controls.Clear();
+            panelContent.Controls.Add(gif);
         }
 
         private void LoadFileControl(string filepath, string type)
@@ -127,7 +128,6 @@ namespace Login.Page
         private void LogOut_Button_Click(object sender, EventArgs e)
         {
             this.Close();
-            new LoginForm().Show();
         }
 
         private void MenuForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -139,6 +139,8 @@ namespace Login.Page
                 {
                     e.Cancel = true;
                 }
+                else
+                    new LoginForm().Show();
             }
         }
 
@@ -196,8 +198,27 @@ namespace Login.Page
         private void AboutUs_Button_Click(object sender, EventArgs e)
         {
             var aboutForm = new AboutUsForm();
-            aboutForm.ShowDialog();
+            aboutForm.Show();
         }
 
+        private void Profile_Button_Click(object sender, EventArgs e)
+        {
+            new ProfileForm().Show();
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Reports_Button_Click(object sender, EventArgs e)
+        {
+            new ReportForm().Show();
+        }
+
+        private void panelContent_Click(object sender, EventArgs e)
+        {
+            panelContent.Controls.Add(gif);
+        }
     } 
 }

@@ -33,18 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupExpenses = new System.Windows.Forms.DataGridView();
-            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Content = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.NamePicker = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Spend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddpersonButton = new System.Windows.Forms.Button();
             this.FileName = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
@@ -52,6 +47,11 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.RemovePersonButton = new System.Windows.Forms.Button();
+            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Content = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NamePicker = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Spend = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GroupExpenses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Result)).BeginInit();
             this.SuspendLayout();
@@ -116,80 +116,6 @@
             this.GroupExpenses.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.CellValidating);
             this.GroupExpenses.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.GroupExpenses_CellValueChanged);
             this.GroupExpenses.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.GroupExpenses_SortCompare);
-            // 
-            // Day
-            // 
-            this.Day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Format = "d";
-            this.Day.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Day.FillWeight = 32F;
-            this.Day.HeaderText = "Day";
-            this.Day.MinimumWidth = 6;
-            this.Day.Name = "Day";
-            this.Day.Width = 125;
-            // 
-            // Content
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Content.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Content.FillWeight = 32F;
-            this.Content.HeaderText = "Content";
-            this.Content.Items.AddRange(new object[] {
-            "Rent",
-            "Food & Beverages",
-            "Utilities bill",
-            "Transportation",
-            "Shopping",
-            "Insurance",
-            "Loan",
-            "Job",
-            "Medicals",
-            "Entertainment",
-            "Others"});
-            this.Content.MinimumWidth = 8;
-            this.Content.Name = "Content";
-            this.Content.Width = 160;
-            // 
-            // NamePicker
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NamePicker.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NamePicker.FillWeight = 21F;
-            this.NamePicker.HeaderText = "Name";
-            this.NamePicker.Items.AddRange(new object[] {
-            ""});
-            this.NamePicker.MinimumWidth = 6;
-            this.NamePicker.Name = "NamePicker";
-            this.NamePicker.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NamePicker.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.NamePicker.Width = 160;
-            // 
-            // Spend
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Spend.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Spend.FillWeight = 21F;
-            this.Spend.HeaderText = "Spend";
-            this.Spend.MinimumWidth = 6;
-            this.Spend.Name = "Spend";
-            this.Spend.Width = 160;
-            // 
-            // Description
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Description.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Description.FillWeight = 130F;
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
-            this.Description.Width = 250;
             // 
             // AddpersonButton
             // 
@@ -293,6 +219,81 @@
             this.RemovePersonButton.UseVisualStyleBackColor = false;
             this.RemovePersonButton.Click += new System.EventHandler(this.RemovePerson_Click);
             // 
+            // Day
+            // 
+            this.Day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "d";
+            this.Day.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Day.FillWeight = 32F;
+            this.Day.HeaderText = "Day";
+            this.Day.MinimumWidth = 6;
+            this.Day.Name = "Day";
+            this.Day.Width = 125;
+            // 
+            // Content
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Content.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Content.FillWeight = 32F;
+            this.Content.HeaderText = "Content";
+            this.Content.Items.AddRange(new object[] {
+            "Rent",
+            "Food & Beverages",
+            "Utilities bill",
+            "Transportation",
+            "Shopping",
+            "Insurance",
+            "Loan",
+            "Job",
+            "Medicals",
+            "Entertainment",
+            "Others"});
+            this.Content.MinimumWidth = 8;
+            this.Content.Name = "Content";
+            this.Content.Width = 160;
+            // 
+            // NamePicker
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NamePicker.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NamePicker.FillWeight = 21F;
+            this.NamePicker.HeaderText = "Name";
+            this.NamePicker.Items.AddRange(new object[] {
+            ""});
+            this.NamePicker.MinimumWidth = 6;
+            this.NamePicker.Name = "NamePicker";
+            this.NamePicker.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NamePicker.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.NamePicker.Width = 160;
+            // 
+            // Spend
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(109)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Spend.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Spend.FillWeight = 21F;
+            this.Spend.HeaderText = "Spend";
+            this.Spend.MinimumWidth = 6;
+            this.Spend.Name = "Spend";
+            this.Spend.Width = 160;
+            // 
+            // Description
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Description.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Description.FillWeight = 130F;
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.Width = 250;
+            // 
             // ucLoadMDFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,11 +326,11 @@
         private System.Windows.Forms.DataGridView Result;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button RemovePersonButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Day;
         private System.Windows.Forms.DataGridViewComboBoxColumn Content;
         private System.Windows.Forms.DataGridViewComboBoxColumn NamePicker;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spend;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.Button RemovePersonButton;
     }
 }

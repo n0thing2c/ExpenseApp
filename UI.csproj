@@ -1,14 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <!-- Kiểu app -->
     <OutputType>WinExe</OutputType>
-
-    <!-- Target sang .NET 8, chạy trên Windows -->
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-
-    <!-- Tùy chọn -->
     <RootNamespace>Login</RootNamespace>
     <AssemblyName>Login</AssemblyName>
     <Nullable>enable</Nullable>
@@ -16,10 +11,8 @@
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
-  
-
   <ItemGroup>
-    <!-- Các resource khác (ảnh, txt, v.v.) -->
+    <!-- Resource ngoài (ảnh, txt) -->
     <None Include="Resources\**\*" />
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />

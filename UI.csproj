@@ -1,266 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46BB5130-6ABC-4A65-AAA4-F19A75EE69D8}</ProjectGuid>
+    <!-- Kiểu app -->
     <OutputType>WinExe</OutputType>
+
+    <!-- Target sang .NET 8, chạy trên Windows -->
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <!-- Tùy chọn -->
     <RootNamespace>Login</RootNamespace>
     <AssemblyName>Login</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
+  
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Operation\ChartHandle\ExpenseRecord.cs" />
-    <Compile Include="Operation\FileClasses\AppFile.cs" />
-    <Compile Include="Operation\FileClasses\FMFile.cs" />
-    <Compile Include="Operation\FileClasses\MDFile.cs" />
-    <Compile Include="Operation\FileClasses\UserFolder.cs" />
-    <Compile Include="Operation\Interface\IAuthView.cs" />
-    <Compile Include="Operation\Interface\IFileCreator.cs" />
-    <Compile Include="Operation\Interface\IFileService.cs" />
-    <Compile Include="Operation\Interface\INewFileView.cs" />
-    <Compile Include="Operation\Interface\IPickFileView.cs" />
-    <Compile Include="Operation\Presenter\LoginPresenter.cs" />
-    <Compile Include="Operation\Presenter\NewFilePresenter.cs" />
-    <Compile Include="Operation\Presenter\PickFilePresenter.cs" />
-    <Compile Include="Operation\Presenter\SignUpPresenter.cs" />
-    <Compile Include="Page\DrawChart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\DrawChart.Designer.cs">
-      <DependentUpon>DrawChart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\AboutUsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\AboutUsForm.Designer.cs">
-      <DependentUpon>AboutUsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\MenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ProfileForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\ProfileForm.Designer.cs">
-      <DependentUpon>ProfileForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\ReportForm.Designer.cs">
-      <DependentUpon>ReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucPickChartType.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucPickChartType.Designer.cs">
-      <DependentUpon>ucPickChartType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucRemovePersonPicker.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucRemovePersonPicker.Designer.cs">
-      <DependentUpon>ucRemovePersonPicker.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\SignUpForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Page\SignUpForm.Designer.cs">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Operation\UserLog\Account.cs" />
-    <Compile Include="Page\ucLoadFMFile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucLoadFMFile.Designer.cs">
-      <DependentUpon>ucLoadFMFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucNewFile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucNewFile.Designer.cs">
-      <DependentUpon>ucNewFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucPickFile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucPickFile.Designer.cs">
-      <DependentUpon>ucPickFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucLoadMDFile.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucLoadMDFile.Designer.cs">
-      <DependentUpon>ucLoadMDFile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucPersonInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucPersonInfo.Designer.cs">
-      <DependentUpon>ucPersonInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Page\ucPickFileType.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Page\ucPickFileType.Designer.cs">
-      <DependentUpon>ucPickFileType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Page\DrawChart.resx">
-      <DependentUpon>DrawChart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\AboutUsForm.resx">
-      <DependentUpon>AboutUsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ProfileForm.resx">
-      <DependentUpon>ProfileForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ReportForm.resx">
-      <DependentUpon>ReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucPickChartType.resx">
-      <DependentUpon>ucPickChartType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucRemovePersonPicker.resx">
-      <DependentUpon>ucRemovePersonPicker.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucPersonInfo.resx">
-      <DependentUpon>ucPersonInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\SignUpForm.resx">
-      <DependentUpon>SignUpForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucLoadFMFile.resx">
-      <DependentUpon>ucLoadFMFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucNewFile.resx">
-      <DependentUpon>ucNewFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucPickFile.resx">
-      <DependentUpon>ucPickFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucLoadMDFile.resx">
-      <DependentUpon>ucLoadMDFile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Page\ucPickFileType.resx">
-      <DependentUpon>ucPickFileType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bank-pig.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lock-icon2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pro5-icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <!-- Các resource khác (ảnh, txt, v.v.) -->
+    <None Include="Resources\**\*" />
     <Content Include="Operation\UserInfo\info.txt" />
     <Content Include="Operation\UserLog\userPass.txt" />
-    <Content Include="Resources\close-eye.png" />
-    <None Include="Resources\pro5.png" />
-    <None Include="Resources\pie.png" />
-    <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%291.png" />
-    <None Include="Resources\[CITYPNG.COM]Pink Notification Bell Icon HD PNG - 1000x1000 %282%29.png" />
-    <None Include="Resources\return.png" />
-    <None Include="Resources\saveFile1.png" />
-    <None Include="Resources\saveFile.png" />
-    <None Include="Resources\saveIcon.jpg" />
-    <None Include="Resources\close-eye1.png" />
-    <None Include="Resources\close-eye2.png" />
-    <None Include="Resources\LoadFileIcon.jpeg" />
-    <None Include="Resources\ExitIcon.png" />
-    <None Include="Resources\legend.png" />
-    <None Include="Resources\Layer 0.png" />
-    <None Include="Resources\LoadFileIcon-removebg.png" />
-    <None Include="Resources\file.png" />
-    <None Include="Resources\giphy1.gif" />
-    <Content Include="Resources\open-eye.png" />
-    <None Include="Resources\plus2.png" />
-    <None Include="Resources\plus.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Operation\UserFiles\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>

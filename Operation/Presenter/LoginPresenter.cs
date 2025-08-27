@@ -17,7 +17,7 @@ namespace Login.Operation.Presenter
         public LoginPresenter(IAuthView loginView)
         {
             view = loginView;
-            repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
         }
 
         public void HandleLogin()

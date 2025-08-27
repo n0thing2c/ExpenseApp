@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Login.Page
 {
-    public partial class UserControl1 : UserControl
+    public partial class ucNewFMFile : UserControl
     {
-        public UserControl1()
+        public ucNewFMFile()
         {
             InitializeComponent();
         }

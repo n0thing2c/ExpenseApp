@@ -24,7 +24,7 @@ namespace Login.Page
         public void SetUserName(string name)
         {
             username = name;
-            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
             FolderPath = Path.Combine(repoPath, "Operation", "UserFiles", username);
         }
         

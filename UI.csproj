@@ -18,4 +18,8 @@
     <Content Include="Operation\UserLog\userPass.txt" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
+  </ItemGroup>
+
 </Project>

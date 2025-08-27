@@ -83,7 +83,7 @@ namespace Login.Operation.UserLog
 
         public bool isValid()
         {
-            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string repoPath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
             string path = Path.Combine(repoPath, "Operation", "UserLog", "userPass.txt");
             try
             {

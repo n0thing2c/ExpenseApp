@@ -21,23 +21,6 @@ To clone this project to your local machine, follow these steps:
 
 **2. Build and run the project**
 
-- Open the terminal
-- Navigate to the folder containing your `.csproj` file
-
-  ```cmd
-  cd path/to/your/folder
-  ```
-
-- Build the project:
-
-  ```cmd
-  dotnet build
-  ```
-
-  If everything compiles successfully, you'll see a `Build succeeded` message.
-
-- Run the project:
-  ```cmd
-  dotnet run
-  ```
+- Open Visual Studio
+- Click F5
   After that, the app will launch.

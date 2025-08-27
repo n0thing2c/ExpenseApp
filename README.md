@@ -23,4 +23,4 @@ To clone this project to your local machine, follow these steps:
 
 - Open Visual Studio
 - Click F5
-  After that, the app will launch.
+- After that, the app will launch.
